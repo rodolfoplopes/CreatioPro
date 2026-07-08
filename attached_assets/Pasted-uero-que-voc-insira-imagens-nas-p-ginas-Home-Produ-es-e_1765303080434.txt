@@ -1,0 +1,167 @@
+uero que você insira imagens nas páginas Home, Produções e Impacto seguindo as instruções abaixo.
+NÃO alterar o hero da Home.
+NÃO mexer na estrutura visual já existente do hero da Home.
+
+1. REGRAS GERAIS
+
+O hero da Home deve permanecer exatamente como está.
+
+Páginas internas (Produções e Impacto) devem receber novos heros com imagem, usando um componente dedicado.
+
+A Home deve receber uma nova seção com imagem antes do footer, NÃO substituindo o hero.
+
+Em Produções, deve ser adicionado também um grid de fotos e vídeos.
+
+Manter gradiente, cores e estilo do site.
+
+2. ORGANIZAÇÃO DAS IMAGENS
+
+Use a pasta:
+
+public/images/creation/
+
+
+As imagens devem ser acessadas com este caminho, por exemplo:
+
+/images/creation/blockchainrio-palco.jpg
+
+3. COMPONENTE REUTILIZÁVEL: HERO INTERNO COM IMAGEM
+
+Criar componente:
+
+client/src/components/layout/HeroInternal.tsx
+
+
+Props:
+
+title
+subtitle?
+badge?
+imageSrc
+imageAlt
+
+
+Comportamento:
+
+Duas colunas no desktop
+
+Mobile empilhado
+
+Imagem com min-h-[420px], object-cover, rounded-xl, overflow-hidden
+
+Overlay leve em gradiente para integrar com o design
+
+Fundo continua com o gradiente padrão
+
+NÃO alterar nenhuma parte do layout da Home
+
+4. APLICAR O HERO INTERNO EM PRODUÇÕES E IMPACTO
+4.1. Produções — Substituir SOMENTE o hero da página Produções
+<HeroInternal
+  title="Produções para marcas que querem sair do papel"
+  subtitle="(usar o subtítulo existente na página)"
+  badge="Creation Produções"
+  imageSrc="/images/creation/blockchainrio-palco.jpg"
+  imageAlt="Palco de evento de grande escala produzido pela Creation"
+/>
+
+4.2. Impacto — Substituir SOMENTE o hero da página Impacto
+<HeroInternal
+  title="(manter o título atual)"
+  subtitle="(manter o subtítulo atual)"
+  badge="Creation Impacto"
+  imageSrc="/images/creation/menino-ribeirinho.jpg"
+  imageAlt="Criança em comunidade representando impacto social"
+/>
+
+5. HOME — ADICIONAR UMA SEÇÃO DE IMAGEM ANTES DO FOOTER (SEM ALTERAR O HERO)
+
+Criar componente:
+
+client/src/components/home/HomeImageSection.tsx
+
+
+Adicionar na Home antes do footer, seguindo a ordem:
+
+Hero atual (não tocar)
+
+Conteúdo textual atual da Home
+
+Nova seção de imagem
+
+Footer
+
+Estrutura da nova seção:
+
+<section className="w-full flex justify-center py-16">
+  <img
+    src="/images/creation/comunidade-barcos.jpg"
+    alt="Comunidade costeira ao pôr do sol"
+    className="w-full max-w-6xl rounded-2xl object-cover shadow-lg"
+  />
+</section>
+
+
+Não alterar nada acima do hero da Home.
+
+6. GRID DE MÍDIA (FOTOS/VÍDEOS) EM PRODUÇÕES
+
+Criar:
+
+client/src/components/producoes/ProductionsMediaGrid.tsx
+
+
+Inserir abaixo do conteúdo principal da página Produções.
+
+Requisitos:
+
+Título: “Alguns momentos que ajudamos a produzir”
+
+Subtítulo reutilizar ou manter simples
+
+Grid responsivo (1 col mobile, 2 col tablet, 3 col desktop)
+
+Cards com rounded-xl, overflow-hidden, shadow-sm
+
+Imagens sugeridas (ajustar conforme disponíveis):
+
+/images/creation/world-creativity.jpg
+/images/creation/auditorio-publico.jpg
+/images/creation/show-musica.jpg
+/images/creation/reservax-lounge.jpg
+/images/creation/feira-artesanato-noite.jpg
+/images/creation/artesa-tecidos.jpg
+
+
+Se houver vídeos, criar card com <video> ou <iframe> mantendo o mesmo estilo e aspecto.
+
+7. CHECKLIST FINAL DO REPLIT
+HOME
+
+ Hero permanece INALTERADO
+
+ Nova seção com imagem inserida antes do footer
+
+ Responsividade preservada
+
+PRODUÇÕES
+
+ Novo hero interno com imagem
+
+ Grid de fotos/vídeos funcionando
+
+ Conteúdo original preservado
+
+IMPACTO
+
+ Novo hero interno com imagem
+
+ Texto da página mantido
+
+GERAL
+
+ Nenhuma rota quebrada
+
+ Imagens com alt text
+
+ Gradiente preservado

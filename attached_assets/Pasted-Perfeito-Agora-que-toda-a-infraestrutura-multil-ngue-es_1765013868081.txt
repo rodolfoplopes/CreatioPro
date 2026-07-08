@@ -1,0 +1,148 @@
+Perfeito. Agora que **toda a infraestrutura multilíngue está pronta e estável**, o que você está pedindo é o **PROMPT FINAL** — o comando-mestre que:
+
+* orienta o Replit/Lovable/qualquer IA a **criar, atualizar ou reconstruir** o site inteiro
+* **sem modificar layout**
+* **mantendo o design atual**
+* **aplicando todo o conteúdo, copywriting e estrutura que definimos**
+* **suportando PT / EN / ES**
+* **mantendo cada vertical exatamente como criamos (OPS, Impacto, Produções, Método)**
+
+Este é o **super-prompt final**, o “manual de instruções” definitivo do site Creation Pro.
+
+Você vai usá-lo:
+
+* para atualizações
+* para expansões
+* para refatoração controlada
+* para reconstrução do site em outra plataforma (Vercel, Lovable, Wix Studio, Webflow, Replit Nova, etc.)
+* para clonar em theme ou template
+* para padronizar futuras páginas
+
+Esse prompt é **a bíblia do site**.
+
+Aqui vai:
+
+---
+
+# 🟩 **SUPER-PROMPT FINAL — CREATION PRO (para Replit / Lovable / Webflow / qualquer IA)**
+
+*(Versão final, pronta para copiar e colar)*
+
+> **Crie ou atualize o site da Creation Pro mantendo exatamente o layout atual do projeto como referência visual.
+>
+> NÃO altere o layout, estrutura, espaçamentos, grid, componentes, classes, estilos ou animações existentes.
+>
+> Apenas substitua os textos existentes pelos novos conteúdos (PT / EN / ES) utilizando o sistema de internacionalização já criado com `data-i18n`.
+>
+> O idioma padrão é PT-BR, mas o site deve carregar automaticamente EN ou ES quando o navegador do usuário estiver configurado para esses idiomas.
+>
+> O seletor manual PT | EN | ES deve continuar funcionando através de `setLanguage(lang)`.
+>
+> A marca principal é: CREATION PRO.
+> O tagline principal é: “Clareza e criatividade para fazer acontecer.”
+>
+> O site possui três verticais oficiais:
+>
+> 1. OPS — Operações
+> 2. Impacto
+> 3. Produções
+>
+> Estrutura final do site:
+>
+> **HOME**
+>
+> * Hero
+> * O que fazemos (Estrutura, Clareza, Ritmo)
+> * Verticais: OPS, Produções, Impacto
+> * Para quem trabalhamos
+> * Por que existimos
+> * CTA final
+>
+> **QUEM SOMOS**
+>
+> * Quem é a Creation Pro
+> * Diferenciais
+> * Biografia profissional
+> * Como trabalhamos
+>
+> **OPS — Operações**
+>
+> * Hero da vertical
+> * O que resolvemos
+> * Como funciona (Diagnóstico → Estruturação → Execução acompanhada)
+> * Entregáveis
+> * Para quem é
+> * Impactos
+> * CTA
+>
+> **IMPACTO**
+>
+> * Hero
+> * O que estruturamos
+> * Programas & Governança
+> * Indicadores de impacto
+> * Para quem é
+> * Entregáveis
+> * CTA
+>
+> **PRODUÇÕES**
+>
+> * Hero
+> * O que produzimos
+> * Processos (Conceito → Planejamento → Execução)
+> * Eventos, Projetos e Plataformas
+> * Diferenciais
+> * CTA
+>
+> **MÉTODO**
+>
+> * Diagnóstico
+> * Estruturação
+> * Execução
+> * Por que funciona
+> * Resultados
+>
+> **CONTATO**
+>
+> * Texto introdutório
+> * Formulário
+> * CTA
+>
+> Utilize o conteúdo oficial nos arquivos:
+>
+> * `/lang/pt.json`
+> * `/lang/en.json`
+> * `/lang/es.json`
+>
+> O site é multilíngue e o layout deve permanecer **idêntico** ao que está no Replit hoje.
+>
+> Qualquer novo texto deve substituir apenas o valor das chaves JSON correspondentes.
+>
+> NÃO reescreva HTML, NÃO mova seções, NÃO altere estilos, NÃO crie novos componentes sem solicitação explícita.
+>
+> Todas as melhorias devem respeitar o branding atual:
+>
+> * Estética premium
+> * Tons de verde como no layout atual
+> * Tipografia limpa, moderna
+> * Estilo minimalista
+> * Toque consultivo (McKinsey / IDEO / Accenture)
+>
+> Mantenha tudo dentro dessas diretrizes.**
+
+---
+
+# 🟦 **AGORA O IMPORTANTE:**
+
+Você quer este super-prompt em alguma destas versões?
+
+1. **Versão curta (para Lovable)**
+2. **Versão técnica (com instrução para Vercel / Next.js)**
+3. **Versão focada em manutenção (para atualizações futuras)**
+4. **Versão focada em expansão (para adicionar novas páginas)**
+5. **Versão para Webflow / Wix Studio**
+
+Ou quer gerar **VÁRIAS versões**?
+
+Me diga:
+👉 **Qual formato você quer que o Super-Prompt final siga?**

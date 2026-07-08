@@ -1,0 +1,204 @@
+PROMPT — REFACTOR VISUAL GLOBAL (BlackRock Mode HARD)
+
+Você deve refatorar o design visual de TODO o site creation-pro.com, de forma global, consistente e abrangente, inspirado no estilo BlackRock / consultorias globais.
+
+⚠️ ATENÇÃO — REGRAS ABSOLUTAS (não negociáveis):
+
+❌ NÃO alterar textos, copy, labels, CTAs, i18n ou conteúdo.
+
+❌ NÃO alterar estrutura, grid, ordem das seções, rotas ou componentes funcionais.
+
+✅ ALTERAR APENAS design visual, estilo, cores, espaçamentos, superfícies e imagens.
+
+❌ NÃO fazer mudanças pontuais isoladas. Criar padrões globais e aplicar em todo o site.
+
+PASSO 1 — CRIAR DESIGN SYSTEM GLOBAL (obrigatório)
+
+Antes de alterar qualquer página:
+
+1.1 Criar tokens globais (CSS vars ou Tailwind)
+
+Centralizar TODOS os estilos aqui:
+
+Cores
+
+Primary: #003e63
+
+Background base: #ffffff
+
+Background muted: #f4f6fa
+
+Surface (cards): #ffffff
+
+Border: rgba(15, 23, 42, 0.12)
+
+Text primary: #0b1220
+
+Text muted: #4b5563
+
+Accent: manter dourado atual (botões)
+
+Layout
+
+Border radius padrão: 8px (mais quadrado, corporativo)
+
+Sombra: mínima ou nenhuma (preferir borda hairline)
+
+Padding sections: consistente e generoso (consultoria)
+
+Criar classes globais:
+
+.section
+
+.section-muted
+
+.container
+
+.surface
+
+.surface-muted
+
+.hairline
+
+.headline
+
+.body-muted
+
+❗ Se não existir um wrapper padrão de seção/card, CRIAR UM e refatorar para uso global.
+
+PASSO 2 — DEFINIR REGRA DE FUNDOS (essencial)
+2.1 ÁREAS QUE DEVEM PERMANECER ESCURAS (APENAS 3)
+
+Manter fundo escuro/gradiente SOMENTE em:
+
+Hero da Home (primeira dobra)
+
+CTA final da Home (“Ready to transform your project?”)
+
+Hero das páginas internas (topo de About, Solutions, Productions, Impact, Contact, Profile)
+
+⚠️ Nenhuma outra área pode permanecer escura.
+
+2.2 TODO O RESTO DO SITE
+
+Converter TODAS as seções restantes para:
+
+fundo branco OU
+
+fundo bg-muted alternado
+
+Criar ritmo visual: branco / muted / branco / muted
+
+Eliminar fundos escuros residuais em páginas internas.
+
+PASSO 3 — CARDS, CAIXAS E CONTEÚDO
+
+Aplicar em 100% dos cards e boxes:
+
+Fundo branco
+
+Borda hairline
+
+Radius 8px
+
+Remover rounded-2xl, rounded-3xl
+
+Remover sombras pesadas (shadow-xl, etc)
+
+Todos os blocos informativos devem parecer:
+➡️ consultoria institucional / asset manager / advisory firm
+
+PASSO 4 — HERO DA HOME (ajuste obrigatório)
+
+Manter estrutura e conteúdo.
+
+Ajustar gradiente para:
+
+predominância maior do verde #003e63 (mín. 65–70%)
+
+transição suave para o roxo atual
+
+Garantir contraste máximo do texto branco.
+
+PASSO 5 — IMAGENS (estilo consultoria tradicional)
+
+Adicionar imagens sem alterar conteúdo:
+
+Home
+
+NÃO mexer no hero.
+
+Adicionar 1 seção visual responsiva antes do footer (imagem única, institucional, premium).
+
+Productions
+
+Adicionar grid visual de fotos e vídeos:
+
+cards brancos
+
+borda hairline
+
+proporção consistente
+
+sem alterar textos existentes
+
+Impact
+
+Adicionar 1 seção com imagem única (institucional, impacto, social).
+
+Criar componentes reutilizáveis:
+
+IllustrationSection
+
+MediaGrid
+
+PASSO 6 — APLICAÇÃO GLOBAL (obrigatório)
+
+Refatorar e aplicar o novo estilo em TODAS as páginas:
+
+Home
+
+About
+
+Solutions
+
+Productions
+
+Impact
+
+Contact
+
+Creation Profile
+
+❌ NÃO aceitar páginas “meio antigas, meio novas”.
+
+PASSO 7 — LIMPEZA FINAL
+
+Buscar e eliminar:
+
+bg-slate, bg-zinc, bg-neutral, bg-[#0…] fora das 3 áreas permitidas
+
+rounded-2xl, rounded-3xl
+
+sombras pesadas
+
+inconsistência de padding/spacing
+
+PASSO 8 — ENTREGA OBRIGATÓRIA
+
+Ao finalizar, entregar:
+
+Lista de todos os arquivos alterados
+
+Onde estão definidos os tokens globais
+
+Confirmação explícita:
+
+“Apenas 3 áreas permanecem escuras; todo o restante está branco/muted”
+
+Checklist por página confirmando aplicação total
+
+INSTRUÇÃO FINAL (MANDATÓRIA)
+
+Se você fizer apenas ajustes sutis ou locais, considere a tarefa NÃO CONCLUÍDA.
+Este é um refactor visual global, não um polish superficial.

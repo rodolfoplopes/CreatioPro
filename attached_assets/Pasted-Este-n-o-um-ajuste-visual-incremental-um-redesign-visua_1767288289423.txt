@@ -1,0 +1,185 @@
+Este não é um ajuste visual incremental.
+É um redesign visual completo, mantendo 100% da estrutura, conteúdo e arquitetura atual, mas substituindo integralmente o sistema visual pelo mesmo padrão utilizado no site da BlackRock (blackrock.com).
+
+Trate o site da BlackRock como referência primária e absoluta de design system.
+
+OBJETIVO
+
+Transformar o site creation-pro.com em uma versão visualmente equivalente ao site da BlackRock, preservando:
+
+Conteúdo textual
+
+Estrutura de páginas
+
+Hierarquia de informação
+
+Rotas, componentes e lógica existente
+
+E alterando somente o design.
+
+PRINCÍPIOS VISUAIS (OBRIGATÓRIOS)
+1. Base cromática
+
+Preto e branco como base dominante
+
+Fundos majoritariamente brancos
+
+Texto predominantemente preto
+
+Uso de cores da Creation apenas como destaque, nunca como fundo principal
+
+As cores da Creation devem funcionar como:
+
+Faixas horizontais
+
+Destaques editoriais
+
+CTAs
+
+Separadores visuais
+
+Blocos institucionais (ex: banners, chamadas, insights)
+
+2. Layout e grid
+
+Layout editorial, institucional e financeiro
+
+Grid rígido, com alinhamento preciso
+
+Muito espaço em branco
+
+Nada de estética “creative agency”
+
+Estética de consultoria global / asset manager / instituição financeira
+
+3. Caixas e containers
+
+TODAS as caixas devem ser retangulares
+
+ZERO border-radius
+
+Sem sombras suaves
+
+Se houver sombra, que seja seca, discreta ou inexistente
+
+Bordas retas, sólidas e limpas
+
+Exemplo:
+❌ Cards arredondados
+✅ Blocos editoriais retangulares
+
+4. Tipografia
+
+Estilo institucional
+
+Hierarquia clara:
+
+Headline forte
+
+Subtítulo informativo
+
+Texto corrido objetivo
+
+Nada de efeitos decorativos
+
+Peso visual vem do contraste, não do ornamento
+
+5. Hero da Home
+
+Fundo claro (preferencialmente branco)
+
+Grande headline institucional
+
+Uso mais evidente do verde principal da Creation
+
+Estrutura semelhante ao hero da BlackRock:
+
+Texto forte à esquerda
+
+Imagem institucional à direita ou integrada
+
+Menos gradiente, mais solidez
+
+6. Uso de imagens (OBRIGATÓRIO)
+
+Inserir imagens ilustrativas como no site da BlackRock, respeitando:
+
+Imagens institucionais
+
+Pessoas em contexto profissional
+
+Arquitetura, cidades, projetos, operação
+
+Imagens em:
+
+Seções editoriais
+
+Banners horizontais
+
+Blocos de destaque
+
+Nada genérico, nada abstrato demais
+
+Tratar imagens como elemento estrutural, não decorativo.
+
+7. Componentes
+
+Aplicar esse padrão visual a TODO o site, incluindo:
+
+Home
+
+About
+
+Solutions
+
+Productions
+
+Impact
+
+Contact
+
+Landing pages internas (ex: Creation Profile)
+
+Nenhuma página deve permanecer com o visual antigo.
+
+O QUE NÃO FAZER (IMPORTANTE)
+
+❌ Não “inspirar-se levemente”
+
+❌ Não manter gradientes dominantes
+
+❌ Não usar rounded corners
+
+❌ Não usar estética startup / tech / creative
+
+❌ Não preservar o visual atual com pequenos ajustes
+
+DEFINIÇÃO FINAL (PARA NÃO HAVER DÚVIDA)
+
+O site da Creation Pro deve parecer que foi desenhado pelo mesmo time que desenhou o site da BlackRock, usando o mesmo design system, mas com a identidade, cores e conteúdo da Creation.
+
+ORDEM DE EXECUÇÃO
+
+Redefinir CSS base (cores, fontes, containers, radius = 0)
+
+Ajustar layout global
+
+Refatorar componentes visuais
+
+Inserir imagens institucionais
+
+Ajustar hero da home
+
+Revisar consistência visual em todas as páginas
+
+CHECK FINAL DE SUCESSO
+
+Antes de finalizar, valide:
+
+“Isso parece um site de uma instituição global?”
+
+“Isso poderia ser confundido com um site de asset manager ou consultoria top-tier?”
+
+“Se eu trocar o logo, isso poderia ser BlackRock, McKinsey ou BCG?”
+
+Se a resposta for sim, está correto.

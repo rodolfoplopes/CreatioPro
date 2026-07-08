@@ -1,0 +1,144 @@
+Perfeito — o que você quer **não é um “ajuste visual”**, é um **reposicionamento total de UI/UX**, usando **BlackRock como blueprint de design**, mantendo **100% da estrutura, conteúdo e rotas atuais**.
+
+A melhor forma de “fazer o Replit entender” é **tirar qualquer margem interpretativa** e dar um **comando de design system + regras objetivas**, quase como um *design refactor mandate*.
+
+Abaixo está **o prompt hardcore, direto e inequívoco** que você pode colar no Replit.
+
+---
+
+## PROMPT — REDESIGN TOTAL (BLACKROCK MODE)
+
+> **Contexto**
+>
+> Refaça **TODO o design visual do site creation-pro.com**, mantendo **EXATAMENTE a mesma estrutura, componentes, rotas, conteúdo e textos atuais**.
+>
+> **O novo design deve ser uma releitura direta do site da BlackRock**, usando-o como **referência primária e obrigatória de UI/UX**.
+>
+> 👉 Referência visual obrigatória: [https://www.blackrock.com/br](https://www.blackrock.com/br)
+>
+> **Não interprete, não suavize, não “se inspire”: replique a lógica visual.**
+
+---
+
+## PRINCÍPIOS DE DESIGN (OBRIGATÓRIOS)
+
+### 1. Base visual
+
+* Fundo **predominantemente branco**
+* Uso forte de **preto e cinza escuro** para texto e hierarquia
+* **Cores da Creation** entram **apenas como acento**, nunca como fundo dominante
+* Nada de gradientes amplos como base de layout
+
+---
+
+### 2. Componentes e Layout
+
+* **TODAS as caixas devem ser retangulares**
+
+  * ❌ Sem border-radius
+  * ❌ Sem cantos arredondados
+* Cards, seções e blocos devem seguir **grid rígido**, corporativo
+* Espaçamento mais generoso, layout “arejado”, institucional
+
+---
+
+### 3. Tipografia
+
+* Hierarquia clara:
+
+  * Headlines grandes, sólidas, corporativas
+  * Textos com peso normal, leitura fácil
+* Nada de visual “criativo / startup”
+* Linguagem visual de **gestora de ativos / consultoria global**
+
+---
+
+### 4. Hero Sections
+
+* Hero da Home:
+
+  * Fundo claro (branco ou quase branco)
+  * Uso pontual do **verde principal da Creation**
+  * Títulos em preto
+* Remover sensação de “dark mode” da Home
+* Hero deve se comportar como BlackRock:
+
+  * Texto + imagem editorial de alto impacto
+
+---
+
+### 5. Imagens (MUITO IMPORTANTE)
+
+* Inserir **imagens ilustrativas/editoriais** em várias seções, como:
+
+  * Home
+  * Solutions
+  * Productions
+  * Impact
+* Estilo das imagens:
+
+  * Corporativo
+  * Pessoas em contexto profissional
+  * Arquitetura, cidades, negócios, liderança
+* Imagens devem:
+
+  * Quebrar grandes blocos de texto
+  * Funcionar como “âncoras visuais”, não decoração
+
+---
+
+### 6. Destaques e chamadas
+
+* Usar **faixas horizontais de destaque**, similares às da BlackRock
+* Nessas faixas:
+
+  * Fundo com **cores da Creation**
+  * Texto em alto contraste
+* Usar esse recurso para:
+
+  * CTAs
+  * Blocos de valor
+  * Transição entre seções
+
+---
+
+### 7. O que NÃO mudar
+
+* ❌ Não alterar textos
+* ❌ Não alterar estrutura de páginas
+* ❌ Não alterar navegação
+* ❌ Não alterar rotas
+* ❌ Não alterar conteúdo multilíngue
+
+> **Apenas design, UI, layout, cores, imagens e tipografia.**
+
+---
+
+## RESULTADO ESPERADO
+
+O site deve parecer:
+
+> “A BlackRock se fosse uma empresa chamada Creation Pro, com identidade própria de cores.”
+
+Não deve parecer:
+
+* Agência criativa
+* Startup
+* Site artístico
+* Landing page de marketing
+
+Deve parecer:
+
+* **Consultoria estratégica global**
+* **Empresa sólida, institucional e premium**
+* **Pronta para C-Level, governo e grandes corporações**
+
+---
+
+Se quiser, no próximo passo eu posso te entregar:
+
+* 🔹 Um **checklist visual** para validar se o Replit executou corretamente
+* 🔹 Um **prompt complementar** só para ajuste fino (tipografia, grid, imagens)
+* 🔹 Um **brief de design system** para evitar regressões futuras
+
+É só dizer.

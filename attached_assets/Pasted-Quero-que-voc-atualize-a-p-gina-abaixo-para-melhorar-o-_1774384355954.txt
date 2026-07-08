@@ -1,0 +1,139 @@
+Quero que você atualize a página abaixo para melhorar o preview de compartilhamento no WhatsApp, Instagram, LinkedIn, X/Twitter e outras plataformas que usam Open Graph.
+
+Página:
+https://creation-pro.com/pt/producoes/creator-ops-rio
+
+Objetivo:
+Hoje o link está aparecendo com título e descrição muito genéricos no WhatsApp. Quero que o preview comunique claramente o serviço como uma solução de produção executiva local no Rio para creators e marcas.
+
+Contexto do serviço:
+Este serviço não é apenas “produção de conteúdo”.
+É uma operação executiva local completa para creators, marcas e times que vêm ao Rio para gravar, produzir conteúdo, fazer ativações ou experiências.
+O cliente chega com seu core criativo, roteiro e direção.
+Nós cuidamos do restante:
+- logística
+- produção local
+- fornecedores
+- locações públicas e privadas
+- equipe de foto, vídeo e produção
+- segurança
+- deslocamento
+- operação do dia
+- apoio para gravação e experiências no Rio
+
+Mensagem central:
+“Você traz o conteúdo. A gente resolve o Rio.”
+
+Quero que você faça as seguintes atualizações:
+
+1. Atualizar o SEO e os metadados da página
+Adicionar ou corrigir no HTML inicial da página as seguintes tags:
+- <title>
+- meta name="description"
+- meta property="og:type"
+- meta property="og:url"
+- meta property="og:title"
+- meta property="og:description"
+- meta property="og:image"
+- meta property="og:image:width"
+- meta property="og:image:height"
+- meta name="twitter:card"
+- meta name="twitter:title"
+- meta name="twitter:description"
+- meta name="twitter:image"
+
+Importante:
+- As tags precisam estar presentes no HTML inicial servido ao crawler.
+- Não podem depender apenas de renderização client-side.
+- Se a aplicação for SPA, preciso de uma solução que garanta que crawlers recebam os metadados corretamente.
+- Use URLs absolutas.
+
+2. Usar o seguinte conteúdo para os metadados
+
+Title:
+Creator Ops Rio | Produção executiva local para creators e marcas no Rio
+
+Meta description:
+Você chega com o roteiro e o core criativo. A gente cuida da operação local no Rio: logística, locações, fornecedores, segurança, equipe e execução ponta a ponta.
+
+Open Graph title:
+Creator Ops Rio | Produção executiva local para creators e marcas no Rio
+
+Open Graph description:
+Você chega com o roteiro e o core criativo. A gente cuida da operação local no Rio: logística, locações, fornecedores, segurança, equipe e execução ponta a ponta.
+
+Twitter title:
+Creator Ops Rio | Produção executiva local para creators e marcas no Rio
+
+Twitter description:
+Você chega com o roteiro e o core criativo. A gente cuida da operação local no Rio: logística, locações, fornecedores, segurança, equipe e execução ponta a ponta.
+
+3. Criar e configurar uma imagem Open Graph específica
+Quero uma imagem social exclusiva para essa página, com especificação:
+- tamanho: 1200 x 630 px
+- formato leve e web-friendly
+- nome de arquivo amigável, por exemplo: creator-ops-rio-og.jpg
+- hospedada em URL pública absoluta
+
+Direção criativa da imagem:
+- visual premium
+- comunicar Rio de Janeiro + produção + operação local
+- pode usar foto de produção / bastidor / creator em gravação / cidade
+- headline principal:
+  “Você traz o conteúdo. A gente resolve o Rio.”
+- subtítulo curto:
+  “Produção executiva local para creators e marcas”
+- apoio visual discreto com os pilares:
+  logística • locações • equipe • segurança
+- manter branding da Creation elegante e discreto
+- evitar imagem genérica ou muito abstrata
+- garantir boa leitura em miniatura
+
+Se já existir uma pasta pública para assets sociais, usar essa convenção.
+Se não existir, criar uma estrutura adequada.
+
+4. Validar compatibilidade da página com compartilhamento
+Quero que você revise se a página está entregando corretamente:
+- título
+- descrição
+- imagem
+- canonical/url
+para crawlers de preview social.
+
+Se necessário:
+- ajustar SSR/SSG/prerender
+- garantir que a rota /pt/producoes/creator-ops-rio entregue metadados corretos
+- evitar que o preview dependa de JavaScript no cliente
+
+5. Melhorias extras de SEO técnico
+Se fizer sentido, adicionar também:
+- canonical
+- lang apropriado
+- JSON-LD básico de página de serviço, se isso não complicar muito
+- imagem com alt coerente
+- estrutura limpa para indexação
+
+6. Não mudar o posicionamento da página inteira
+A alteração deve focar em:
+- preview do link
+- metadados
+- imagem social
+- robustez técnica para compartilhamento
+Sem alterar desnecessariamente o layout principal da página ou quebrar outros componentes.
+
+7. Entrega esperada
+Quero que você:
+- implemente as mudanças
+- me mostre exatamente quais arquivos foram alterados
+- me entregue o texto final dos metadados aplicados
+- me diga onde a imagem OG foi salva
+- me explique se foi necessário mudar algo na renderização da página para os crawlers
+
+Se houver mais de uma forma de implementar, escolha a mais robusta para previews sociais.
+Se o projeto usar React, Next, Vite, Express ou outro framework, adapte a solução corretamente ao stack existente.
+
+Importante:
+A prioridade aqui é que, ao colar o link no WhatsApp, o preview mostre:
+- título claro
+- descrição objetiva
+- imagem forte e específica do serviço

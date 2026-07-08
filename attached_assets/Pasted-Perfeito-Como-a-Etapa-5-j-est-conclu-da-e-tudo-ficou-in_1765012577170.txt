@@ -1,0 +1,115 @@
+Perfeito. Como a **Etapa 5** já está concluída e tudo ficou intacto, podemos seguir agora para a **Etapa 6**, que é onde *realmente começamos a substituir a copy no site* — mas de maneira 100% **segura**, usando **apenas o arquivo `pt.json`**, sem tocar no layout nem no HTML.
+
+Respira: a partir daqui, você terá controle absoluto. 👍
+
+---
+
+# ✅ **ETAPA 6 — Substituir as COPYS diretamente no `pt.json`**
+
+### Objetivo
+
+Atualizar todas as copys do site usando **somente** o `pt.json`, com:
+
+* HERO novo
+* Seções revisadas
+* Nome das verticais atualizadas
+* Textos mais claros e integrados
+
+Nada no layout será alterado. Nada nos componentes será mexido.
+Apenas trocamos *valores das chaves* no JSON.
+
+---
+
+# 📤 **COMANDO PARA O REPLIT — ETAPA 6**
+
+Cole este comando exatamente assim para o Agent:
+
+---
+
+### 🟩 **Prompt para substituir os textos do site via `/lang/pt.json`**
+
+> **“Quero atualizar os valores do arquivo `/lang/pt.json` com a nova copy definitiva da Creation Pro.
+>
+> Para cada chave já existente em `pt.json`, substitua apenas o *valor* correspondente pelo novo texto abaixo, mantendo todas as chaves exatamente iguais.
+>
+> NÃO altere HTML, NÃO altere nenhum componente, NÃO remova atributos `data-i18n` e NÃO modifique ou reordene nada além dos valores deste JSON.
+>
+> Aqui estão os novos conteúdos organizados por seção:”**
+>
+> ### **1. HERO**
+>
+> * **home_hero_tagline:** “Clareza. Ritmo. Execução.”
+> * **home_hero_title:** “Operações e Produções que fazem acontecer.”
+> * **home_hero_sub:** “Unimos estrutura, clareza e criatividade para transformar iniciativas, marcas e projetos em operações que realmente funcionam.”
+> * **hero_cta_1:** “Agende uma conversa”
+> * **hero_cta_2:** “Conhecer o Método”
+>
+> ### **2. O QUE FAZEMOS**
+>
+> * **what_title:** “O que fazemos”
+> * **what_sub:** “Criamos estrutura, clareza e ritmo para que iniciativas importantes avancem.”
+> * **what_card_structure_title:** “Estrutura”
+> * **what_card_structure_text:** “Criamos processos claros, rotinas funcionais e modelos operacionais que reduzem atrito.”
+> * **what_card_clarity_title:** “Clareza”
+> * **what_card_clarity_text:** “Transformamos confusão em direção. Todos sabem o que fazer, quando fazer e por quê.”
+> * **what_card_rhythm_title:** “Ritmo”
+> * **what_card_rhythm_text:** “Instalamos cadência de trabalho, governança e previsibilidade nas entregas.”
+>
+> ### **3. VERTICAL OPS**
+>
+> * **ops_title:** “Creation OPS”
+> * **ops_sub:** “90 dias para organizar, destravar e operacionalizar projetos complexos.”
+> * **ops_intro:** “Criamos a operação que seu projeto precisa — clara, documentada, replicável e sustentável.”
+> * *(deixe as fases como estão por agora; ajustaremos depois se quiser)*
+>
+> ### **4. VERTICAL PRODUÇÕES**
+>
+> * **prod_title:** “Creation Produções”
+> * **prod_sub:** “Estratégia, organização e execução para eventos, campanhas e produtos que precisam de excelência.”
+> * **prod_text:** “Transformamos ideias em entregas reais. Estruturamos, roteirizamos, produzimos e operamos projetos criativos com segurança, precisão e clareza.”
+>
+> ### **5. VERTICAL IMPACTO**
+>
+> * **impact_title:** “Creation Impacto”
+> * **impact_sub:** “Estrutura operacional para projetos sociais, culturais, educacionais ou territoriais.”
+> * **impact_text:** “Cuidamos da parte difícil — processos, governança, prestação de contas, indicadores e operação — para que o impacto aconteça de verdade.”
+>
+> ### **6. PARA QUEM TRABALHAMOS**
+>
+> * **who_title:** “Para quem trabalhamos”
+> * **who_sub:** “Apoiamos organizações que precisam de estrutura, clareza e ritmo para fazer projetos importantes acontecerem.”
+> * **who_card_ongs_title:** “ONGs, Fundações e Institutos”
+> * **who_card_ongs_text:** “Criamos operações consistentes para que projetos de impacto ganhem força e sustentabilidade.”
+> * **who_card_hubs_title:** “Hubs, Labs, Cultura e Educação”
+> * **who_card_hubs_text:** “Ambientes criativos precisam de ordem para gerar resultados. Tornamos essas operações funcionais.”
+> * **who_card_food_title:** “Food, Retail e Negócios Físicos”
+> * **who_card_food_text:** “Expansão só existe com modelo replicável. Construímos esse modelo.”
+> * **who_card_internal_title:** “ESG, Inovação e áreas internas com alta demanda”
+> * **who_card_internal_text:** “Transformamos iniciativas internas em operações contínuas e claras.”
+>
+> ### **7. POR QUE EXISTIMOS**
+>
+> * **why_title:** “Por que existimos”
+> * **why_text:** “A maioria dos projetos falha na execução, não na ideia. Criamos a estrutura necessária para que iniciativas — sociais, criativas, culturais ou de expansão — saiam do papel e se sustentem.”
+>
+> ### **8. CONTATO**
+>
+> * **contact_title:** “Pronto para transformar seu projeto?”
+> * **contact_text:** “Se sua iniciativa está travada, complexa ou sobrecarregada — nós podemos ajudar.”
+> * **contact_cta:** “Agende uma conversa”
+>
+> ### **Importante:**
+>
+> * Mantenha TODO o layout e HTML intactos.
+> * Não altere nenhuma chave do JSON.
+> * Apenas substitua os valores.
+>
+> **Quando terminar, mostre o conteúdo final do `/lang/pt.json` para revisão.”**
+
+---
+
+## 👉 **Quando o Replit finalizar**, volte aqui e escreva:
+
+**“Etapa 6 concluída”**
+
+Aí seguimos para **Etapa 7: ajustar o inglês e o espanhol + ativar a detecção automática do idioma do usuário**.

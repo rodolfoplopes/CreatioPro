@@ -1,0 +1,115 @@
+Quero fazer ajustes FINOS no layout, sem quebrar nada do que já está funcionando.
+
+Regra geral:
+- NÃO alterar estrutura, componentes, nem classes globais além do necessário.
+- NÃO mudar textos ou chaves i18n, apenas onde eu indicar.
+- Manter todo o layout atual, só refinando hero, badge e aplicação do gradiente.
+
+===============================
+1) AJUSTE DO GRADIENTE DO HERO
+===============================
+Objetivo: fazer o gradiente conversar melhor com a cor principal da marca (#003e63), mantendo o estilo atual (azul → roxo → dourado).
+
+Passos:
+1. Localizar o CSS atual do background do HERO da home (o gradiente recém aplicado).
+2. Criar uma classe reutilizável, por exemplo: `.hero-gradient-main`.
+3. Ajustar o gradiente para algo nesta linha (pode refinar, mas mantendo essa lógica):
+
+.hero-gradient-main {
+  background: linear-gradient(
+    135deg,
+    #003e63 0%,
+    #005b94 32%,
+    #5b4fb1 68%,
+    #c4975b 100%
+  );
+}
+
+4. Garantir que o container principal do HERO da home use essa classe `.hero-gradient-main`.
+5. NÃO mexer em padding, margin, flex, grid etc. Apenas o background.
+
+===============================
+2) TÍTULO DO HERO (QUEBRA DE LINHA)
+===============================
+Quero que o título em português fique assim visualmente:
+
+Operações, produções e impacto  
+para fazer acontecer.
+
+Ou seja:
+- Primeira linha: "Operações, produções e impacto"
+- Segunda linha: "para fazer acontecer."
+
+Sem mudar o texto em si, apenas a composição.
+
+Implementação sugerida:
+- Manter a chave i18n `hero_title` exatamente como está.
+- No componente React/Vue/etc. do título, quebrar em duas linhas usando `<br />` após "impacto", ou usar dois spans empilhados.
+
+Exemplo de markup (ajuste ao framework):
+
+<h1 ...>
+  <span>Operações, produções e impacto</span><br />
+  <span>para fazer acontecer.</span>
+</h1>
+
+Importante:
+- Em inglês e espanhol, manter a semântica parecida (duas linhas também), mas sem inventar texto novo. Ajustar apenas markup, não o conteúdo das chaves.
+
+===============================
+3) BADGE "CLAREZA. RITMO. EXECUÇÃO."
+===============================
+Quero refinar o badge do hero:
+
+- Um pouco MENOR.
+- Mais próximo do título (ou do topo do hero), sem parecer solto.
+- Contorno com uma cor que converse com o roxo do gradiente.
+
+Passos:
+1. Localizar o componente do badge no HERO.
+2. Diminuir levemente:
+   - font-size (ex: -1 ou -2px em relação ao atual),
+   - padding horizontal e vertical,
+   - border-radius pode manter.
+3. Ajustar margin:
+   - Se ele estiver muito distante do título, reduzir `margin-bottom`.
+   - Se estiver muito colado no topo, ajustar `margin-top`.
+4. Alterar a cor da borda para algo próximo do roxo do gradiente, por exemplo:
+   - border-color: #7e5ad6;  (ou um tom semelhante)
+5. Manter legibilidade do texto (não mexer na cor da fonte se não for necessário).
+
+Exemplo de estilo alvo (ajuste fino a partir do que já existe):
+
+.hero-badge {
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #7e5ad6;
+  margin-bottom: 16px; /* aproximar do título */
+}
+
+Ajustar para o contexto atual, sem quebrar o layout.
+
+===============================
+4) APLICAR O MESMO GRADIENTE AOS OUTROS HEROS
+===============================
+Quero CONSISTÊNCIA VISUAL: o mesmo gradiente do hero da home deve ser aplicado aos heros das páginas:
+
+- OPS (/ops)
+- Produções (/producoes)
+- Impacto (/impacto)
+
+Passos:
+1. Reutilizar a classe `.hero-gradient-main` criada no passo 1.
+2. Localizar os containers principais de HERO dessas páginas.
+3. Aplicar `.hero-gradient-main` nesses containers, substituindo o fundo verde chapado atual.
+4. Não alterar textos, botões, cards ou espaçamentos das páginas internas.
+5. Garantir que, em todas as páginas, o texto continue legível sobre o gradiente (se necessário, ajustar só a opacidade de qualquer overlay, MAS sem mudar cores de texto).
+
+===============================
+IMPORTANTE
+===============================
+- Não alterar header, footer ou navegação.
+- Não mexer em outras seções além do HERO e do badge.
+- Não remover nenhuma classe existente, apenas adicionar/estender.
+- Após concluir, gerar o preview geral (home + OPS + Produções + Impacto) para eu revisar.

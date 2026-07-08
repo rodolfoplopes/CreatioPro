@@ -1,0 +1,169 @@
+PROMPT (Replit) — “BlackRock Mode” com 3 seções Signature, sem mudar estrutura nem conteúdo
+
+Quero refatorar o design de TODO o site creation-pro.com para um estilo mais corporativo premium (inspirado em BlackRock), porém sem alterar nenhuma estrutura, layout macro, rotas, seções, ordem, nem conteúdo textual. Apenas estilo visual, consistência e inserção de imagens onde já exista espaço/área prevista.
+
+O que deve ficar como “Signature” (mantém fundo escuro)
+
+Manter fundo escuro/gradiente somente nestas 3 áreas:
+
+Home Hero (primeira dobra) — manter estrutura e textos; apenas ajustar o gradiente.
+
+CTA final da Home (a seção “Ready to transform your project?”) — manter escuro.
+
+Hero das páginas internas (topo de About/Solutions/Productions/Impact/Contact e /profile quando existir) — manter escuro, padrão único.
+
+Todo o restante do site deve migrar para fundo branco / cinza corporativo claro, com cards, bordas e tipografia no estilo consultoria.
+
+Regras absolutas
+
+Não mudar conteúdo (nenhum texto/copy/labels/links/CTAs/i18n).
+
+Não mudar estrutura (não remover nem reorganizar seções; não mudar grid macro).
+
+Aplicação global: não aceito “mudanças sutis” em poucos componentes. Quero consistência em 100% das páginas.
+
+Responsividade intacta (mobile/tablet/desktop).
+
+Nada de hacks por página: criar tokens e padrões globais e aplicar por refactor.
+
+Execução obrigatória (passo a passo)
+Etapa 1 — Auditoria (antes de alterar)
+
+Fazer busca global por: bg-, #, linear-gradient, rounded-, shadow-, border-, text-, opacity-.
+
+Identificar e listar:
+
+onde estão os estilos globais (Tailwind config, index.css, theme tokens)
+
+quais componentes controlam seções e cards (Section wrapper, Card, containers, etc.)
+
+Etapa 2 — Criar Design System global (tokens)
+
+Centralizar o novo estilo em um único lugar (Tailwind + CSS vars).
+
+Criar/ajustar tokens globais:
+
+--brand-navy: #003e63 (principal)
+
+--brand-accent: (usar o dourado atual do botão, manter)
+
+--bg: #ffffff
+
+--bg-muted: #f5f7fb (cinza consultoria)
+
+--surface: #ffffff
+
+--border: rgba(15, 23, 42, 0.12) (hairline)
+
+--text: #0b1220
+
+--text-muted: #4b5563
+
+--radius: 8px (cards mais “quadrados”, premium)
+
+--shadow: sombra discreta (ou só borda)
+
+Criar classes utilitárias globais (ex.: em index.css com @layer utilities):
+
+.section (padrão de padding)
+
+.containerX (max width consistente)
+
+.surface (card branco + borda hairline + radius 8)
+
+.surface-muted (seção bg-muted)
+
+.hairline (borda padrão)
+
+.headline / .kicker / .body-muted (tipografia consistente)
+
+Etapa 3 — Aplicar estilo BlackRock no site todo
+3.1 Fundos
+
+Converter todas as seções (exceto as 3 “Signature”) para:
+
+fundo branco ou bg-muted
+
+alternância de seções (white / bg-muted) para ritmo visual
+
+Garantir que nenhuma página fique com “blocos antigos” escuros no meio sem intenção.
+
+3.2 Cards e caixas
+
+Padronizar TODOS os cards/boxes para:
+
+fundo branco
+
+borda hairline
+
+radius 8px
+
+sombra mínima (ou nenhuma, só borda)
+
+Remover rounded-2xl/3xl e sombras pesadas.
+
+3.3 Tipografia consultoria
+
+Em fundo branco:
+
+títulos em --text
+
+parágrafos em --text-muted
+
+mais espaçamento vertical e leitura
+
+Não mudar strings, apenas classe/estilo.
+
+3.4 Hero Home com mais presença do #003e63 (importante)
+
+Ajustar gradiente do Hero da Home para começar com maior peso do #003e63 (ex.: 60–75% da área dominante), com transição suave pro roxo.
+
+Manter contraste alto do texto branco.
+
+Não mexer na estrutura do hero.
+
+3.5 Inserção de imagens no estilo consultoria (sem mexer no conteúdo)
+
+Aumentar uso de imagens de forma consistente:
+
+Home: manter hero como está; inserir 1 seção visual (imagem full-width contida) onde já combinado anteriormente (antes do footer).
+
+Productions: adicionar grid visual de fotos/vídeos com cards brancos e borda hairline (sem alterar textos já existentes).
+
+Impact: inserir 1 seção com imagem hero-like (não o topo; uma seção interna).
+
+Criar componente reutilizável IllustrationSection e MediaGrid, e aplicar nos mesmos pontos em EN/ES/PT onde existirem (respeitando regras de idioma quando aplicável).
+
+Etapa 4 — Garantia de cobertura total (checagem)
+
+Depois de aplicar:
+
+Buscar e eliminar inconsistências:
+
+bg-slate|bg-zinc|bg-neutral|bg-[#0 fora das 3 áreas signature
+
+rounded-2xl|rounded-3xl|shadow-xl etc
+
+Conferir páginas: Home, About, Solutions, Productions, Impact, Contact, /profile
+
+Garantir que o Header/Footer também estejam alinhados ao novo visual (sem mudar estrutura).
+
+Etapa 5 — Entregável final obrigatório
+
+Ao final, me entregue:
+
+Lista de todos os arquivos alterados
+
+Onde ficaram definidos os tokens (Tailwind/CSS vars)
+
+Confirmação explícita: “Apenas 3 áreas signature ficaram escuras; o resto está branco”
+
+Checklist por página (Home/About/Solutions/Productions/Impact/Contact/Profile)
+
+Observações finais (não negociais)
+
+Não quero mudanças mínimas. Quero refactor global consistente.
+
+Não faça ajustes isolados por página sem antes criar tokens e padrões.
+
+Se algo ficar pior, crie um STYLE_ROLLBACK.md com passos de reversão.

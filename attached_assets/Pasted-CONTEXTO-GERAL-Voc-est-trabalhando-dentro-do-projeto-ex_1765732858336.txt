@@ -1,0 +1,229 @@
+CONTEXTO GERAL
+Você está trabalhando dentro do projeto existente da Creation Pro.
+Crie um novo produto premium chamado “Creation Profile” como uma landing page interna (/profile), disponível SOMENTE nos idiomas EN e ES.
+Esse produto NÃO deve aparecer em PT-BR.
+
+O produto se comunica com executivos, founders, real estate leaders, investors, entertainment & wellness professionals em Miami / Florida.
+
+Canal de contato principal:
+profile@creation-pro.com
+
+---
+
+REGRAS INEGOCIÁVEIS
+- NÃO criar um novo projeto.
+- NÃO alterar o hero atual da Home.
+- NÃO alterar o design system global.
+- NÃO exibir Creation Profile em PT (nem rota, nem menu, nem banner).
+- Design deve ser mais corporativo e premium que o restante do site.
+- Linguagem limpa, estratégica, executiva (sem marketing raso).
+- Usar Header e Footer existentes.
+
+---
+
+PARTE 1 — ROTA E CONTROLE DE IDIOMA
+
+1. Criar rota /profile
+2. Criar página CreationProfilePage
+3. Implementar guard de idioma:
+   - Se lang === 'pt' → redirecionar para '/'
+   - Se lang === 'en' ou 'es' → renderizar normalmente
+
+---
+
+PARTE 2 — COPY COMPLETA DA LANDING PAGE
+
+### HERO SECTION
+Badge:
+- “Signature Product”
+
+Title (EN):
+Creation Profile
+
+Subtitle (EN):
+Strategic positioning, narrative construction and image architecture  
+for executives and high-impact leaders.
+
+Title (ES):
+Creation Profile
+
+Subtitle (ES):
+Posicionamiento estratégico, narrativa e imagen  
+para ejecutivos y líderes de alto impacto.
+
+Supporting text (EN):
+We build clarity, authority and presence before execution.
+
+Supporting text (ES):
+Construimos claridad, autoridad y presencia antes de la ejecución.
+
+Primary CTA:
+“Email us” / “Enviar email” → mailto:profile@creation-pro.com
+
+Secondary CTA:
+“Book a call” / “Agendar llamada” → usar o fluxo padrão de contato do site
+
+---
+
+### SECTION — WHAT IS CREATION PROFILE
+Title (EN):
+What is Creation Profile
+
+Text (EN):
+Creation Profile is a premium strategic product focused on building executive profile, narrative and positioning.
+We don’t start with content.
+We start with research, diagnosis and strategic intent — then we execute with precision.
+
+Title (ES):
+Qué es Creation Profile
+
+Text (ES):
+Creation Profile es un producto estratégico premium enfocado en construir perfil ejecutivo, narrativa y posicionamiento.
+No empezamos con contenido.
+Empezamos con investigación, diagnóstico e intención estratégica.
+
+---
+
+### SECTION — WHAT YOU GET
+Title (EN):
+What you get
+
+Items (EN):
+- Strategic Positioning Diagnosis
+- Executive Narrative System
+- Personal Image & Communication Architecture
+- Signature Content Direction (LinkedIn, Instagram, Speaking)
+- Investor-Ready Profile Assets
+
+Title (ES):
+Qué recibes
+
+Items (ES):
+- Diagnóstico estratégico de posicionamiento
+- Sistema narrativo ejecutivo
+- Arquitectura de imagen y comunicación
+- Dirección de contenido premium
+- Activos de perfil para inversores
+
+---
+
+### SECTION — HOW IT WORKS
+Title (EN):
+How it works
+
+Steps (EN):
+01 — Diagnostic & Research  
+02 — Strategy & Narrative  
+03 — Production Direction  
+04 — Publishing Rhythm & Optimization  
+
+Title (ES):
+Cómo funciona
+
+Steps (ES):
+01 — Diagnóstico e investigación  
+02 — Estrategia y narrativa  
+03 — Dirección de producción  
+04 — Ritmo de publicación y optimización  
+
+---
+
+### SECTION — WHO IT’S FOR
+Title (EN):
+Who it’s for
+
+List (EN):
+- Executives & C-Level
+- Founders & Entrepreneurs
+- Real Estate Leaders
+- Investors & Family Offices
+- Public figures and speakers
+
+Title (ES):
+Para quién es
+
+List (ES):
+- Ejecutivos y C-Level
+- Fundadores y emprendedores
+- Líderes inmobiliarios
+- Inversores y family offices
+- Figuras públicas y conferencistas
+
+---
+
+### SECTION — PACKAGES (NO PRICES)
+Title (EN):
+Engagement models
+
+Packages (EN):
+Foundation  
+Executive  
+Signature  
+
+CTA:
+“Request availability” → mailto:profile@creation-pro.com
+
+Title (ES):
+Modelos de contratación
+
+Packages (ES):
+Foundation  
+Executive  
+Signature  
+
+CTA:
+“Solicitar disponibilidad” → mailto:profile@creation-pro.com
+
+---
+
+### FINAL CTA
+Title (EN):
+Your profile is already speaking.  
+Let’s make sure it’s saying the right thing.
+
+Title (ES):
+Tu perfil ya está hablando.  
+Asegurémonos de que diga lo correcto.
+
+CTA:
+Email us / Enviar email → mailto:profile@creation-pro.com
+
+---
+
+PARTE 3 — INSERIR EM “SOLUTIONS”
+
+1. Localizar o menu “Solutions” no Header.
+2. Adicionar item:
+   - Label EN: Creation Profile
+   - Label ES: Creation Profile
+3. Exibir SOMENTE se lang === 'en' || lang === 'es'
+4. Link para /profile
+5. Adicionar badge pequeno “Signature” com borda premium (sem exagero).
+6. NÃO exibir em PT.
+
+Se existir página /solutions:
+- Adicionar card premium do Creation Profile (EN/ES)
+- CTA: Explore → /profile
+
+---
+
+PARTE 4 — VISUAL & UX
+- Usar o mesmo gradiente base do site com refinamento corporativo.
+- Cards com espaçamento generoso.
+- Bordas sutis douradas ou roxas.
+- Tipografia forte, sem excesso.
+- Mobile e desktop impecáveis.
+
+---
+
+CHECKLIST FINAL
+- /profile abre apenas em EN/ES
+- PT redireciona
+- Item aparece em Solutions (EN/ES)
+- CTA email funcional
+- Nenhuma quebra no site existente
+- Visual premium corporativo
+
+ENTREGAR
+- Lista de arquivos criados/alterados
+- Confirmação de idioma e rotas

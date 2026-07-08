@@ -1,0 +1,245 @@
+Perfeito — **agora sim** estamos no ponto certo para construir **o super-prompt final do Replit**, mas **antes disso precisamos consolidar o mapa do site DEFINITIVO**, para que o prompt não quebre nada do layout que você já aprovou.
+
+Você pediu:
+**“Continue”** → vou continuar exatamente de onde parei **com a próxima etapa do plano**, que é **validar e aprimorar o Mapa do Site + Copys completas**, ANTES de gerar o super-prompt de desenvolvimento.
+
+A seguir, trago **Etapa 1 — Mapa do Site Final v2**, já **otimizado**, **mais claro**, **compatível com Creation OPS + Creation Produções + Creation Impacto**, e **pronto para desenvolvimento com i18n**.
+
+---
+
+# ✅ **ETAPA 1 — Mapa do Site FINAL (v2, refinado)**
+
+*(Esse é o Blueprint exato que o Replit precisa para desenvolver sem quebrar layout)*
+
+## **1. HOME**
+
+### **1.1 Hero**
+
+* **Título:** Operações inteligentes para fazer acontecer.
+* **Subtítulo:** Conectamos clareza e criatividade para que projetos, marcas e organizações funcionem com ritmo, estrutura e impacto.
+* Botões:
+
+  * **Agendar uma conversa**
+  * **Conhecer o Método**
+
+### **1.2 Mini-Tagline (acima ou abaixo do hero)**
+
+Clareza. Ritmo. Execução.
+
+### **1.3 Sessão “O que fazemos” (Overview das Verticais)**
+
+Cards das 3 verticais:
+
+#### **OPS — Arquitetura Operacional**
+
+Texto curto:
+
+> Estruturamos processos, papéis, governança e fluxos para transformar projetos e organizações em operações que realmente funcionam.
+
+#### **Produções — Marketing, Conteúdo e Eventos**
+
+Texto curto:
+
+> Criamos produtos, campanhas, conteúdos e experiências que reforçam posicionamento e conectam marcas com comunidades.
+
+#### **Impacto — Projetos Sociais, Cultura e ESG**
+
+Texto curto:
+
+> Estruturamos, medimos e ativamos iniciativas de impacto social, educacional e cultural com propósito e responsabilidade.
+
+### **1.4 Sessão “Porque Existimos”**
+
+Texto:
+
+> A maioria dos projetos falha na execução, não na ideia.
+> Criamos a estrutura necessária para que iniciativas importantes — sociais, culturais, educacionais ou de expansão — saiam do papel e se sustentem.
+
+### **1.5 Cases (em mosaico)**
+
+Usar seus vídeos + fotos:
+
+* WCD Rio 2023 (vídeo + foto)
+* Festival/Expo/Shows
+* ReservaX Holder Lounge
+* Documentário / Entrevista
+* HackingRio / hackathons
+* Projetos sociais (Casa do Pai)
+* Cultura / Música / Arte
+* etc.
+
+### **1.6 CTA Final**
+
+> Pronto para transformar seu projeto?
+> Se sua iniciativa está travada, complexa ou sobrecarregada — nós podemos ajudar.
+
+Botão: **Agende uma conversa**
+
+---
+
+## **2. QUEM SOMOS**
+
+### **2.1 Identidade**
+
+> Somos um ecossistema criativo-operacional que combina estratégia, execução e impacto para transformar projetos complexos em realidades sustentáveis.
+
+### **2.2 Sobre a Creation**
+
+> Atuamos entre comunicação estratégica, operações, cultura, impacto e criatividade aplicada.
+> Nossa missão é transformar ideias em estruturas executáveis, criativas e escaláveis.
+
+### **2.3 Diferenciais**
+
+* Execução + Criatividade
+* Estruturas replicáveis
+* Inteligência cultural
+* Workflows claros
+* Operação sustentável
+* Brasil + EUA + Europa
+
+### **2.4 Onde Atuamos**
+
+Rio de Janeiro • Florida • Europa (Espanha)
+
+---
+
+## **3. SERVIÇOS (Página-mãe)**
+
+Cards para cada vertical levando para subpáginas.
+
+### **3.1 OPS**
+
+Link para página própria.
+Resumo:
+
+> Operações inteligentes para projetos importantes.
+> 90 dias para transformar caos em execução.
+
+### **3.2 Produções**
+
+Link para página própria.
+Resumo:
+
+> Projetos, campanhas, conteúdos e eventos feitos para marcas que desejam presença, consistência e impacto real.
+
+### **3.3 Impacto**
+
+Link para página própria.
+Resumo:
+
+> Estruturas de impacto social, educacional e cultural com estratégia, governança, mensuração e responsabilidade.
+
+---
+
+## **4. PÁGINAS DAS VERTICAIS**
+
+### **4.1 Creation OPS**
+
+*Você já tem ela pronta no Replit — vamos só atualizar copy.*
+
+Seções da versão atual:
+
+* Diagnóstico Operacional
+* Estruturação
+* Execução Acompanhada
+* Para quem trabalhamos
+* CTA final
+
+Texto permanecerá, só trocaremos “caos” por “complexidade”.
+
+---
+
+### **4.2 Creation Produções**
+
+**Nova página — estrutura sugerida:**
+
+* Hero:
+  **Criamos produtos, conteúdos e experiências que conectam.**
+  Sub: Da estratégia à entrega — marketing, audiovisual, eventos e campanhas integradas.
+
+* Sessões:
+
+  * Branding & Identidade
+  * Conteúdo & Storytelling
+  * Audiovisual
+  * Eventos & Experiências
+  * Projetos especiais
+
+* Cases visuais
+
+* CTA
+
+---
+
+### **4.3 Creation Impacto**
+
+**Nova página — estrutura sugerida:**
+
+* Hero:
+  **Impacto que faz sentido e se sustenta.**
+  Sub: Estruturamos, ativamos e medimos projetos sociais, educacionais e culturais.
+
+* Sessões:
+
+  * Estratégia e Governança
+  * Métricas & Indicadores
+  * Projetos Sociais
+  * Cultura & Educação
+  * Voluntariado e Território
+  * Accountability + Relatórios
+
+* Cases
+
+* CTA
+
+---
+
+## **5. MÉTODO**
+
+Hero:
+**Nossa metodologia une clareza estratégica, criatividade aplicada e execução operacional.**
+
+Etapas:
+
+1. Imersão
+2. Arquitetura
+3. Co-criação
+4. Implementação
+5. Sustentação
+6. Indicadores
+
+---
+
+## **6. CONTATO**
+
+* CTA forte
+* Formulário
+* WhatsApp
+* Email
+* Calendly
+* Escritórios globais
+
+---
+
+# 🔥 **ETAPA 1 FINALIZADA — Mapa do Site Completo**
+
+**Agora posso gerar todo o conteúdo textual (copywriting completo) ou avançar para o Super-Prompt para o Replit.**
+
+---
+
+# ❓ Próxima ação — escolha 1:
+
+## **1. Quer seguir para ETAPA 2 — COPYS completas página por página?**
+
+*(Hero, subtítulos, textos longos, cards, CTAs — tudo alinhado com seu tom)*
+
+ou
+
+## **2. Quer pular direto para ETAPA 3 — SUPER-PROMPT do REPLIT baseado no mapa do site final?**
+
+*(Esse prompt vai reconstruir o site sem quebrar layout, aplicar i18n e criar as páginas das verticais.)*
+
+---
+
+Qual você escolhe?
+**1 (copys completas) ou 2 (super-prompt imediato)?**

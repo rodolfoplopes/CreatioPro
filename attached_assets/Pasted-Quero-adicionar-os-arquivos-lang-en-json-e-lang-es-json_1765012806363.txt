@@ -1,0 +1,107 @@
+Quero adicionar os arquivos /lang/en.json e /lang/es.json com traduções oficiais da copy.
+
+Copie o arquivo /lang/pt.json,
+
+Mantenha TODAS as chaves exatamente iguais,
+
+Substitua apenas os valores pelos textos abaixo,
+
+Não altere layout, HTML, componentes, nem data-i18n.
+
+Aqui estão os novos conteúdos traduzidos:”**
+
+🇺🇸 ENGLISH — en.json
+
+home_hero_tagline: “Clarity. Rhythm. Execution.”
+home_hero_title: “Operations and Productions that make things happen.”
+home_hero_sub: “We bring structure, clarity and creativity so initiatives, brands and projects finally work as they should.”
+hero_cta_1: “Book a call”
+hero_cta_2: “Learn the Method”
+
+what_title: “What we do”
+what_sub: “We create structure, clarity and rhythm so important initiatives move forward.”
+what_card_structure_title: “Structure”
+what_card_structure_text: “We build clear processes, functional routines and operational models that reduce friction.”
+what_card_clarity_title: “Clarity”
+what_card_clarity_text: “We turn confusion into direction. Everyone knows what to do, when to do it, and why.”
+what_card_rhythm_title: “Rhythm”
+what_card_rhythm_text: “We install cadence, governance and predictable delivery.”
+
+ops_title: “Creation OPS”
+ops_sub: “90 days to organize, unlock and operationalize complex projects.”
+ops_intro: “We create the operation your project needs — clear, documented, replicable and sustainable.”
+
+prod_title: “Creation Productions”
+prod_sub: “Strategy, organization and execution for events, campaigns and products that require excellence.”
+prod_text: “We transform ideas into real deliveries. We structure, script, produce and operate creative projects with precision.”
+
+impact_title: “Creation Impact”
+impact_sub: “Operational structure for social, cultural, educational or territorial projects.”
+impact_text: “We take care of the hard part — processes, governance, reporting, indicators and operation — so impact actually happens.”
+
+who_title: “Who we work with”
+who_sub: “We support organizations that need structure, clarity and rhythm to make important projects happen.”
+who_card_ongs_title: “NGOs, Foundations & Institutes”
+who_card_ongs_text: “We build consistent operations so impact projects gain strength and sustainability.”
+who_card_hubs_title: “Hubs, Labs, Culture & Education”
+who_card_hubs_text: “Creative environments need order to generate results. We make them functional.”
+who_card_food_title: “Food, Retail & Physical Businesses”
+who_card_food_text: “Expansion only exists with a replicable model. We build that model.”
+who_card_internal_title: “ESG, Innovation and Overloaded Internal Areas”
+who_card_internal_text: “We transform internal initiatives into continuous and clear operations.”
+
+why_title: “Why we exist”
+why_text: “Most projects fail in execution, not in the idea. We build the structure needed for important initiatives — social, creative, cultural or expansion — to leave the paper and sustain themselves.”
+
+contact_title: “Ready to transform your project?”
+contact_text: “If your initiative is stalled, complex or overloaded — we can help.”
+contact_cta: “Book a call”
+
+🇪🇸 ESPAÑOL — es.json
+
+home_hero_tagline: “Claridad. Ritmo. Ejecución.”
+home_hero_title: “Operaciones y Producciones que hacen que las cosas sucedan.”
+home_hero_sub: “Unimos estructura, claridad y creatividad para que iniciativas, marcas y proyectos funcionen de verdad.”
+hero_cta_1: “Agenda una llamada”
+hero_cta_2: “Conocer el Método”
+
+what_title: “Qué hacemos”
+what_sub: “Creamos estructura, claridad y ritmo para que iniciativas importantes avancen.”
+what_card_structure_title: “Estructura”
+what_card_structure_text: “Creamos procesos claros, rutinas funcionales y modelos operativos que reducen fricción.”
+what_card_clarity_title: “Claridad”
+what_card_clarity_text: “Transformamos confusión en dirección. Todos saben qué hacer, cuándo hacerlo y por qué.”
+what_card_rhythm_title: “Ritmo”
+what_card_rhythm_text: “Instalamos cadencia, gobernanza y entregas previsibles.”
+
+ops_title: “Creation OPS”
+ops_sub: “90 días para organizar, destrabar y operacionalizar proyectos complejos.”
+ops_intro: “Creamos la operación que tu proyecto necesita — clara, documentada, replicable y sostenible.”
+
+prod_title: “Creation Producciones”
+prod_sub: “Estrategia, organización y ejecución para eventos, campañas y productos que requieren excelencia.”
+prod_text: “Transformamos ideas en entregas reales. Estructuramos, guionizamos, producimos y operamos proyectos creativos con precisión.”
+
+impact_title: “Creation Impacto”
+impact_sub: “Estructura operacional para proyectos sociales, culturales, educativos o territoriales.”
+impact_text: “Nos encargamos de la parte difícil — procesos, gobernanza, informes, indicadores y operación — para que el impacto suceda de verdad.”
+
+who_title: “Con quién trabajamos”
+who_sub: “Apoyamos organizaciones que necesitan estructura, claridad y ritmo para hacer que proyectos importantes sucedan.”
+who_card_ongs_title: “ONGs, Fundaciones e Institutos”
+who_card_ongs_text: “Creamos operaciones consistentes para que proyectos de impacto ganen fuerza y sostenibilidad.”
+who_card_hubs_title: “Hubs, Labs, Cultura y Educación”
+who_card_hubs_text: “Los entornos creativos necesitan orden para generar resultados. Los hacemos funcionales.”
+who_card_food_title: “Food, Retail y Negocios Físicos”
+who_card_food_text: “La expansión solo existe con un modelo replicable. Creamos ese modelo.”
+who_card_internal_title: “ESG, Innovación y Áreas Internas Sobrecargadas”
+who_card_internal_text: “Transformamos iniciativas internas en operaciones continuas y claras.”
+
+why_title: “Por qué existimos”
+why_text: “La mayoría de los proyectos falla en la ejecución, no en la idea. Creamos la estructura necesaria para que iniciativas importantes — sociales, creativas, culturales o de expansión — salgan del papel y se sostengan.”
+
+contact_title: “¿Listo para transformar tu proyecto?”
+contact_text: “Si tu iniciativa está estancada, compleja o sobrecargada — podemos ayudar.”
+contact_cta: “Agenda una llamada”
+
+Quando terminar, mostre os arquivos en.json e es.json completos para revisão.”

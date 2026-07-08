@@ -1,0 +1,218 @@
+Preciso integrar um novo serviço "Creator Ops Rio" no meu site Creation Pro existente.
+
+CONTEXTO:
+- Tenho um site React já funcionando no Replit
+- Preciso adicionar uma nova vertical de serviço focada em produção executiva para creators internacionais no Rio de Janeiro
+- Deve ter 2 partes: uma seção preview na home + uma página completa dedicada
+
+PALETA DE CORES DO SITE ATUAL:
+- Black: #000000
+- Navy Blue: #003c64  
+- Medium Blue: #7ad1e4
+- Cyan: #90e5e6
+- Pink: #faaef1
+
+PALETA PARA CREATOR OPS RIO (adaptar):
+- Manter: #000000, #003c64, #7ad1e4, #90e5e6
+- SUBSTITUIR rosa por: Brazil Yellow #FFD700 (badges e destaques)
+- ADICIONAR: Tropical Green #00D98E (CTAs principais)
+
+TAREFAS:
+
+1. ATUALIZAR NAVBAR
+- Adicionar submenu dropdown em "Produções"
+- Items do submenu:
+  * Visão Geral (link: /producoes)
+  * Creator Ops Rio 🎬 (link: /producoes/creator-ops-rio)
+- Submenu aparece no hover (desktop) e no accordion (mobile)
+- Estilo: background navy com border cyan, items hover yellow
+
+2. CRIAR COMPONENTE: CreatorOpsPreview.jsx
+Seção para inserir na HOME entre "Serviços" e "Cases"
+- Background: black
+- Layout: Grid 2 colunas (50/50) - mobile stack
+- Coluna esquerda:
+  * Badge: "NOVO SERVIÇO" (yellow bg, black text)
+  * Título: "Creator Ops Rio" (white, text-5xl)
+  * Tagline: "Você Cria. Nós Executamos." (cyan, italic)
+  * Descrição: "Produção executiva completa para creators e marcas internacionais no Rio de Janeiro. Da consultoria estratégica à execução impecável - sem stress logístico."
+  * Features grid 2x2:
+    - Equipe Trilíngue (PT/EN/ES)
+    - 150+ Locações Premium
+    - Operação 24/7
+    - 0% Burocracia
+  * 2 CTAs:
+    - "Conhecer Creator Ops" (bg tropical-green, link: #creator-ops-full)
+    - "Agendar Consultoria" (outline cyan, scroll para #contact-form)
+- Coluna direita:
+  * Grid 2x2 de placeholders de imagem (locações do Rio)
+  * Cada card: grayscale hover colorido, ícone câmera em yellow no hover
+
+3. CRIAR PÁGINA COMPLETA: /producoes/creator-ops-rio
+Componente: CreatorOpsRioPage.jsx
+
+Estrutura:
+- Breadcrumb: "Início > Produções > Creator Ops Rio" (cyan)
+- Hero Section (70vh):
+  * Background: imagem Rio com overlay navy/black
+  * Overline: "PRODUÇÃO EXECUTIVA NO RIO" (yellow)
+  * H1: "Creator Ops Rio" (white, giant)
+  * Tagline: "Você Cria. Nós Executamos." (cyan, italic)
+  * Descrição
+  * 2 CTAs: "Agendar Consultoria Gratuita" (green) + "Ver Serviços" (outline cyan)
+
+- Social Proof Strip:
+  * "Confiado por 150+ creators de 25 países"
+
+- Problema → Solução (2 colunas):
+  * ANTES (navy bg): 6 problemas com X yellow
+  * DEPOIS (gradient green→cyan): 6 soluções com ✓ yellow
+
+- 3 Pacotes de Serviço (cards):
+  
+  CARD 1 - CONTENT SPRINT:
+  - Badge: "MAIS POPULAR" (yellow)
+  - Ícone: Camera (green)
+  - Duração: 3-5 dias
+  - Ideal: Creators & Influenciadores
+  - Includes (7 itens com checkmarks cyan)
+  - Preço: A partir de $3,500 USD
+  - CTA: "Solicitar Proposta" (green button)
+  
+  CARD 2 - BRAND CAMPAIGN:
+  - Ícone: Briefcase (yellow)
+  - Duração: 1-2 semanas
+  - Ideal: Marcas & Agências
+  - "Tudo do Content Sprint +" (cyan italic)
+  - Includes adicionais (5 itens)
+  - Preço: $8,000 USD
+  - CTA: "Falar com Especialista" (navy button)
+  
+  CARD 3 - BUSINESS TOURISM VIP:
+  - Background: gradient navy→black
+  - Border: cyan
+  - Ícone: Crown (yellow)
+  - Duração: Personalizada
+  - Ideal: Executivos & Investidores
+  - Includes (6 itens com checkmarks yellow)
+  - Preço: $500 USD/dia
+  - CTA: "Agendar Conversa" (yellow button, black text)
+
+- Como Funciona (4 passos em timeline horizontal):
+  1. Briefing Estratégico (ícone MessageSquare)
+  2. Planejamento Detalhado (ícone MapPin)
+  3. Execução Impecável (ícone Video)
+  4. Resultado Premium (ícone CheckCircle)
+  * Cada passo: número gigante yellow opaco no background, ícone green, título black, descrição navy
+
+- Locações Exclusivas (navy bg):
+  * Grid 3x2 de cards de locação:
+    - Cristo Redentor (Acesso VIP)
+    - Praias Secretas
+    - Favelas Autênticas (Segurança Garantida)
+    - Arquitetura Colonial
+    - Natureza Tropical
+    - Rooftops Premium
+  * Cada card: grayscale hover colorido, label yellow, pin green
+
+- Por Que Escolher (white bg):
+  * Grid 2x3 de benefícios:
+    1. Especialização em Content Creators
+    2. Equipe 100% Trilíngue
+    3. Conhecimento Local Profundo
+    4. Operação Ágil Sem Burocracia
+    5. Network Fornecedores Premium
+    6. Segurança e Discrição Garantidas
+  * Cada item: ícone em círculo yellow, título black, descrição navy
+
+- Depoimento (black bg):
+  * Card destaque: gradient navy→black, border cyan glow
+  * 5 estrelas yellow
+  * Quote em white italic
+  * Foto circular com border green
+  * 4 métricas: "15 locações em 5 dias", "50+ peças", "0 imprevistos", "100% satisfação"
+
+- CTA Final + Formulário (#contact-form):
+  * Background: imagem Rio com overlay navy 80%
+  * Título: "Pronto para Criar Conteúdo Premium no Rio?"
+  * Formulário (white bg 95%, rounded):
+    - Nome, Email (grid 2 cols)
+    - Tipo de Projeto (select), Datas Planejadas (grid 2 cols)
+    - Orçamento Estimado (select)
+    - Mensagem (textarea)
+    - Botão: "Enviar Solicitação" (green, full-width)
+    - Nota: "Resposta em 24 horas"
+
+- Footer:
+  * Usar o MESMO footer do site principal
+  * Contatos unificados: contact@creation-pro.com, @creation.pro, WhatsApp
+
+4. SISTEMA DE IDIOMAS (PT/EN/ES)
+- Criar LanguageContext.jsx com React Context
+- Criar translations.js com TODOS os textos em 3 idiomas
+- Toggle de idiomas no navbar: 🇧🇷 🇺🇸 🇪🇸
+- Persistir escolha em localStorage
+- Traduzir TODO conteúdo (navbar, preview section, página completa, footer)
+
+TRADUÇÕES PRINCIPAIS:
+
+PT:
+- "Você Cria. Nós Executamos."
+- "Agendar Consultoria Gratuita"
+- "Conhecer Creator Ops"
+
+EN:
+- "You Create. We Execute."
+- "Schedule Free Consultation"
+- "Explore Creator Ops"
+
+ES:
+- "Tú Creas. Nosotros Ejecutamos."
+- "Agendar Consultoría Gratuita"
+- "Conocer Creator Ops"
+
+5. REQUISITOS TÉCNICOS
+- Framework: React (já existente)
+- Styling: Tailwind CSS
+- Ícones: Lucide React (instalar: npm install lucide-react)
+- Responsivo: Mobile-first
+- Animações: Fade-in ao scroll (Intersection Observer)
+- Smooth scroll para âncoras
+- Navbar sticky que fica opaco ao scroll
+
+6. ROUTING
+Se usar React Router, adicionar rota:
+<Route path="/producoes/creator-ops-rio" element={<CreatorOpsRioPage />} />
+
+Se não tiver React Router ainda, criar navegação básica com hash ou configurar.
+
+7. INTEGRAÇÃO NA HOME
+No componente Home.jsx existente, adicionar entre seções:
+```jsx
+import CreatorOpsPreview from './components/creator-ops/CreatorOpsPreview';
+
+// ... dentro do return
+<HeroSection />
+<ServicesSection />
+<CreatorOpsPreview />  {/* ADICIONAR AQUI */}
+<CasesSection />
+<ContactSection />
+```
+
+ENTREGÁVEIS:
+1. Navbar atualizado com submenu
+2. CreatorOpsPreview.jsx (componente da home)
+3. CreatorOpsRioPage.jsx (página completa)
+4. LanguageContext.jsx
+5. translations.js
+6. Instruções de onde adicionar cada arquivo
+7. Código pronto para copiar/colar
+
+IMPORTANTE:
+- Manter consistência total com o design do site Creation Pro existente
+- Yellow (#FFD700) e Green (#00D98E) APENAS no Creator Ops, não no resto do site
+- Todos os contatos (email, Instagram, WhatsApp) são os mesmos do site principal
+- Mobile-first e totalmente responsivo
+- Código limpo, componentizado e comentado
+
+Gere o código completo e organizado por arquivos, com instruções claras de integração.

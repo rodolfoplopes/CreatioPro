@@ -1,0 +1,151 @@
+Prompt para o Replit (ajuste sutil “BlackRock-like”, mantendo fundo e arquitetura)
+
+Objetivo
+Quero refinar o design do site creation-pro.com para ficar mais corporativo e “consultoria premium”, com referências de linguagem visual do site da BlackRock (mais “clean”, mais “sharp”, hierarquia forte), sem alterar estrutura, layout, ordem das seções, componentes existentes ou textos/copies. O fundo continua escuro como hoje, e a arquitetura dessas áreas da Home deve permanecer.
+
+Regras obrigatórias
+
+Não mudar estrutura: não remover, não adicionar seções, não trocar ordem, não refatorar componentes por domínio.
+
+Não mudar conteúdo/copy: nenhum texto, títulos, botões, links e CTAs devem ser alterados.
+
+Alterações devem ser apenas de UI/estilo (CSS/Tailwind/theme tokens).
+
+Rollback fácil: faça mudanças de modo revertível (preferencialmente centralizando em tokens / CSS variables / theme).
+
+Manter fundo escuro nas áreas que já estão com fundo escuro (não transformar em branco aqui).
+
+Ajuste deve ser sutil (não “rebranding”).
+
+O que ajustar (Home – duas áreas que eu gosto)
+1) Seção “Creation OPS” (Hero interno / bloco de produto dentro da Home)
+
+Manter o fundo escuro atual, mas:
+
+Aumentar sensação de “corporate sharp”: menos arredondado, bordas mais retas.
+
+Cards/caixas mais quadradas (ex.: rounded-2xl → rounded-lg ou rounded-md).
+
+Bordas mais claras e definidas (stroke sutil e consistente em todo o site).
+
+Sombras mais discretas (menos “glow”, mais “elevation” limpa).
+
+Tipografia e espaçamento com mais “grid discipline”:
+
+Ajustar line-height do subtítulo e espaçamentos verticais para ficar mais “executive”.
+
+Destaques acentuados: reforçar hierarquia com:
+
+label/badge e micro-textos com mais contraste,
+
+separadores discretos (linha fina) quando fizer sentido.
+
+Não mexer no conteúdo, só no styling.
+
+2) Seção final “Ready to transform your project?”
+
+Mesma regra: manter estrutura e conteúdo.
+
+Ajustar:
+
+Botão com look mais “institucional”: menos arredondado, borda/outline opcional, hover sutil.
+
+Texto com contraste mais sofisticado (cinza mais “corporate” em vez de muito claro).
+
+Espaçamentos e alinhamentos para parecer “consultoria grande”.
+
+Ajustes globais (aplicar no site todo, mas sem quebrar o layout)
+
+Crie/ajuste um “design system” mínimo via tokens:
+
+A) Bordas e cantos
+
+Padronizar cantos em menos arredondado:
+
+Cards, containers e botões: usar rounded-md/rounded-lg.
+
+Padronizar borda:
+
+border com cor sutil e consistente, e opacidade.
+
+B) Componentes de Card / Section container
+
+Para todos os cards existentes:
+
+borda + fundo com leve variação (sem alterar cor base),
+
+espaçamento interno consistente,
+
+hover discreto (elevação pequena, sem brilho forte).
+
+C) Tipografia e hierarquia
+
+Manter fontes atuais, mas:
+
+Ajustar tracking, leading e opacity para ficar mais “corporate”.
+
+Subtítulos: reduzir “peso visual” e melhorar leitura.
+
+D) Botões
+
+Primary e secondary:
+
+menos arredondado,
+
+estados hover/focus mais “premium” (outline/underline sutil, transição curta).
+
+E) Inserção “consultoria tradicional”
+
+Sem criar novas seções agora, apenas preparar para fotos:
+
+Criar um estilo reutilizável de “image container” (moldura/crop/overlay) que possamos aplicar depois sem refazer layout.
+
+Esse container deve aceitar imagem e manter o fundo escuro com integração suave (overlay gradient leve).
+
+Implementação técnica
+
+Identifique onde ficam os estilos principais (Tailwind config, CSS globals, tokens).
+
+Centralize as mudanças em:
+
+CSS variables (ex.: --radius, --card-border, --elevation), ou
+
+um arquivo de tema (ex.: client/src/styles/theme.css), ou
+
+tailwind.config (extend) + classes utilitárias padronizadas.
+
+Aplique as classes padronizadas nos componentes sem reestruturar JSX (apenas trocar classes).
+
+Garanta que:
+
+Desktop e mobile seguem OK,
+
+contraste e legibilidade não pioram.
+
+Checklist de validação (antes de finalizar)
+
+Nada quebrou responsividade.
+
+Não houve mudanças de texto/conteúdo.
+
+O visual ficou mais “BlackRock-like” em:
+
+cantos menos arredondados,
+
+bordas mais definidas,
+
+hierarquia mais corporativa,
+
+sombras discretas,
+
+botões mais institucionais.
+
+Se eu quiser reverter: basta reverter o(s) arquivo(s) de tema/tokens.
+
+Entrega esperada
+
+Commit/alterações finalizadas.
+
+Lista dos arquivos mexidos.
+
+Prints (ou descrição) do “antes/depois” das duas áreas da Home.

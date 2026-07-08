@@ -1,0 +1,103 @@
+MISSÃO
+Transformar o site creation-pro.com em uma versão “BlackRock-level” (baseline visual institucional e premium), mantendo a identidade da Creation. 
+Isso significa: mesma estrutura e conteúdo, mas um design system corporativo global, branco, editorial, com caixas mais quadradas, hierarquia forte e inserção de imagens ilustrativas como consultorias tradicionais.
+
+IMPORTANTE: Existe um ANEXO no projeto com a paleta oficial e percentuais de uso de cor no site.
+Você deve respeitar essa paleta e esses percentuais como regra de design.
+- Dois verdes = primários
+- Azul = secundário
+- Três cores = apoio
+Aplique esses percentuais no design final (não “aproximado”, mas o mais fiel possível dentro do CSS/tema).
+
+REGRAS ABSOLUTAS (NÃO NEGOCIÁVEIS)
+1) NÃO alterar conteúdo textual, CTAs, labels, traduções ou ordem das seções.
+2) NÃO alterar estrutura/layout macro, rotas, componentes funcionais ou navegação.
+3) Só alterar UI/estilo (theme/tokens/classes), e inserir imagens APENAS como suporte visual (sem mexer nos textos).
+4) Mudança precisa ser GLOBAL (todo o site), sem “mudanças sutis” em poucas áreas.
+5) Responsividade intacta.
+
+BASELINE VISUAL (BLACKROCK-LIKE)
+- Fundo predominantemente branco (com seções alternadas em cinza muito claro para ritmo editorial).
+- Caixas/cards mais quadradas (radius menor), borda hairline, sombras discretas.
+- Tipografia com hierarquia clara (headline forte, subheadline com contraste executivo, texto em cinza institucional).
+- Destaques acentuados: linhas finas, dividers, blocos editoriais.
+- Padrão consultoria: menos “efeito”, mais “clareza institucional”.
+
+ÁREAS SIGNATURE (ESCURO) — APENAS 3
+Somente as 3 áreas abaixo podem ficar com fundo escuro/gradiente:
+1) Hero da Home (estrutura igual, mas aumentar presença dos verdes primários conforme a paleta/percentuais)
+2) CTA final da Home (“Ready to transform your project?”)
+3) Hero das páginas internas (About/Solutions/Productions/Impact/Contact/Profile)
+Fora dessas 3: o site deve ser branco/muted, no estilo consultoria.
+
+IMAGENS — OBRIGATÓRIO (CONSULTORIA TRADICIONAL)
+O site precisa ganhar apoio visual institucional, sem alterar conteúdo.
+Crie um sistema reutilizável e aplique em pontos estratégicos:
+
+- HOME:
+  - Não tocar no hero.
+  - Inserir 1 seção de imagem editorial antes do footer (imagem única, premium, responsiva, com overlay sutil alinhado aos verdes/azul).
+
+- PRODUCTIONS:
+  - Inserir um grid premium de fotos + vídeos (MediaGrid) com cards brancos e borda hairline.
+  - A galeria deve ter proporção consistente (ex.: 16:9), hover discreto, legendas opcionais.
+  - Não inventar textos novos; usar título curto se já existir, ou inserir a galeria sem título.
+
+- IMPACT:
+  - Inserir 1 seção de imagem única (editorial) dentro do fluxo da página (não precisa ser no topo).
+  - Manter narrativa visual de impacto (pessoas/território) com look institucional.
+
+IMPLEMENTAÇÃO HARDCORE (OBRIGATÓRIO)
+PASSO 1 — Editar primeiro os arquivos de tema/base
+Você DEVE mexer em:
+- tailwind.config.ts (ou equivalente)
+- client/src/index.css (ou globals.css)
+- componentes base (Card/Section/Container/Button/typography)
+
+PASSO 2 — Criar design tokens (com base no anexo)
+Criar CSS variables/tokens globais para:
+- cores (primárias, secundária, apoio)
+- backgrounds (white / muted)
+- border hairline
+- radius padrão (mais quadrado)
+- shadow discreta
+- spacing padrão de seção
+- tipografia (headline/subheadline/body)
+Aplicar percentuais de uso de cor guiando:
+- backgrounds
+- accents
+- badges
+- botões
+- bordas e highlights
+Sem extrapolar a paleta.
+
+PASSO 3 — Refactor global por busca/substituição consciente
+Faça varredura global:
+- remover rounded-2xl/3xl → padronizar para radius token
+- remover sombras pesadas → sombras discretas
+- limpar fundos escuros fora das 3 áreas permitidas
+- padronizar containers e paddings com classes utilitárias
+- eliminar inconsistência visual entre páginas
+
+PASSO 4 — Componentes novos (reutilizáveis)
+Criar (ou equivalente):
+- IllustrationSection (imagem única editorial com overlay e responsividade)
+- MediaGrid (fotos e vídeos)
+Fazer data-driven via arrays (src/type/alt/caption) para fácil troca.
+
+PASSO 5 — Checagem final obrigatória
+- Confirmar que a linguagem visual mudou DE VERDADE em todo o site:
+  Home, About, Solutions, Productions, Impact, Contact e Profile.
+- Confirmar que apenas as 3 áreas signature ficaram escuras.
+- Confirmar que a paleta/percentuais do anexo foram respeitados.
+
+ENTREGA OBRIGATÓRIA NO FINAL
+1) Lista completa de arquivos alterados
+2) Onde os tokens foram definidos (e quais são)
+3) Confirmação explícita:
+   - “Baseline BlackRock + características Creation aplicado globalmente”
+   - “Paleta/percentuais do anexo aplicados”
+   - “Imagens adicionadas em Home/Productions/Impact”
+4) Checklist por página confirmando consistência
+
+SE VOCÊ FIZER APENAS MUDANÇAS SUTIS OU PARCIAIS, CONSIDERE A TAREFA NÃO CONCLUÍDA.

@@ -1,0 +1,154 @@
+Quero que você atue como um desenvolvedor front-end sênior e um estrategista de produto digital. Vamos construir, do zero, o novo site da **Creation Pro**, usando um stack moderno.
+
+### STACK E REQUISITOS TÉCNICOS
+
+- Use **React** com **Vite** ou **Next.js** (escolha o mais simples de configurar no Replit, mas explique a escolha).
+- Estilização com **Tailwind CSS**.
+- Layout totalmente **responsivo** (mobile-first, funcionando bem em celular, tablet e desktop).
+- Organização em componentes reutilizáveis (ex: `Layout`, `Header`, `Footer`, `HeroSection`, `ServicesSection`, etc.).
+- Código limpo, comentado apenas quando necessário, sem gambiarra.
+- Sem lorem ipsum. Todo texto deve ser real, baseado nas instruções abaixo.
+- Linguagem principal: **Português (Brasil)**, mas já preparado para futuro suporte a inglês (ex.: estrutura de textos em um arquivo separado que possa ser trocado depois).
+
+### IDENTIDADE ESTRATÉGICA DA MARCA (NÃO IGNORAR)
+
+Você deve EMBUTIR esses conceitos no texto, no tom e na estrutura do site:
+
+**Quem é a Creation Pro:**
+> A Creation Pro é um estúdio estratégico especializado em organizar, estruturar e operacionalizar projetos complexos.  
+> Entramos onde há caos, múltiplos stakeholders, processos soltos e equipes sobrecarregadas — e transformamos tudo em operação clara, coordenada e executável.
+
+**Missão:**
+> Criar a estrutura, os processos e a governança que permitem que projetos de impacto, inovação e transformação realmente funcionem.  
+> Em termos simples: fazemos a execução acontecer.
+
+**Visão:**
+> Ser referência global em operação estratégica aplicada a impacto, expansão e inovação — com presença no Brasil, Estados Unidos e Europa.
+
+**Valores (resumidos):**
+- Clareza radical
+- Execução acima de discurso
+- Estrutura antes de velocidade
+- Coerência operacional
+- Praticidade irrefutável
+- Replicabilidade
+
+**Problema central que resolvemos:**
+> A maioria dos projetos importantes (sociais, culturais, territoriais, de inovação, eventos, hubs, negócios físicos) fracassa porque não há estrutura para execução: falta governança, processos claros, dono, ritmo e coordenação.
+
+**Solução central (superpoder):**
+> A Creation Pro entra em projetos complexos, organiza tudo, cria governança, estrutura processos e acompanha a operação até funcionar.
+
+### ICP / PÚBLICO-ALVO PRINCIPAL
+
+Você deve escrever a copy pensando nesses públicos (sem falar “ICP” no site):
+
+1. **ONGs, Fundações, Institutos e projetos de impacto**  
+2. **Hubs, labs, espaços de inovação, cultura e educação**  
+3. **Negócios físicos e redes em expansão (especialmente food/retail) com operação caótica**  
+4. **Equipes de inovação/ESG/cultura sobrecarregadas em empresas** (como público secundário)
+
+O tom tem que ser:
+- Claro
+- Direto
+- Profissional
+- Sem corporatês vazio
+- Sem frase motivacional boba
+- Com foco em dor real e solução prática
+
+### PRODUTO PRINCIPAL: CREATION OPS (NÃO ESQUECER)
+
+O site deve deixar claro que o produto-mestre é:
+
+**Creation OPS – Programa de 90 dias para organizar e operacionalizar projetos complexos**
+
+Elementos do Creation OPS que devem aparecer:
+
+- 3 fases:
+  1. Diagnóstico Operacional  
+  2. Estruturação (processos, governança, rituais)  
+  3. Operação Acompanhada (execução com ajustes)
+
+- Entregáveis:
+  - mapa da operação
+  - processos claros
+  - agenda de governança
+  - rituais de reunião
+  - plano de execução
+  - indicadores básicos
+  - operação rodando sem depender de uma pessoa só
+
+### ESTRUTURA DO SITE
+
+Crie um site com, no mínimo, estas páginas/seções:
+
+1. **Home**
+   - Hero com headline forte (ex: “Transformamos caos em operação executável.”)
+   - Subheadline explicando em 1–2 frases o que fazemos
+   - Bloco “Como ajudamos” (3–4 cards com dores: projetos travados, equipes sobrecarregadas, falta de processo, múltiplos stakeholders)
+   - Bloco “Creation OPS – 90 dias” (resumo do método)
+   - “Para quem é” (ONGs, fundações, hubs, negócios em expansão)
+   - Diferenciais (execução real, método próprio, experiência em ambientes caóticos)
+   - CTA claro (ex: “Agendar uma conversa”)
+
+2. **Quem Somos**
+   - História curta da Creation Pro (sem floreio, focada na experiência em caos real: eventos massivos, logística complexa, projetos territoriais, etc.)
+   - Missão, Visão e Valores escritos de forma objetiva
+   - Explicação simples: “o que fazemos e o que não fazemos”
+   - Um bloco explicando: “Por que existimos: a lacuna entre estratégia e execução”
+
+3. **Serviços / Soluções**
+   - Foco principal: **Creation OPS (90 dias)** – com explicação das 3 fases e entregáveis
+   - Sub-ofertas/variações:
+     - OPS Impact (ONGs, Fundações, Institutos)
+     - OPS Expansion (food, varejo, redes físicas)
+     - OPS Creative (cultura, educação, hubs, festivais)
+   - Cada serviço com:
+     - Problema que resolve
+     - O que entregamos
+     - Para quem é
+     - Resultado esperado
+
+4. **Método (página opcional separada ou seção detalhada)**
+   - Explicação visual/textual do framework (Fase 1, 2, 3)
+   - Lista de dores comuns antes da entrada da Creation Pro
+   - Como é trabalhar com a Creation Pro (cadência, reuniões, acesso, acompanhamento)
+
+5. **Contato / Agende uma conversa**
+   - Formulário simples (nome, e-mail, organização, tipo de projeto, mensagem)
+   - Bloco com texto convidando para uma conversa de diagnóstico (sem prometer consultoria gratuita interminável)
+   - Opção de CTA extra: botão de e-mail direto e/ou WhatsApp placeholder
+
+### ESTILO VISUAL (MESMO SEM DESIGNER)
+
+- Layout limpo, com bastante espaço em branco.
+- Componentes bem organizados, hierarquia visual clara (títulos fortes, subtítulos, corpo).
+- Nada “coloridão demais”. Preferência por um visual sério, contemporâneo, com 1 cor principal de destaque e o resto neutro.
+- Use Tailwind para garantir consistência de spacing, fontes e tamanhos.
+
+### O QUE VOCÊ DEVE ENTREGAR
+
+1. A estrutura do projeto (pastas e arquivos) pronta para rodar no Replit.
+2. O código completo das páginas (Home, Quem Somos, Serviços, Método, Contato) com:
+   - JSX/TSX organizado
+   - Classes Tailwind bem aplicadas
+3. A copy toda em português, já pensada para:
+   - conversão
+   - clareza
+   - explicar bem o que a Creation Pro faz sem jargão desnecessário
+4. Explicações curtas no próprio código (comentários) onde fizer sentido, sobre:
+   - como alterar textos
+   - como adicionar novos serviços
+   - como evoluir o layout
+
+### IMPORTANTE
+
+- Não invente “cases” específicos com nomes de clientes reais. Se for usar exemplos, mantenha genérico (ex: “uma fundação de educação”, “um hub de inovação”, “uma ONG de impacto territorial”).
+- Não use promessas numéricas não comprovadas (ex: “reduzimos 40% de retrabalho”). Foque em clareza, estrutura e previsibilidade.
+- Priorize linguagem que uma diretora de instituto ou coordenador de projeto lê e entende sem esforço.
+
+Agora:
+1. Escolha o stack (Vite+React ou Next.js) adequado para o Replit e justifique.
+2. Crie a estrutura inicial do projeto.
+3. Implemente as páginas com a copy baseada em tudo que foi descrito acima.
+4. Me mostre os trechos principais (componentes e rotas) e explique como rodar o projeto no Replit.

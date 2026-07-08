@@ -1,0 +1,90 @@
+import { useState, useCallback, useEffect } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import useEmblaCarousel from "embla-carousel-react";
+import carnaSensaImage from "@assets/CarnaSensa00_1767378328855.jpg";
+import credenciamentoImage from "@assets/credenciamento_event.jpg";
+
+const slides = [
+  { src: "/images/story-line.jpg", alt: "Creation Pro Story" },
+  { src: carnaSensaImage, alt: "CarnaSensa Event" },
+  { src: credenciamentoImage, alt: "Credenciamento Event" },
+];
+
+export default function WhyWeExistSection() {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [canScrollPrev, setCanScrollPrev] = useState(false);
+  const [canScrollNext, setCanScrollNext] = useState(false);
+
+  const scrollPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const scrollNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  const onSelect = useCallback(() => {
+    if (!emblaApi) return;
+    setCanScrollPrev(emblaApi.canScrollPrev());
+    setCanScrollNext(emblaApi.canScrollNext());
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
+    onSelect();
+    emblaApi.on("select", onSelect);
+    emblaApi.on("reInit", onSelect);
+  }, [emblaApi, onSelect]);
+
+  return (
+    <section 
+      className="relative py-0" 
+      data-testid="section-why-we-exist"
+    >
+      <div className="relative overflow-hidden" ref={emblaRef}>
+        <div className="flex">
+          {slides.map((slide, index) => (
+            <div key={index} className="flex-[0_0_100%] min-w-0">
+              <img
+                src={slide.src}
+                alt={slide.alt}
+                className="w-full h-[300px] md:h-[400px] object-cover"
+                data-testid={`slide-image-${index}`}
+              />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <button
+        onClick={scrollPrev}
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white flex items-center justify-center transition-colors border border-[rgba(0,0,0,0.1)]"
+        data-testid="button-slide-prev"
+        aria-label="Previous slide"
+      >
+        <ChevronLeft className="h-6 w-6 text-black" />
+      </button>
+
+      <button
+        onClick={scrollNext}
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white flex items-center justify-center transition-colors border border-[rgba(0,0,0,0.1)]"
+        data-testid="button-slide-next"
+        aria-label="Next slide"
+      >
+        <ChevronRight className="h-6 w-6 text-black" />
+      </button>
+
+      <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => emblaApi?.scrollTo(index)}
+            className="w-2 h-2 bg-white/60 hover:bg-white transition-colors"
+            data-testid={`slide-indicator-${index}`}
+            aria-label={`Go to slide ${index + 1}`}
+          />
+        ))}
+      </div>
+    </section>
+  );
+}

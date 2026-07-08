@@ -1,0 +1,66 @@
+You are working on a React + Vite site that currently switches languages via i18n state only (no URL change). We must implement URL-based language routing with prefixes and keep the existing content/structure intact.
+
+GOAL
+- Use language prefixes in the URL:
+  /en (English)
+  /es (Spanish)
+  /pt (Portuguese)
+- All pages must exist under each lang prefix:
+  /en, /en/about, /en/solutions, /en/productions, /en/impact, /en/contact, /en/profile (if exists)
+  Same for /es and /pt.
+
+HARD REQUIREMENTS
+1) Switching language MUST update the URL and preserve the current page path:
+   Example: user is at /en/solutions and switches to ES -> navigate to /es/solutions
+2) If user visits root "/" redirect to /en by default (we sell internationally).
+3) If user visits any path WITHOUT lang prefix (ex: /solutions), redirect to /en/solutions.
+4) If user visits an unsupported lang, redirect to /en.
+5) Language persistence:
+   - The lang in the URL is the source of truth.
+   - Optionally keep localStorage "preferredLang", but URL always wins.
+6) SEO basics:
+   - Add <html lang="en|es|pt"> according to URL.
+   - Add <link rel="alternate" hrefLang="..."> tags for each language version for the same route.
+7) Do NOT change text content or information architecture. Only routing + wiring i18n + minimal layout adjustments.
+
+IMPLEMENTATION DETAILS (React Router v6)
+A) Create a language-aware router structure:
+   - Add a top-level route: "/:lang(en|es|pt)/*"
+   - Nest all existing routes beneath it (Home, About, Solutions, Productions, Impact, Contact, Profile...).
+   - Add redirects for "/" and for routes without lang.
+
+B) i18n integration:
+   - Ensure i18n changes language based on URL param ":lang".
+   - On route change, read lang param and call i18n.changeLanguage(lang) if different.
+   - Ensure translations are loaded from existing JSONs (public/en.json, public/es.json, public/pt.json or current setup).
+
+C) Language switcher behavior (Header)
+   - Update the language buttons so they do:
+     const newPath = currentPath.replace(/^\/(en|es|pt)/, `/${targetLang}`)
+     navigate(newPath)
+   - If currentPath has no lang prefix, assume /en then replace.
+
+FILES TO TOUCH (typical)
+- client/src/App.tsx (router structure)
+- client/src/i18n.ts (or i18n config file)
+- client/src/components/Header.tsx (language switcher)
+- client/src/main.tsx if needed
+- Add a small helper: client/src/lib/lang.ts (optional) with:
+  supportedLangs = ["en","es","pt"]
+  defaultLang = "en"
+  normalizePathWithLang()
+
+DELIVERABLES / VERIFICATION
+- Visiting:
+  / -> redirects to /en
+  /solutions -> redirects to /en/solutions
+  /pt/solutions works and sets site language to PT
+  /en/solutions works and sets site language to EN
+- Switching language on any page updates URL and keeps same slug.
+- Copy-pasting /en/solutions to another browser loads directly in English.
+- No content changes.
+
+IMPORTANT
+- Keep existing translations exactly as they are, just wire them to URL.
+- Keep existing page components; do not rewrite them.
+- Provide a short summary of changes and list the modified files at the end.

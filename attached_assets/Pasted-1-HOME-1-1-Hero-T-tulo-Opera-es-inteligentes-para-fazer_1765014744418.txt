@@ -1,0 +1,228 @@
+1. HOME
+1.1 Hero
+
+Título: Operações inteligentes para fazer acontecer.
+
+Subtítulo: Conectamos clareza e criatividade para que projetos, marcas e organizações funcionem com ritmo, estrutura e impacto.
+
+Botões:
+
+Agendar uma conversa
+
+Conhecer o Método
+
+1.2 Mini-Tagline (acima ou abaixo do hero)
+
+Clareza. Ritmo. Execução.
+
+1.3 Sessão “O que fazemos” (Overview das Verticais)
+
+Cards das 3 verticais:
+
+OPS — Arquitetura Operacional
+
+Texto curto:
+
+Estruturamos processos, papéis, governança e fluxos para transformar projetos e organizações em operações que realmente funcionam.
+
+Produções — Marketing, Conteúdo e Eventos
+
+Texto curto:
+
+Criamos produtos, campanhas, conteúdos e experiências que reforçam posicionamento e conectam marcas com comunidades.
+
+Impacto — Projetos Sociais, Cultura e ESG
+
+Texto curto:
+
+Estruturamos, medimos e ativamos iniciativas de impacto social, educacional e cultural com propósito e responsabilidade.
+
+1.4 Sessão “Porque Existimos”
+
+Texto:
+
+A maioria dos projetos falha na execução, não na ideia.
+Criamos a estrutura necessária para que iniciativas importantes — sociais, culturais, educacionais ou de expansão — saiam do papel e se sustentem.
+
+1.5 Cases (em mosaico)
+
+Usar seus vídeos + fotos:
+
+WCD Rio 2023 (vídeo + foto)
+
+Festival/Expo/Shows
+
+ReservaX Holder Lounge
+
+Documentário / Entrevista
+
+HackingRio / hackathons
+
+Projetos sociais (Casa do Pai)
+
+Cultura / Música / Arte
+
+etc.
+
+1.6 CTA Final
+
+Pronto para transformar seu projeto?
+Se sua iniciativa está travada, complexa ou sobrecarregada — nós podemos ajudar.
+
+Botão: Agende uma conversa
+
+2. QUEM SOMOS
+2.1 Identidade
+
+Somos um ecossistema criativo-operacional que combina estratégia, execução e impacto para transformar projetos complexos em realidades sustentáveis.
+
+2.2 Sobre a Creation
+
+Atuamos entre comunicação estratégica, operações, cultura, impacto e criatividade aplicada.
+Nossa missão é transformar ideias em estruturas executáveis, criativas e escaláveis.
+
+2.3 Diferenciais
+
+Execução + Criatividade
+
+Estruturas replicáveis
+
+Inteligência cultural
+
+Workflows claros
+
+Operação sustentável
+
+Brasil + EUA + Europa
+
+2.4 Onde Atuamos
+
+Rio de Janeiro • Florida • Europa (Espanha)
+
+3. SERVIÇOS (Página-mãe)
+
+Cards para cada vertical levando para subpáginas.
+
+3.1 OPS
+
+Link para página própria.
+Resumo:
+
+Operações inteligentes para projetos importantes.
+90 dias para transformar caos em execução.
+
+3.2 Produções
+
+Link para página própria.
+Resumo:
+
+Projetos, campanhas, conteúdos e eventos feitos para marcas que desejam presença, consistência e impacto real.
+
+3.3 Impacto
+
+Link para página própria.
+Resumo:
+
+Estruturas de impacto social, educacional e cultural com estratégia, governança, mensuração e responsabilidade.
+
+4. PÁGINAS DAS VERTICAIS
+4.1 Creation OPS
+
+Você já tem ela pronta no Replit — vamos só atualizar copy.
+
+Seções da versão atual:
+
+Diagnóstico Operacional
+
+Estruturação
+
+Execução Acompanhada
+
+Para quem trabalhamos
+
+CTA final
+
+Texto permanecerá, só trocaremos “caos” por “complexidade”.
+
+4.2 Creation Produções
+
+Nova página — estrutura sugerida:
+
+Hero:
+Criamos produtos, conteúdos e experiências que conectam.
+Sub: Da estratégia à entrega — marketing, audiovisual, eventos e campanhas integradas.
+
+Sessões:
+
+Branding & Identidade
+
+Conteúdo & Storytelling
+
+Audiovisual
+
+Eventos & Experiências
+
+Projetos especiais
+
+Cases visuais
+
+CTA
+
+4.3 Creation Impacto
+
+Nova página — estrutura sugerida:
+
+Hero:
+Impacto que faz sentido e se sustenta.
+Sub: Estruturamos, ativamos e medimos projetos sociais, educacionais e culturais.
+
+Sessões:
+
+Estratégia e Governança
+
+Métricas & Indicadores
+
+Projetos Sociais
+
+Cultura & Educação
+
+Voluntariado e Território
+
+Accountability + Relatórios
+
+Cases
+
+CTA
+
+5. MÉTODO
+
+Hero:
+Nossa metodologia une clareza estratégica, criatividade aplicada e execução operacional.
+
+Etapas:
+
+Imersão
+
+Arquitetura
+
+Co-criação
+
+Implementação
+
+Sustentação
+
+Indicadores
+
+6. CONTATO
+
+CTA forte
+
+Formulário
+
+WhatsApp
+
+Email
+
+Calendly
+
+Escritórios globais

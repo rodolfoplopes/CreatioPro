@@ -1,0 +1,498 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   CREATION PRO - BLACKROCK STYLE DESIGN SYSTEM
+   Base: Preto (#000) e Branco (#FFF)
+   Accents: Light Blue (#7ad1e4), Green (#22C55E)
+   NO GOLD - Light Gray (#F5F5F5) for backgrounds
+   ============================================ */
+
+/* LIGHT MODE - BlackRock Corporate Style */
+:root {
+  --button-outline: rgba(0,0,0, .10);
+  --badge-outline: rgba(0,0,0, .05);
+  --opaque-button-border-intensity: -8;
+  --elevate-1: rgba(0,0,0, .03);
+  --elevate-2: rgba(0,0,0, .08);
+  
+  /* Background System - WHITE PRIMARY */
+  --background: 0 0% 100%;
+  --background-muted: 0 0% 96%;
+  --foreground: 0 0% 0%;
+  
+  /* Border System - Hairline Corporate */
+  --border: 0 0% 90%;
+  --border-hairline: rgba(0, 0, 0, 0.08);
+  
+  /* Card System */
+  --card: 0 0% 100%;
+  --card-foreground: 0 0% 0%;
+  --card-border: 0 0% 90%;
+  
+  /* Sidebar - Black for BlackRock style */
+  --sidebar: 0 0% 0%;
+  --sidebar-foreground: 0 0% 100%;
+  --sidebar-border: 0 0% 10%;
+  --sidebar-primary: 200 70% 55%;
+  --sidebar-primary-foreground: 0 0% 100%;
+  --sidebar-accent: 0 0% 10%;
+  --sidebar-accent-foreground: 0 0% 100%;
+  --sidebar-ring: 200 70% 55%;
+  
+  /* Popover */
+  --popover: 0 0% 100%;
+  --popover-foreground: 0 0% 0%;
+  --popover-border: 0 0% 90%;
+  
+  /* Primary - Black #000000 */
+  --primary: 0 0% 0%;
+  --primary-foreground: 0 0% 100%;
+  
+  /* Secondary - Light Gray */
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 0 0% 0%;
+  
+  /* Muted */
+  --muted: 0 0% 96%;
+  --muted-foreground: 0 0% 40%;
+  
+  /* Accent - Light Blue #7ad1e4 */
+  --accent: 200 60% 56%;
+  --accent-foreground: 0 0% 100%;
+  
+  /* Destructive */
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  
+  /* Input & Ring */
+  --input: 0 0% 90%;
+  --ring: 200 60% 56%;
+  
+  /* Charts */
+  --chart-1: 0 0% 0%;
+  --chart-2: 200 60% 56%;
+  --chart-3: 142 76% 36%;
+  --chart-4: 0 0% 50%;
+  --chart-5: 200 40% 70%;
+  
+  /* Typography */
+  --font-sans: Inter, sans-serif;
+  --font-serif: Georgia, serif;
+  --font-mono: Menlo, monospace;
+  
+  /* Radius - ZERO for BlackRock style */
+  --radius: 0rem;
+  
+  /* Shadows - Minimal */
+  --shadow-2xs: 0 1px 2px 0 rgba(0, 0, 0, 0.02);
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.03);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.04);
+  --shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.10);
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.12);
+  
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+  
+  /* Brand Colors - Creation Pro NEW PALETTE */
+  --light-blue: 200 60% 56%;
+  --green: 142 76% 36%;
+  --light-gray: 0 0% 96%;
+  --black: 0 0% 0%;
+  --white: 0 0% 100%;
+}
+
+/* ============================================
+   HERO SECTION - BLACKROCK STYLE (BLACK/WHITE)
+   ============================================ */
+
+/* Main Hero - Light Background with light blue accent */
+.hero-blackrock {
+  background-color: #ffffff !important;
+  position: relative;
+}
+
+.hero-blackrock::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 6px;
+  background-color: #7ad1e4;
+}
+
+/* Hero with subtle gray background */
+.hero-light {
+  background-color: #F5F5F5 !important;
+}
+
+/* Hero dark - Black background */
+.hero-dark {
+  background-color: #000000 !important;
+  color: #ffffff;
+}
+
+/* Accent Strip - Full width highlight bar (BLACK) */
+.accent-strip {
+  background-color: #000000 !important;
+  color: white;
+}
+
+/* Accent Strip - Light Blue */
+.accent-strip-blue {
+  background-color: #7ad1e4 !important;
+  color: #ffffff;
+}
+
+/* Accent Strip - Green */
+.accent-strip-green {
+  background-color: #22C55E !important;
+  color: #ffffff;
+}
+
+/* CTA Section - Dark strip */
+.cta-strip {
+  background-color: #000000 !important;
+  color: white;
+}
+
+/* Internal pages hero */
+.hero-gradient-main {
+  background-color: #000000 !important;
+}
+
+.hero-gradient-internal {
+  background-color: #000000 !important;
+}
+
+.cta-gradient {
+  background-color: #000000 !important;
+}
+
+/* Dark mode - NOT USED */
+.dark {
+  --button-outline: rgba(255,255,255, .10);
+  --badge-outline: rgba(255,255,255, .05);
+  --opaque-button-border-intensity: 9;
+  --elevate-1: rgba(255,255,255, .04);
+  --elevate-2: rgba(255,255,255, .09);
+  --background: 0 0% 5%;
+  --foreground: 0 0% 98%;
+  --border: 0 0% 20%;
+  --card: 0 0% 8%;
+  --card-foreground: 0 0% 98%;
+  --card-border: 0 0% 18%;
+  --sidebar: 0 0% 6%;
+  --sidebar-foreground: 0 0% 98%;
+  --sidebar-border: 0 0% 14%;
+  --sidebar-primary: 200 60% 56%;
+  --sidebar-primary-foreground: 0 0% 8%;
+  --sidebar-accent: 0 0% 16%;
+  --sidebar-accent-foreground: 0 0% 98%;
+  --sidebar-ring: 200 60% 56%;
+  --popover: 0 0% 12%;
+  --popover-foreground: 0 0% 98%;
+  --popover-border: 0 0% 20%;
+  --primary: 200 60% 56%;
+  --primary-foreground: 0 0% 8%;
+  --secondary: 0 0% 18%;
+  --secondary-foreground: 0 0% 98%;
+  --muted: 0 0% 16%;
+  --muted-foreground: 0 0% 65%;
+  --accent: 200 60% 56%;
+  --accent-foreground: 0 0% 8%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 98%;
+  --input: 0 0% 25%;
+  --ring: 200 60% 56%;
+  --light-blue: 200 60% 56%;
+  --green: 142 76% 36%;
+  --light-gray: 0 0% 96%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* ============================================
+   GLOBAL UTILITY CLASSES - BLACKROCK STYLE
+   ============================================ */
+
+@layer components {
+  /* Section Containers */
+  .section {
+    @apply py-20 md:py-28;
+  }
+  
+  .section-sm {
+    @apply py-16 md:py-20;
+  }
+  
+  .section-lg {
+    @apply py-24 md:py-36;
+  }
+  
+  /* Background Variants - CLEAN */
+  .section-white {
+    @apply bg-white;
+  }
+  
+  .section-gray {
+    @apply bg-[#F5F5F5];
+  }
+  
+  .section-dark {
+    @apply bg-[#000000] text-white;
+  }
+  
+  .section-dark-gray {
+    @apply bg-[#1A1A1A] text-white;
+  }
+  
+  /* Container */
+  .container-x {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Surface - Corporate Cards (NO ROUNDED) */
+  .surface {
+    @apply bg-white border border-[rgba(0,0,0,0.08)];
+  }
+  
+  .surface-hover {
+    @apply surface hover:border-[rgba(0,0,0,0.15)] transition-colors;
+  }
+  
+  /* Hairline Border */
+  .hairline {
+    @apply border-[rgba(0,0,0,0.08)];
+  }
+  
+  .hairline-t {
+    @apply border-t border-t-[rgba(0,0,0,0.08)];
+  }
+  
+  .hairline-b {
+    @apply border-b border-b-[rgba(0,0,0,0.08)];
+  }
+  
+  .hairline-l {
+    @apply border-l-4 border-l-[#000000];
+  }
+  
+  .hairline-l-accent {
+    @apply border-l-4 border-l-[#7ad1e4];
+  }
+  
+  /* Typography - Corporate BlackRock Style */
+  .headline {
+    @apply text-black font-bold;
+  }
+  
+  .headline-lg {
+    @apply text-4xl sm:text-5xl md:text-6xl font-bold text-black leading-tight tracking-tight;
+  }
+  
+  .headline-md {
+    @apply text-3xl sm:text-4xl font-bold text-black;
+  }
+  
+  .headline-sm {
+    @apply text-xl sm:text-2xl font-semibold text-black;
+  }
+  
+  /* Kicker - Light Blue accent (NOT gold) */
+  .kicker {
+    @apply text-sm font-semibold uppercase tracking-widest text-[#7ad1e4];
+  }
+  
+  .body-text {
+    @apply text-[#374151] leading-relaxed;
+  }
+  
+  .body-muted {
+    @apply text-[#6b7280] leading-relaxed;
+  }
+  
+  .body-sm {
+    @apply text-sm text-[#6b7280] leading-relaxed;
+  }
+  
+  /* Cards - Corporate Style (RECTANGULAR) */
+  .card-corporate {
+    @apply bg-white border border-[rgba(0,0,0,0.08)] p-6 md:p-8;
+  }
+  
+  .card-corporate-hover {
+    @apply card-corporate hover:border-[rgba(0,0,0,0.15)] transition-all;
+  }
+  
+  /* Highlight Strip - BLACK */
+  .highlight-strip {
+    @apply bg-[#000000] text-white py-16 md:py-20;
+  }
+  
+  /* BlackRock-style image container */
+  .image-editorial {
+    @apply w-full h-full object-cover;
+  }
+  
+  /* CTA Link Style (BlackRock) - Text + Arrow */
+  .cta-link {
+    @apply inline-flex items-center gap-2 text-[#7ad1e4] font-medium hover:underline transition-all;
+  }
+  
+  .cta-link-dark {
+    @apply inline-flex items-center gap-2 text-white font-medium hover:underline transition-all;
+  }
+}
+
+/* ============================================
+   ELEVATE SYSTEM (existing)
+   ============================================ */
+
+@layer utilities {
+  input[type="search"]::-webkit-search-cancel-button {
+    @apply hidden;
+  }
+
+  [contenteditable][data-placeholder]:empty::before {
+    content: attr(data-placeholder);
+    color: hsl(var(--muted-foreground));
+    pointer-events: none;
+  }
+
+  .no-default-hover-elevate {}
+  .no-default-active-elevate {}
+
+  .toggle-elevate::before,
+  .toggle-elevate-2::before {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: -1;
+  }
+
+  .toggle-elevate.toggle-elevated::before {
+    background-color: var(--elevate-2);
+  }
+
+  .border.toggle-elevate::before {
+    inset: -1px;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate),
+  .active-elevate:not(.no-default-active-elevate),
+  .hover-elevate-2:not(.no-default-hover-elevate),
+  .active-elevate-2:not(.no-default-active-elevate) {
+    position: relative;
+    z-index: 0;
+  }
+
+  .hover-elevate:not(.no-default-hover-elevate)::after,
+  .active-elevate:not(.no-default-active-elevate)::after,
+  .hover-elevate-2:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:not(.no-default-active-elevate)::after {
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    inset: 0px;
+    border-radius: inherit;
+    z-index: 999;
+  }
+
+  .hover-elevate:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-1);
+  }
+
+  .hover-elevate-2:hover:not(.no-default-hover-elevate)::after,
+  .active-elevate-2:active:not(.no-default-active-elevate)::after {
+    background-color: var(--elevate-2);
+  }
+
+  .border.hover-elevate:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate:not(.no-active-interaction-elevate)::after,
+  .border.hover-elevate-2:not(.no-hover-interaction-elevate)::after,
+  .border.active-elevate-2:not(.no-active-interaction-elevate)::after {
+    inset: -1px;
+  }
+
+  /* Language Selector */
+  .lang-selector {
+    @apply flex gap-1 items-center;
+  }
+
+  .lang-btn {
+    @apply px-2 py-1 text-xs font-semibold text-white/60 transition-colors;
+  }
+
+  .lang-btn:hover {
+    @apply text-white/90 bg-white/10;
+  }
+
+  .lang-btn:active {
+    @apply text-[#7ad1e4];
+  }
+}
+
+/* ============================================
+   BUTTON OVERRIDES - RECTANGULAR - BLACKROCK STYLE
+   ============================================ */
+
+/* Primary CTA - Black with white text */
+.btn-primary {
+  @apply bg-[#000000] text-white font-semibold px-6 py-3 hover:bg-[#333333] transition-colors;
+}
+
+/* Secondary CTA - Outline */
+.btn-secondary {
+  @apply bg-transparent border-2 border-black text-black font-semibold px-6 py-3 hover:bg-black hover:text-white transition-colors;
+}
+
+/* Light Blue accent button */
+.btn-accent {
+  @apply bg-[#7ad1e4] text-white font-semibold px-6 py-3 hover:bg-[#3A8FC4] transition-colors;
+}
+
+/* Green accent button */
+.btn-green {
+  @apply bg-[#22C55E] text-white font-semibold px-6 py-3 hover:bg-[#16A34A] transition-colors;
+}
+
+/* Text + Arrow CTA (BlackRock style) */
+.btn-arrow {
+  @apply inline-flex items-center gap-2 text-[#7ad1e4] font-medium hover:gap-3 transition-all;
+}
+
+.btn-arrow-dark {
+  @apply inline-flex items-center gap-2 text-white font-medium hover:gap-3 transition-all;
+}
+
+/* ============================================
+   NAVIGATION - BLACKROCK STYLE
+   ============================================ */
+.nav-blackrock {
+  @apply bg-black text-white;
+}
+
+.nav-link {
+  @apply text-white/80 hover:text-white transition-colors;
+}
+
+.nav-link-active {
+  @apply text-[#7ad1e4];
+}

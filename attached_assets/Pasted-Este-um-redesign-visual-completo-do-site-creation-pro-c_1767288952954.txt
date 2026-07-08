@@ -1,0 +1,118 @@
+Este é um redesign visual completo do site creation-pro.com.
+Não alterar estrutura, rotas, textos, conteúdos ou hierarquia de informação.
+O objetivo é transformar o site visualmente para ser equivalente ao design do site da BlackRock, mantendo todo o conteúdo atual da Creation Pro.
+
+REFERÊNCIA OBRIGATÓRIA
+
+Use como referência visual direta e integral:
+
+https://www.blackrock.com/br
+
+https://www.blackrock.com/corporate/about-us/social-impact
+
+O resultado final deve parecer um site da BlackRock adaptado para a marca Creation Pro.
+
+DIRETRIZES DE DESIGN (OBRIGATÓRIAS)
+1. BASE DE CORES
+
+Base principal do site:
+
+Preto (#000000) e Branco (#FFFFFF)
+
+Cores de destaque (usar com moderação, como a BlackRock faz):
+
+Light Blue da Creation (secundário principal)
+
+Green da Creation (secundário)
+
+Light Gray da Creation (fundos, divisões e respiros)
+
+❌ Não usar dourado
+
+❌ Não usar o verde primário antigo como base
+
+As cores servem apenas para destaque visual, CTAs, faixas e hierarquia, nunca como fundo dominante.
+
+2. LAYOUT E COMPONENTES
+
+Visual corporativo, institucional, sóbrio e editorial
+
+Containers, cards e caixas de texto:
+
+❌ Sem bordas arredondadas
+
+✔ Bordas retas (border-radius: 0)
+
+Muito espaço em branco (white space)
+
+Grid bem definido
+
+Tipografia forte, com títulos grandes e hierarquia clara
+
+Nada de visual “startup”, “tech rounded” ou “soft”
+
+3. HERO E SEÇÕES PRINCIPAIS
+
+Hero da home:
+
+Base branca ou preta
+
+Forte presença tipográfica
+
+Uso estratégico de imagem editorial (foto grande, estilo consultoria global)
+
+CTAs no estilo BlackRock:
+
+Texto + seta
+
+Visual simples, sem botões chamativos
+
+4. USO DE IMAGENS (OBRIGATÓRIO)
+
+Inserir mais imagens ilustrativas ao longo do site, mesmo onde hoje há apenas texto
+
+Estilo das imagens:
+
+Consultorias tradicionais
+
+Ambientes corporativos
+
+Pessoas em contexto profissional
+
+Cidades, infraestrutura, trabalho, estratégia
+
+Imagens grandes, horizontais, bem integradas ao layout
+
+Tratar imagens como elemento estrutural do design, não decorativo
+
+5. SEÇÕES DESTACADAS
+
+Criar blocos de destaque inspirados na BlackRock:
+
+Faixas horizontais
+
+Blocos em light gray
+
+Destaques com light blue ou green
+
+Separações visuais claras entre seções
+
+Nada de “cards flutuantes” ou sombras exageradas
+
+6. CSS E IMPLEMENTAÇÃO
+
+Centralizar as mudanças no CSS base (ex: index.css, globals)
+
+Criar variáveis claras de cor (CSS variables)
+
+Aplicar o novo design em todo o site, não apenas na home
+
+Garantir consistência visual entre todas as páginas
+
+7. REGRA FINAL (MUITO IMPORTANTE)
+
+Se alguém abrir o site sem conhecer a Creation Pro, deve pensar:
+
+“Isso parece o site da BlackRock — só que com outra marca.”
+
+Esse é o nível de fidelidade esperado.
