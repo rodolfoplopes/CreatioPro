@@ -1,12 +1,13 @@
 import { useState, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import credenciamentoImage from "@assets/credenciamento_event.jpg";
 
 const slides = [
   { src: "/images/story-line.jpg", alt: "Creation Pro Story" },
-  { src: carnaSensaImage, alt: "CarnaSensa Event" },
-  { src: credenciamentoImage, alt: "Credenciamento Event" },
+  { src: "/images/blockchain-rio.jpg", alt: "Blockchain Rio Festival" },
+  { src: "/images/carnasensa.jpg", alt: "CarnaSensa" },
+  { src: "/images/expo.jpg", alt: "Expo" },
+  { src: "/images/reservax.jpg", alt: "ReservaX Lounge" },
 ];
 
 export default function WhyWeExistSection() {
