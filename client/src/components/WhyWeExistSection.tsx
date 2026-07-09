@@ -1,7 +1,6 @@
 import { useState, useCallback, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import useEmblaCarousel from "embla-carousel-react";
-import carnaSensaImage from "@assets/CarnaSensa00_1767378328855.jpg";
 import credenciamentoImage from "@assets/credenciamento_event.jpg";
 
 const slides = [
