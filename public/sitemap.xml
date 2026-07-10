@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://creation-pro.com/en</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/en/quem-somos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/quem-somos"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es/quem-somos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/quem-somos"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt/quem-somos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/quem-somos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/quem-somos"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/en/servicos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/servicos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/servicos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/servicos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/servicos"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es/servicos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/servicos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/servicos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/servicos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/servicos"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt/servicos</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/servicos"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/servicos"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/servicos"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/servicos"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/en/producoes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/producoes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/producoes"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/producoes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/producoes"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es/producoes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/producoes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/producoes"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/producoes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/producoes"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt/producoes</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/producoes"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/producoes"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/producoes"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/producoes"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/en/producoes/creator-ops-rio</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/producoes/creator-ops-rio"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es/producoes/creator-ops-rio</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/producoes/creator-ops-rio"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt/producoes/creator-ops-rio</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/producoes/creator-ops-rio"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/producoes/creator-ops-rio"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/en/impacto</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/impacto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/impacto"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/impacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/impacto"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es/impacto</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/impacto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/impacto"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/impacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/impacto"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt/impacto</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/impacto"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/impacto"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/impacto"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/impacto"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/en/metodo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/metodo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/metodo"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/metodo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/metodo"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es/metodo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/metodo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/metodo"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/metodo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/metodo"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt/metodo</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/metodo"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/metodo"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/metodo"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/metodo"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/en/contato</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/contato"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/contato"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/contato"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/contato"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es/contato</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/contato"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/contato"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/contato"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/contato"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt/contato</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/contato"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/contato"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/contato"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/contato"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/en/profile</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/profile"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/profile"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/profile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/profile"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/es/profile</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/profile"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/profile"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/profile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/profile"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://creation-pro.com/pt/profile</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://creation-pro.com/en/profile"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://creation-pro.com/es/profile"/>
+    <xhtml:link rel="alternate" hreflang="pt" href="https://creation-pro.com/pt/profile"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://creation-pro.com/en/profile"/>
+    <lastmod>2026-07-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>

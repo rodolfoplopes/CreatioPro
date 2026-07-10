@@ -39,7 +39,7 @@ async function copyPublicAssets() {
   
   const files = await readdir(publicDir);
   for (const file of files) {
-    if (file.endsWith(".json") || file.endsWith(".png") || file.endsWith(".ico") || file.endsWith(".svg")) {
+    if (file.endsWith(".json") || file.endsWith(".png") || file.endsWith(".ico") || file.endsWith(".svg") || file.endsWith(".xml") || file.endsWith(".txt")) {
       await copyFile(join(publicDir, file), join(distPublicDir, file));
       console.log(`  copied ${file} to dist/public`);
     }
