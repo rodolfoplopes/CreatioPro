@@ -4,4 +4,8 @@ dist
 server/public
 vite.config.ts.*
 *.tar.gz
+
+# Videos: bloqueia todos por padrao, libera so o hero otimizado
 *.mp4
+!client/public/images/video-hero.mp4
+!public/images/video-hero.mp4
