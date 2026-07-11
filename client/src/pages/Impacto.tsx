@@ -190,7 +190,7 @@ export default function Impacto() {
       <section className="py-20 md:py-28 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6" data-i18n="impact_projects_title">
               Projetos que transformamos
             </h2>
           </div>
@@ -222,7 +222,7 @@ export default function Impacto() {
       <section className="py-20 md:py-28 bg-[#f8f9fa]">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6">
+            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6" data-i18n="impact_audience_title">
               Para quem é
             </h2>
           </div>

@@ -250,7 +250,7 @@ export default function QuemSomos() {
             <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight" data-i18n="qs_cta_title">
               Pronto para transformar sua operação?
             </h2>
-            <p className="text-white/70 mb-10 leading-relaxed">
+            <p className="text-white/70 mb-10 leading-relaxed" data-i18n="about_cta_subtitle">
               Se sua iniciativa está complexa ou travada, vamos entender seu contexto e propor a melhor estrutura.
             </p>
             <Link href="/contato">
