@@ -41,6 +41,7 @@ export default function CreationOpsSection() {
                   <Badge
                     variant="outline"
                     className="border-[rgba(0,0,0,0.15)] text-[#6b7280] text-xs"
+                    data-i18n={`creation_ops_phase_${index}_duration`}
                   >
                     {phase.duration}
                   </Badge>

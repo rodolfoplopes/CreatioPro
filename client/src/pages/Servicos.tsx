@@ -53,7 +53,7 @@ export default function Servicos() {
                     <span className="text-4xl font-black text-[#000000]">
                       {phase.number}
                     </span>
-                    <Badge variant="outline" className="text-xs border-[rgba(0,0,0,0.15)]">
+                    <Badge variant="outline" className="text-xs border-[rgba(0,0,0,0.15)]" data-i18n={`creation_ops_phase_${index}_duration`}>
                       {phase.duration}
                     </Badge>
                   </div>
