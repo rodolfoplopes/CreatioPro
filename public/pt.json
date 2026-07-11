@@ -447,5 +447,20 @@
   "cop_form_budget": "Orçamento Estimado",
   "cop_form_message": "Mensagem",
   "cop_form_submit": "Enviar Solicitação",
-  "cop_form_response_time": "Resposta em até 24 horas"
+  "cop_form_response_time": "Resposta em até 24 horas",
+  "creation_ops_phase_0_deliverable_0": "Mapeamento completo da operação",
+  "creation_ops_phase_0_deliverable_1": "Leitura de rotina",
+  "creation_ops_phase_0_deliverable_2": "Identificação de gargalos",
+  "creation_ops_phase_0_deliverable_3": "Papéis e responsabilidades",
+  "creation_ops_phase_0_deliverable_4": "Plano de correção imediato",
+  "creation_ops_phase_1_deliverable_0": "Processos claros",
+  "creation_ops_phase_1_deliverable_1": "Governança e rituais",
+  "creation_ops_phase_1_deliverable_2": "Agenda e cadência",
+  "creation_ops_phase_1_deliverable_3": "Documentação",
+  "creation_ops_phase_1_deliverable_4": "Fluxos executáveis",
+  "creation_ops_phase_2_deliverable_0": "Acompanhamento próximo",
+  "creation_ops_phase_2_deliverable_1": "Correções em tempo real",
+  "creation_ops_phase_2_deliverable_2": "Ajuste de ritmo",
+  "creation_ops_phase_2_deliverable_3": "Suporte à liderança",
+  "creation_ops_phase_2_deliverable_4": "Entrega com sustentabilidade"
 }

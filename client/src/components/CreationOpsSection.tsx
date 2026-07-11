@@ -58,7 +58,7 @@ export default function CreationOpsSection() {
                       className="flex items-center gap-3 text-sm text-[#374151]"
                     >
                       <Check className="h-4 w-4 text-[#7ad1e4] flex-shrink-0" />
-                      <span>{item}</span>
+                      <span data-i18n={`creation_ops_phase_${index}_deliverable_${i}`}>{item}</span>
                     </li>
                   ))}
                 </ul>

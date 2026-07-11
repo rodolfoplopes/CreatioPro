@@ -97,7 +97,7 @@ export default function Metodo() {
                     {phase.deliverables.map((item, i) => (
                       <li key={i} className="flex items-center gap-3 text-sm">
                         <Check className="h-4 w-4 text-[#7ad1e4] flex-shrink-0" />
-                        <span className="text-[#6b7280]">{item}</span>
+                        <span className="text-[#6b7280]" data-i18n={`creation_ops_phase_${index}_deliverable_${i}`}>{item}</span>
                       </li>
                     ))}
                   </ul>
