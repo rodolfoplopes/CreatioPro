@@ -1,3 +1,4 @@
+import { Section, SectionHeader } from "@/components/primitives";
 import img1 from "@assets/world_creativity_performance.jpg";
 import img2 from "@assets/462964255_2632487433605091_4180725961629335019_n_1767378729118.jpg";
 import img3 from "@assets/reservax_lounge.jpg";
@@ -8,98 +9,48 @@ import img7 from "@assets/Storyline_BetinhoDias0_1767378729127.jpg";
 import img8 from "@assets/blockchain_rio.jpg";
 import img9 from "@assets/IMG_6290_1767378825154.jpg";
 
-type MediaItem = {
-  type: "image";
-  src: string;
-  alt: string;
-};
-
-const mediaItems: MediaItem[] = [
-  {
-    type: "image",
-    src: img1,
-    alt: "World Creativity Day - Performance"
-  },
-  {
-    type: "image",
-    src: img2,
-    alt: "DJ na praia - Evento"
-  },
-  {
-    type: "image",
-    src: img3,
-    alt: "ReservaX Holder Lounge"
-  },
-  {
-    type: "image",
-    src: img4,
-    alt: "Hacking Rio - Programadores"
-  },
-  {
-    type: "image",
-    src: img5,
-    alt: "Luiza Brunet - Produção"
-  },
-  {
-    type: "image",
-    src: img6,
-    alt: "Donatinho - Show"
-  },
-  {
-    type: "image",
-    src: img7,
-    alt: "Storyline - Praia"
-  },
-  {
-    type: "image",
-    src: img8,
-    alt: "Blockchain Rio - Palestra"
-  },
-  {
-    type: "image",
-    src: img9,
-    alt: "Feira de artesanato"
-  }
+/**
+ * As legendas ja existiam - escondidas no atributo alt, visiveis so para
+ * leitores de tela. World Creativity Day, ReservaX, Hacking Rio, Blockchain
+ * Rio, Donatinho, Storyline. Sao projetos reais, com nomes reais.
+ * Foto sem legenda parece stock. Foto com legenda e prova.
+ *
+ * TODO(Sprint 2): adicionar cliente e ano em cada uma.
+ */
+const mediaItems = [
+  { src: img1, label: "World Creativity Day" },
+  { src: img2, label: "Evento na praia" },
+  { src: img3, label: "ReservaX Holder Lounge" },
+  { src: img4, label: "Hacking Rio" },
+  { src: img5, label: "Luiza Brunet" },
+  { src: img6, label: "Donatinho" },
+  { src: img7, label: "Storyline" },
+  { src: img8, label: "Blockchain Rio" },
+  { src: img9, label: "Feira de artesanato" },
 ];
 
 export default function ProductionsMediaGrid() {
   return (
-    <section className="py-16 md:py-20 bg-[#f4f6fa]">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 
-            className="text-3xl sm:text-4xl font-bold text-foreground mb-4"
-            data-i18n="producoes_media_title"
-          >
-            Alguns momentos que ajudamos a produzir
-          </h2>
-          <p 
-            className="text-lg text-muted-foreground max-w-2xl mx-auto"
-            data-i18n="producoes_media_subtitle"
-          >
-            Eventos, experiências e produções que marcam.
-          </p>
-        </div>
+    <Section tone="muted">
+      <SectionHeader title="Alguns momentos que ajudamos a produzir" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {mediaItems.map((item, index) => (
-            <div
-              key={index}
-              className="bg-white border border-[rgba(15,23,42,0.12)] overflow-hidden group hover:border-[rgba(15,23,42,0.20)] transition-colors"
-              data-testid={`media-item-${index}`}
-            >
-              <div className="aspect-video relative">
-                <img
-                  src={item.src}
-                  alt={item.alt}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-petroleo-dark/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {mediaItems.map((item) => (
+          <figure key={item.label} className="group">
+            <div className="aspect-video overflow-hidden bg-black">
+              <img
+                src={item.src}
+                alt={item.label}
+                className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                loading="lazy"
+              />
             </div>
-          ))}
-        </div>
+            <figcaption className="mt-3 text-sm font-medium text-black">
+              {item.label}
+            </figcaption>
+          </figure>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }

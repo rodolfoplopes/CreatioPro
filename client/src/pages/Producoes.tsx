@@ -1,116 +1,84 @@
-import { Link } from "wouter";
 import Layout from "@/components/Layout";
 import HeroInternal from "@/components/layout/HeroInternal";
 import ProductionsMediaGrid from "@/components/producoes/ProductionsMediaGrid";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ArrowRight, Film, Megaphone, Zap, Calendar, Sparkles } from "lucide-react";
+import { Section, SectionHeader, Grid, FeatureCard, CTAButton } from "@/components/primitives";
+import { ArrowRight } from "lucide-react";
+import { Link } from "wouter";
+import { useContent, useLocalizedHref } from "@/content";
 
-const serviceIcons = [Film, Megaphone, Zap];
-
+/**
+ * ANTES: todo o texto hardcoded em PT, traduzido em runtime pelo i18n.js
+ * sobrescrevendo o DOM. Com o i18n.js morto, /en/producoes mostrava
+ * portugues. Agora o conteudo vem do useContent().
+ *
+ * Removidos os icones Film / Megaphone / Zap / Calendar / Sparkles em
+ * caixinhas cianas - genericos de biblioteca, rebaixavam a tipografia.
+ */
 export default function Producoes() {
+  const c = useContent();
+  const localize = useLocalizedHref();
+
   return (
     <Layout>
       <HeroInternal
-        title="Produções para marcas que querem sair do papel"
-        titleI18n="producoes_hero_headline"
-        subtitle="Da estratégia à entrega — marketing, audiovisual, eventos e campanhas integradas."
-        subtitleI18n="producoes_hero_subheadline"
+        title={c.productions.hero.title}
+        subtitle={c.productions.hero.subtitle}
         videoSrc="/images/video-hero.mp4"
       />
 
-      <section className="py-20 md:py-28 bg-[#f8f9fa]" data-first-content="true">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-6" data-i18n="producoes_services_title">
-              O que produzimos
+      <Section tone="muted" firstContent>
+        <SectionHeader title={c.productions.servicesTitle} />
+
+        <Grid cols={3}>
+          {c.productions.services.map((service) => (
+            <FeatureCard
+              key={service.title}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
+        </Grid>
+      </Section>
+
+      {/*
+        CREATOR OPS RIO - SPIN-OFF.
+        Saiu da home. Saiu do menu. Virou UMA LINHA aqui, com link.
+        Publico diferente (creator internacional vs. ONG brasileira), moeda
+        diferente (USD), idioma diferente (EN), identidade visual diferente
+        (verde neon + amarelo + navy competindo com preto/branco/ciano).
+        Modelo: marca endossada. Herda credibilidade sem poluir posicionamento.
+        TODO(Sprint 4): dominio proprio (creatorops.rio) + assinatura "by Creation".
+      */}
+      <Section tone="ink">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <div className="max-w-2xl">
+            <p className="text-xs font-semibold text-[#7ad1e4] mb-3 uppercase tracking-widest">
+              {c.productions.creatorOps.eyebrow}
+            </p>
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 tracking-tight">
+              {c.productions.creatorOps.title}
             </h2>
+            <p className="text-white/70 leading-relaxed">
+              {c.productions.creatorOps.description}
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                title: "Branding & Identidade",
-                description: "Criamos identidades visuais e narrativas que comunicam com clareza.",
-                icon: 0
-              },
-              {
-                title: "Conteúdo & Storytelling",
-                description: "Histórias que conectam marcas com públicos de forma autêntica e relevante.",
-                icon: 1
-              },
-              {
-                title: "Audiovisual",
-                description: "Vídeos, documentários e conteúdo audiovisual que capturam essência e impacto.",
-                icon: 2
-              }
-            ].map((service, index) => {
-              const Icon = serviceIcons[service.icon];
-              return (
-                <Card key={index} className="flex flex-col bg-white border border-[rgba(0,0,0,0.08)]" data-testid={`card-producoes-service-${index}`}>
-                  <CardHeader className="pb-4">
-                    <div className="mb-4 w-12 h-12 bg-[#7ad1e4]/10 flex items-center justify-center">
-                      <Icon className="h-6 w-6 text-[#7ad1e4]" />
-                    </div>
-                    <CardTitle className="text-xl text-black" data-i18n={`producoes_service_${index}_title`}>
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent className="flex-grow">
-                    <p className="text-[#6b7280]" data-i18n={`producoes_service_${index}_description`}>
-                      {service.description}
-                    </p>
-                  </CardContent>
-                </Card>
-              );
-            })}
-          </div>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
-            <Card className="flex flex-col bg-white border border-[rgba(0,0,0,0.08)]" data-testid="card-producoes-events">
-              <CardHeader className="pb-4">
-                <div className="mb-4 w-12 h-12 bg-[#7ad1e4]/10 flex items-center justify-center">
-                  <Calendar className="h-6 w-6 text-[#7ad1e4]" />
-                </div>
-                <CardTitle className="text-xl text-black" data-i18n="producoes_service_3_title">
-                  Eventos & Experiências
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-[#6b7280]" data-i18n="producoes_service_3_description">
-                  De grandes eventos a experiências imersivas — estruturamos tudo para máximo impacto.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="flex flex-col bg-white border border-[rgba(0,0,0,0.08)]" data-testid="card-producoes-special">
-              <CardHeader className="pb-4">
-                <div className="mb-4 w-12 h-12 bg-[#7ad1e4]/10 flex items-center justify-center">
-                  <Sparkles className="h-6 w-6 text-[#7ad1e4]" />
-                </div>
-                <CardTitle className="text-xl text-black" data-i18n="producoes_service_4_title">
-                  Projetos Especiais
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="flex-grow">
-                <p className="text-[#6b7280]" data-i18n="producoes_service_4_description">
-                  Iniciativas únicas que combinam criatividade, operação e propósito.
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-
-          <div className="text-center">
-            <Link href="/contato">
-              <span className="inline-flex items-center gap-2 text-[#7ad1e4] font-semibold text-lg hover:gap-3 transition-all cursor-pointer" data-testid="button-producoes-cta" data-i18n="producoes_cta">
-                Vamos produzir algo juntos
-                <ArrowRight className="h-5 w-5" />
-              </span>
-            </Link>
-          </div>
+          <Link href={localize(c.productions.creatorOps.href)}>
+            <span className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 font-semibold hover:border-white transition-colors cursor-pointer shrink-0">
+              {c.productions.creatorOps.linkLabel}
+              <ArrowRight className="h-5 w-5" />
+            </span>
+          </Link>
         </div>
-      </section>
+      </Section>
 
       <ProductionsMediaGrid />
+
+      <Section tone="paper" size="sm" className="border-t border-black/10">
+        <div className="text-center">
+          <CTAButton label={c.cta.primary} href={c.cta.href} variant="primary" />
+        </div>
+      </Section>
     </Layout>
   );
 }

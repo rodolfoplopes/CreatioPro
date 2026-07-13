@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useContent } from "@/content";
 
 import logo1 from "@assets/1_1767297713777.png";
 import logo2 from "@assets/2_1767297713782.png";
@@ -7,7 +8,6 @@ import logo4 from "@assets/4_1767297713788.png";
 import logo5 from "@assets/5_1767297713789.png";
 import logo6 from "@assets/6_1767297713790.png";
 import logo7 from "@assets/7_1767297713790.png";
-import logo8 from "@assets/8_1767297713791.png";
 import logo9 from "@assets/9_1767297713800.png";
 import logo10 from "@assets/10_1767297713805.png";
 import logo11 from "@assets/11_1767297713805.png";
@@ -21,7 +21,6 @@ const clientLogos = [
   { id: 5, src: logo5, alt: "Instituto Casa do Pai" },
   { id: 6, src: logo6, alt: "Asta" },
   { id: 7, src: logo7, alt: "Instituto Skate Cuida" },
-  { id: 8, src: logo8, alt: "El Poncio" },
   { id: 9, src: logo9, alt: "Pertinho de Casa" },
   { id: 10, src: logo10, alt: "Globo" },
   { id: 11, src: logo11, alt: "Hacking.Rio" },
@@ -29,6 +28,7 @@ const clientLogos = [
 ];
 
 export default function ClientLogosSlideshow() {
+  const c = useContent();
   const [currentIndex, setCurrentIndex] = useState(0);
   const visibleLogos = 5;
 
@@ -51,8 +51,8 @@ export default function ClientLogosSlideshow() {
   return (
     <section className="py-16 md:py-20 bg-[#f8f9fa]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-12 text-center" data-i18n="qs_clients_title">
-          Nossos Parceiros
+        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-12 text-center">
+          {c.about.partnersTitle}
         </h2>
         
         <div className="relative overflow-hidden">
