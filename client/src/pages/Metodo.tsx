@@ -1,131 +1,113 @@
-import { Link } from "wouter";
 import Layout from "@/components/Layout";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Check, ArrowRight } from "lucide-react";
-import { content } from "@/lib/content";
+import { Section, SectionHeader, CTAButton } from "@/components/primitives";
+import { Check } from "lucide-react";
+import { useContent } from "@/content";
 
+/**
+ * A DUPLICACAO MAIS ABSURDA DO SITE ESTAVA AQUI.
+ * A versao antiga renderizava, NA MESMA PAGINA:
+ *   Secao 2 -> content.method.phases      (3 cards: titulo + descricao)
+ *   Secao 4 -> content.creationOps.phases (3 cards: titulo + entregaveis)
+ * Dois objetos redundantes descrevendo as MESMAS tres fases.
+ * Agora: UMA secao, com os entregaveis junto.
+ */
 export default function Metodo() {
+  const c = useContent();
+
   return (
     <Layout>
-      <section className="relative bg-white py-16 md:py-24 overflow-hidden">
+      <section className="relative bg-white py-14 md:py-20 overflow-hidden">
         <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#7ad1e4]" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6 tracking-tight" data-i18n="method_title">
-              {content.method.title}
+            <p className="text-xs font-semibold text-[#7ad1e4] mb-4 uppercase tracking-widest">
+              {c.method.badge}
+            </p>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6 tracking-tight">
+              {c.method.title}
             </h1>
-            <p className="text-xl text-[#374151] leading-relaxed" data-i18n="method_subtitle">
-              {content.method.subtitle}
+            <p className="text-xl text-[#4a4a4a] leading-relaxed">
+              {c.method.subtitle}
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28 bg-[#f8f9fa]" data-testid="section-method-phases" data-first-content="true">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center mb-16">
-            <Badge className="bg-[#7ad1e4]/20 text-[#7ad1e4] border-[#7ad1e4]/30 mb-6" data-i18n="method_framework_badge">
-              Creation OPS
-            </Badge>
-            <p className="text-lg text-[#6b7280] leading-relaxed" data-i18n="method_framework_description">
-              Um framework de 90 dias para organizar e operacionalizar qualquer projeto complexo.
-            </p>
-          </div>
+      <Section tone="muted" firstContent>
+        <p className="text-lg text-[#4a4a4a] leading-relaxed max-w-3xl mb-12">
+          {c.method.description}
+        </p>
 
-          <div className="relative">
-            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-px bg-[rgba(0,0,0,0.08)] -translate-y-1/2" />
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-              {content.method.phases.map((phase, index) => (
-                <div key={index} className="relative" data-testid={`card-method-phase-${index}`}>
-                  <Card className="relative z-10 h-full bg-white border border-[rgba(0,0,0,0.08)] border-t-4 border-t-[#7ad1e4]">
-                    <CardContent className="p-8">
-                      <div className="w-14 h-14 bg-[#000000] text-white flex items-center justify-center text-xl font-bold mb-6 mx-auto lg:mx-0">
-                        0{index + 1}
-                      </div>
-                      <h3 className="text-xl font-semibold text-black mb-4" data-i18n={`method_phase_${index}_title`}>
-                        {phase.title}
-                      </h3>
-                      <p className="text-[#6b7280] leading-relaxed" data-i18n={`method_phase_${index}_description`}>
-                        {phase.description}
-                      </p>
-                    </CardContent>
-                  </Card>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
+        <div className="space-y-px bg-black/10">
+          {c.method.phases.map((phase) => (
+            <div
+              key={phase.number}
+              className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-white p-8 md:p-10"
+            >
+              <div className="lg:col-span-1">
+                <span className="text-4xl font-black text-black/20 tabular-nums">
+                  {phase.number}
+                </span>
+              </div>
 
-      <section className="py-20 md:py-28 bg-white" data-testid="section-how-we-work">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-black mb-10 text-center" data-i18n="method_how_we_work_title">
-              {content.method.howWeWork.title}
-            </h2>
-            <Card className="bg-white border border-[rgba(0,0,0,0.08)]">
-              <CardContent className="p-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {content.method.howWeWork.items.map((item, index) => (
-                    <div key={index} className="flex items-center gap-3">
-                      <Check className="h-5 w-5 text-[#7ad1e4] flex-shrink-0" />
-                      <span className="text-[#374151]" data-i18n={`method_how_we_work_item_${index}`}>{item}</span>
-                    </div>
+              <div className="lg:col-span-5">
+                <p className="text-xs font-semibold text-[#7ad1e4] mb-2 uppercase tracking-widest">
+                  {phase.label}
+                </p>
+                <h2 className="text-2xl font-bold text-black mb-4">
+                  {phase.title}
+                </h2>
+                <p className="text-[#4a4a4a] leading-relaxed">
+                  {phase.description}
+                </p>
+              </div>
+
+              <div className="lg:col-span-6 lg:border-l lg:border-black/10 lg:pl-8">
+                <ul className="space-y-3">
+                  {phase.deliverables.map((item) => (
+                    <li key={item} className="flex items-start gap-3">
+                      <Check className="h-4 w-4 text-[#7ad1e4] shrink-0 mt-1" />
+                      <span className="text-[#4a4a4a]">{item}</span>
+                    </li>
                   ))}
-                </div>
-              </CardContent>
-            </Card>
-          </div>
+                </ul>
+              </div>
+            </div>
+          ))}
         </div>
-      </section>
 
-      <section className="py-20 md:py-28 bg-[#f8f9fa]" data-testid="section-method-deliverables">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl sm:text-4xl font-bold text-black mb-12 text-center" data-i18n="method_deliverables_title">
-            Entregáveis por Fase
+        <div className="mt-12 border-l-2 border-black pl-8 max-w-3xl">
+          <p className="text-xl md:text-2xl font-medium text-black leading-snug">
+            {c.method.result}
+          </p>
+        </div>
+      </Section>
+
+      <Section tone="paper">
+        <SectionHeader title={c.method.howWeWork.title} />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-5 max-w-5xl">
+          {c.method.howWeWork.items.map((item) => (
+            <div key={item} className="flex items-start gap-3">
+              <Check className="h-5 w-5 text-[#7ad1e4] shrink-0 mt-0.5" />
+              <span className="text-[#4a4a4a]">{item}</span>
+            </div>
+          ))}
+        </div>
+      </Section>
+
+      {/*
+        TODO(Sprint 4): secao de investimento.
+        "Voce vende clareza - comece por ser claro sobre isso."
+      */}
+
+      <Section tone="ink" size="sm">
+        <div className="text-center max-w-2xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 tracking-tight">
+            {c.contact.title}
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-            {content.creationOps.phases.map((phase, index) => (
-              <Card key={index} className="bg-white border border-[rgba(0,0,0,0.08)] border-l-4 border-l-[#000000]" data-testid={`card-deliverables-${index}`}>
-                <CardContent className="p-8">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-3xl font-black text-[#000000]">{phase.number}</span>
-                    <h3 className="font-semibold text-black" data-i18n={`method_deliverable_phase_${index}_title`}>{phase.title}</h3>
-                  </div>
-                  <ul className="space-y-3">
-                    {phase.deliverables.map((item, i) => (
-                      <li key={i} className="flex items-center gap-3 text-sm">
-                        <Check className="h-4 w-4 text-[#7ad1e4] flex-shrink-0" />
-                        <span className="text-[#6b7280]" data-i18n={`creation_ops_phase_${index}_deliverable_${i}`}>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+          <CTAButton label={c.cta.primary} href={c.cta.href} variant="primary" onDark />
         </div>
-      </section>
-
-      <section className="py-20 md:py-28 bg-[#000000]">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-2xl mx-auto">
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight" data-i18n="method_ready_title">
-              Pronto para organizar seu projeto?
-            </h2>
-            <p className="text-white/70 mb-10 leading-relaxed" data-i18n="method_ready_description">
-              Em 90 dias, sua operação pode estar funcionando de forma clara, documentada e replicável.
-            </p>
-            <Link href="/contato">
-              <span className="inline-flex items-center gap-2 text-[#7ad1e4] font-semibold text-lg hover:gap-3 transition-all cursor-pointer" data-testid="button-method-cta" data-i18n="method_ready_cta">
-                Agendar Conversa de Diagnóstico
-                <ArrowRight className="h-5 w-5" />
-              </span>
-            </Link>
-          </div>
-        </div>
-      </section>
+      </Section>
     </Layout>
   );
 }

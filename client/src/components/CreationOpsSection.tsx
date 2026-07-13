@@ -1,89 +1,72 @@
-import { Link } from "wouter";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Check } from "lucide-react";
-import { content } from "@/lib/content";
+import { Section, CTAButton } from "@/components/primitives";
+import { useContent } from "@/content";
 
+/**
+ * ============================================================================
+ * A REPETICAO QUE ESTE ARQUIVO CAUSAVA
+ * As 3 fases (Diagnostico -> Estruturacao -> Execucao) apareciam em 5 lugares:
+ *   1. Home       -> CreationOpsSection (este arquivo), com os 15 entregaveis
+ *   2. Servicos   -> os mesmos 15 entregaveis
+ *   3. Metodo     -> cards de fase
+ *   4. Metodo     -> DE NOVO, "Entregaveis por Fase", mesma pagina!
+ *   5. Quem Somos -> "Como fazemos" (Diagnostico/Arquitetura/Execucao/Sustentacao)
+ *
+ * E vinham de DOIS objetos redundantes no content: method.phases e
+ * creationOps.phases, descrevendo a mesma coisa.
+ *
+ * AGORA: as fases vivem so na pagina Metodo. A home anuncia e linka.
+ * ============================================================================
+ */
 export default function CreationOpsSection() {
+  const c = useContent();
+
   return (
-    <section
-      className="py-20 md:py-28 bg-white"
-      data-testid="section-creation-ops"
-    >
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-          <Badge className="bg-[#000000]/10 text-[#000000] border-[#000000]/20 mb-6" data-i18n="creation_ops_badge">
-            {content.creationOps.badge}
-          </Badge>
-          <h2 className="text-4xl sm:text-5xl font-bold text-black tracking-tight" data-i18n="creation_ops_title">
-            {content.creationOps.title}
-          </h2>
-          <p className="mt-4 text-xl text-[#7ad1e4] font-medium" data-i18n="creation_ops_subtitle">
-            {content.creationOps.subtitle}
-          </p>
-          <p className="mt-6 text-lg text-[#6b7280] max-w-2xl mx-auto" data-i18n="creation_ops_description">
-            {content.creationOps.description}
-          </p>
-        </div>
+    <Section tone="paper">
+      <div className="max-w-3xl">
+        <p className="text-xs font-semibold text-[#7ad1e4] mb-4 uppercase tracking-widest">
+          {c.method.badge}
+        </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
-          {content.creationOps.phases.map((phase, index) => (
-            <Card
-              key={index}
-              className="bg-white border border-[rgba(0,0,0,0.08)]"
-              data-testid={`card-phase-${index}`}
+        <h2 className="text-4xl sm:text-5xl font-bold text-black tracking-tight">
+          {c.method.title}
+        </h2>
+
+        <p className="mt-4 text-xl text-[#4a4a4a] font-medium">
+          {c.method.subtitle}
+        </p>
+
+        <p className="mt-6 text-lg text-[#4a4a4a] leading-relaxed">
+          {c.method.description}
+        </p>
+
+        <ol className="mt-10 space-y-1">
+          {c.method.phases.map((phase) => (
+            <li
+              key={phase.number}
+              className="flex items-baseline gap-4 py-3 border-b border-black/10"
             >
-              <CardContent className="p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="text-5xl font-black text-[#000000]">
-                    {phase.number}
-                  </span>
-                  <Badge
-                    variant="outline"
-                    className="border-[rgba(0,0,0,0.15)] text-[#6b7280] text-xs"
-                    data-i18n={`creation_ops_phase_${index}_duration`}
-                  >
-                    {phase.duration}
-                  </Badge>
-                </div>
-                <h3 className="text-xl font-semibold text-black mb-4" data-i18n={`creation_ops_phase_${index}_title`}>
-                  {phase.title}
-                </h3>
-                <p className="text-[#6b7280] mb-6" data-i18n={`creation_ops_phase_${index}_description`}>
-                  {phase.description}
-                </p>
-                <ul className="space-y-3">
-                  {phase.deliverables.map((item, i) => (
-                    <li
-                      key={i}
-                      className="flex items-center gap-3 text-sm text-[#374151]"
-                    >
-                      <Check className="h-4 w-4 text-[#7ad1e4] flex-shrink-0" />
-                      <span data-i18n={`creation_ops_phase_${index}_deliverable_${i}`}>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
+              <span className="text-2xl font-black text-black/20 tabular-nums">
+                {phase.number}
+              </span>
+              <span className="text-lg font-semibold text-black">
+                {phase.title}
+              </span>
+            </li>
           ))}
-        </div>
+        </ol>
 
-        <div className="bg-[#f8f9fa] border border-[rgba(0,0,0,0.08)] p-8 md:p-12 text-center max-w-3xl mx-auto">
-          <p className="text-[#374151] text-lg leading-relaxed mb-8" data-i18n="creation_ops_result">
-            {content.creationOps.result}
-          </p>
-          <Link href="/contato">
-            <span
-              className="inline-flex items-center gap-2 text-[#7ad1e4] font-semibold text-lg hover:gap-3 transition-all cursor-pointer"
-              data-testid="button-creation-ops-cta"
-              data-i18n="creation_ops_cta"
-            >
-              {content.creationOps.cta}
-              <ArrowRight className="h-5 w-5" />
-            </span>
-          </Link>
+        <p className="mt-10 text-xl font-medium text-black leading-snug border-l-2 border-[#7ad1e4] pl-6">
+          {c.hero.proof}
+        </p>
+
+        <div className="mt-10">
+          <CTAButton
+            label={c.cta.secondary}
+            href={c.cta.methodHref}
+            variant="primary"
+          />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }

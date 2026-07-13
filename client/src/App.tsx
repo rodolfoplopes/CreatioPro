@@ -1,5 +1,4 @@
-import './i18n';
-import { Switch, Route, Redirect, useLocation, useRoute } from "wouter";
+import { Switch, Route, Redirect, useLocation } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
@@ -15,13 +14,24 @@ import Metodo from "@/pages/Metodo";
 import Contato from "@/pages/Contato";
 import CreationProfile from "@/pages/CreationProfile";
 import NotFound from "@/pages/not-found";
-import { supportedLangs, defaultLang, getLangFromPath, getPathWithLang, isValidLang } from "@/lib/lang";
-import { loadLanguage } from "./i18n";
+import {
+  supportedLangs,
+  defaultLang,
+  getLangFromPath,
+  getPathWithLang,
+  isValidLang,
+} from "@/lib/lang";
+
+/**
+ * `import './i18n'` REMOVIDO.
+ * O i18n.js sobrescrevia o DOM por cima do React via textContent, com um
+ * MutationObserver para recolar a traducao a cada re-render. Agora o idioma
+ * vem da rota e o conteudo do useContent(). React puro.
+ */
 
 function LanguageSync({ lang }: { lang: string }) {
   useEffect(() => {
     if (isValidLang(lang)) {
-      loadLanguage(lang);
       document.documentElement.lang = lang;
     }
   }, [lang]);
@@ -30,24 +40,27 @@ function LanguageSync({ lang }: { lang: string }) {
 
 function HrefLangTags({ currentPath }: { currentPath: string }) {
   useEffect(() => {
-    const existingLinks = document.querySelectorAll('link[rel="alternate"][hreflang]');
-    existingLinks.forEach(link => link.remove());
+    const existingLinks = document.querySelectorAll(
+      'link[rel="alternate"][hreflang]',
+    );
+    existingLinks.forEach((link) => link.remove());
 
     const baseUrl = window.location.origin;
-    const pathWithoutLang = currentPath.replace(/^\/(en|es|pt)/, '') || '/';
+    const pathWithoutLang = currentPath.replace(/^\/(en|es|pt)/, "") || "/";
+    const suffix = pathWithoutLang === "/" ? "" : pathWithoutLang;
 
-    supportedLangs.forEach(lang => {
-      const link = document.createElement('link');
-      link.rel = 'alternate';
+    supportedLangs.forEach((lang) => {
+      const link = document.createElement("link");
+      link.rel = "alternate";
       link.hreflang = lang;
-      link.href = `${baseUrl}/${lang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
+      link.href = `${baseUrl}/${lang}${suffix}`;
       document.head.appendChild(link);
     });
 
-    const defaultLink = document.createElement('link');
-    defaultLink.rel = 'alternate';
-    defaultLink.hreflang = 'x-default';
-    defaultLink.href = `${baseUrl}/${defaultLang}${pathWithoutLang === '/' ? '' : pathWithoutLang}`;
+    const defaultLink = document.createElement("link");
+    defaultLink.rel = "alternate";
+    defaultLink.hreflang = "x-default";
+    defaultLink.href = `${baseUrl}/${defaultLang}${suffix}`;
     document.head.appendChild(defaultLink);
   }, [currentPath]);
 
@@ -56,7 +69,7 @@ function HrefLangTags({ currentPath }: { currentPath: string }) {
 
 function LangRouter({ lang }: { lang: string }) {
   const [location] = useLocation();
-  
+
   return (
     <>
       <LanguageSync lang={lang} />
@@ -79,16 +92,14 @@ function LangRouter({ lang }: { lang: string }) {
 
 function RedirectHandler() {
   const [location, setLocation] = useLocation();
-  
+
   useEffect(() => {
     const lang = getLangFromPath(location);
-    
     if (!lang) {
-      const newPath = getPathWithLang(location, defaultLang);
-      setLocation(newPath, { replace: true });
+      setLocation(getPathWithLang(location, defaultLang), { replace: true });
     }
   }, [location, setLocation]);
-  
+
   return null;
 }
 
@@ -96,7 +107,7 @@ function Router() {
   const [location] = useLocation();
   const lang = getLangFromPath(location);
 
-  if (location === '/') {
+  if (location === "/") {
     return <Redirect to={`/${defaultLang}`} />;
   }
 
