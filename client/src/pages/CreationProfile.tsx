@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { getCurrentLang } from "@/i18n";
+import { useLang } from "@/content";
 import { 
   Target, 
   MessageSquare, 
@@ -47,26 +47,14 @@ const packages = ["Foundation", "Executive", "Signature"];
 
 export default function CreationProfile() {
   const [, setLocation] = useLocation();
-  const [isAllowed, setIsAllowed] = useState(false);
-
+  const lang = useLang();
   useEffect(() => {
-    const checkLanguage = () => {
-      const lang = getCurrentLang();
-      if (lang === 'pt') {
-        setLocation('/');
-      } else {
-        setIsAllowed(true);
-      }
-    };
-    
-    checkLanguage();
-    const interval = setInterval(checkLanguage, 500);
-    setTimeout(() => clearInterval(interval), 2000);
-    
-    return () => clearInterval(interval);
-  }, [setLocation]);
+    if (lang === "pt") {
+      setLocation("/pt");
+    }
+  }, [lang, setLocation]);
 
-  if (!isAllowed) {
+  if (lang === "pt") {
     return null;
   }
 
