@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <Link href={localize("/")}>
                 <img
-                  src="/brand/lockup_bone.svg"
+                  src="/brand/lockup_bone_transp.svg"
                   alt={c.brand.name}
                   className="h-14 w-auto cursor-pointer"
                   data-testid="img-footer-logo"
