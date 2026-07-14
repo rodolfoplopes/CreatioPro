@@ -11,31 +11,6 @@ export default {
         sm: "0.25rem", /* 4px */
       },
       colors: {
-        // ========================================================
-        // CREATION — Manual de Marca v3
-        // Pares texto/fundo validados em WCAG 2.1 (manual, pag. W1)
-        //
-        //   Fundo claro (bone):
-        //     corpo       text-abyss                12.47:1
-        //     secundario  text-abyss/70              5.15:1
-        //     link        text-abyss + underline
-        //     PROIBIDO    text-signal  (2.20:1)
-        //     PROIBIDO    text-slate   (3.78:1)
-        //
-        //   Fundo escuro (abyss / ink):
-        //     corpo       text-bone                 12.47:1
-        //     secundario  text-bone/70               6.84:1
-        //     link/acento text-signal                5.67:1
-        //
-        //   Slate: bordas e icones apenas. NUNCA texto.
-        //   Ember e Lichen NAO existem no site.
-        // ========================================================
-        abyss: "#0A2E3B",
-        signal: "#1EB3C6",
-        bone: "#F2EFE9",
-        ink: "#061C24",
-        slate: "#6E7B85",
-
         // Flat / base colors (regular buttons)
         background: "hsl(var(--background) / <alpha-value>)",
         foreground: "hsl(var(--foreground) / <alpha-value>)",
@@ -114,30 +89,10 @@ export default {
           DEFAULT: "hsl(var(--ouro) / <alpha-value>)",
         },
       },
-      // ========================================================
-      // TIPOGRAFIA — Manual v3, pagina W2
-      //   display : Newsreader 700  (H1, H2, citacao)
-      //   sans    : Inter 400/600   (corpo, interface, legenda)
-      //   Newsreader NUNCA em corpo. Inter NUNCA em titulo principal.
-      //   Base 16px. Nunca menor. Medida de linha 60-75 caracteres.
-      // ========================================================
       fontFamily: {
-        display: ["Newsreader", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
-        serif: ["Newsreader", "Georgia", "serif"],
+        sans: ["var(--font-sans)"],
+        serif: ["var(--font-serif)"],
         mono: ["var(--font-mono)"],
-      },
-      fontSize: {
-        display: ["39px", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
-        h1: ["31px", { lineHeight: "1.1", letterSpacing: "-0.02em" }],
-        h2: ["25px", { lineHeight: "1.2" }],
-        h3: ["20px", { lineHeight: "1.35" }],
-        body: ["16px", { lineHeight: "1.6" }],
-        small: ["13px", { lineHeight: "1.5" }],
-        caption: ["11px", { lineHeight: "1.4" }],
-      },
-      maxWidth: {
-        measure: "68ch",
       },
       keyframes: {
         "accordion-down": {
