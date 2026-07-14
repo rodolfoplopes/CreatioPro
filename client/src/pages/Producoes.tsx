@@ -72,7 +72,7 @@ export default function Producoes() {
         </div>
       </Section>
 
-      <ProductionsMediaGrid />
+      <ProductionsMediaGrid title={c.productions.mediaTitle} />
 
       <Section tone="bone" size="sm" className="border-t border-abyss/14">
         <div className="text-center">

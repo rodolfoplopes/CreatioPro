@@ -10,29 +10,28 @@ import img8 from "@assets/blockchain_rio.jpg";
 import img9 from "@assets/IMG_6290_1767378825154.jpg";
 
 /**
- * As legendas ja existiam - escondidas no atributo alt, visiveis so para
- * leitores de tela. World Creativity Day, ReservaX, Hacking Rio, Blockchain
- * Rio, Donatinho, Storyline. Sao projetos reais, com nomes reais.
- * Foto sem legenda parece stock. Foto com legenda e prova.
+ * Legendas em INGLES nos tres idiomas — decisao de marca.
+ * Sao nomes de projeto, nao texto corrido. Nomes proprios nao se traduzem.
  *
  * TODO(Sprint 2): adicionar cliente e ano em cada uma.
+ * Foto sem contexto parece stock. Foto com cliente e ano e prova.
  */
 const mediaItems = [
   { src: img1, label: "World Creativity Day" },
-  { src: img2, label: "Evento na praia" },
-  { src: img3, label: "ReservaX Holder Lounge" },
-  { src: img4, label: "Hacking Rio" },
-  { src: img5, label: "Luiza Brunet" },
-  { src: img6, label: "Donatinho" },
+  { src: img2, label: "Beach Carnival" },
+  { src: img3, label: "Port Rio Events" },
+  { src: img4, label: "Hackathon" },
+  { src: img5, label: "50+ Magazine" },
+  { src: img6, label: "Pocket Show" },
   { src: img7, label: "Storyline" },
-  { src: img8, label: "Blockchain Rio" },
-  { src: img9, label: "Feira de artesanato" },
+  { src: img8, label: "Event Productions" },
+  { src: img9, label: "NGO Projects" },
 ];
 
-export default function ProductionsMediaGrid() {
+export default function ProductionsMediaGrid({ title }: { title: string }) {
   return (
     <Section tone="bone" divider>
-      <SectionHeader title="Alguns momentos que ajudamos a produzir" />
+      <SectionHeader title={title} />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {mediaItems.map((item) => (
@@ -45,7 +44,7 @@ export default function ProductionsMediaGrid() {
                 loading="lazy"
               />
             </div>
-            <figcaption className="mt-3 text-sm font-medium text-abyss">
+            <figcaption className="mt-3 text-small font-semibold text-abyss">
               {item.label}
             </figcaption>
           </figure>

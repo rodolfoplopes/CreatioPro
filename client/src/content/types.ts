@@ -144,6 +144,7 @@ export interface Content {
   productions: {
     hero: { title: string; subtitle: string };
     servicesTitle: string;
+    mediaTitle: string;
     services: TitledItem[];
     creatorOps: {
       eyebrow: string;

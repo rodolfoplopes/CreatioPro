@@ -289,6 +289,7 @@ export const en: Content = {
       subtitle: "From strategy to delivery — audiovisual, events, campaigns and special projects.",
     },
     servicesTitle: "What we produce",
+    mediaTitle: "Some moments we helped produce",
     services: [
       {
         title: "Branding & Identity",
