@@ -5,6 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { useContent, useLang } from "@/content";
 import { getPathWithoutLang, type SupportedLang } from "@/lib/lang";
+import { storeLang } from "@/lib/detectLang";
 
 
 /**
@@ -47,6 +48,7 @@ export default function Header() {
   const isCurrentPath = (href: string) => cleanPath === href;
 
   const switchLanguage = (targetLang: SupportedLang) => {
+    storeLang(targetLang);
     setLocation(cleanPath === "/" ? `/${targetLang}` : `/${targetLang}${cleanPath}`);
   };
 

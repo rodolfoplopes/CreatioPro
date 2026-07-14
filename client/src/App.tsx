@@ -21,6 +21,7 @@ import {
   getPathWithLang,
   isValidLang,
 } from "@/lib/lang";
+import { resolveInitialLang } from "@/lib/detectLang";
 
 /**
  * `import './i18n'` REMOVIDO.
@@ -113,7 +114,7 @@ function RedirectHandler() {
   useEffect(() => {
     const lang = getLangFromPath(location);
     if (!lang) {
-      setLocation(getPathWithLang(location, defaultLang), { replace: true });
+      setLocation(getPathWithLang(location, resolveInitialLang()), { replace: true });
     }
   }, [location, setLocation]);
 
@@ -125,7 +126,7 @@ function Router() {
   const lang = getLangFromPath(location);
 
   if (location === "/") {
-    return <Redirect to={`/${defaultLang}`} />;
+    return <Redirect to={`/${resolveInitialLang()}`} />;
   }
 
   if (!lang) {
