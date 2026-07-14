@@ -23,7 +23,7 @@ export default function Impacto() {
         showSecondaryCta={false}
       />
 
-      <Section tone="muted" firstContent>
+      <Section tone="bone" divider firstContent>
         <SectionHeader
           title={impact.approach.title}
           subtitle={impact.approach.subtitle}
@@ -41,7 +41,7 @@ export default function Impacto() {
 
       <ImpactoTripleImage />
 
-      <Section tone="paper">
+      <Section tone="bone">
         <Grid cols={3}>
           {impact.offerings.map((offering) => (
             <div
@@ -78,7 +78,7 @@ export default function Impacto() {
         Agora: enquanto impact.cases.items estiver vazio, NAO RENDERIZA.
       */}
       {hasCases && (
-        <Section tone="muted">
+        <Section tone="bone" divider>
           <SectionHeader title={impact.cases.title} />
           <div className="space-y-8">
             {impact.cases.items.map((item) => (
@@ -129,7 +129,7 @@ export default function Impacto() {
         </Section>
       )}
 
-      <Section tone="paper">
+      <Section tone="bone">
         <SectionHeader title={impact.audience.title} />
         <Grid cols={2}>
           {impact.audience.items.map((item) => (
@@ -149,7 +149,7 @@ export default function Impacto() {
         do mesmo site se contradiziam eticamente.
         Converte risco reputacional em diferencial.
       */}
-      <Section tone="muted">
+      <Section tone="bone" divider>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-abyss tracking-tight">
             {impact.territoryPolicy.title}

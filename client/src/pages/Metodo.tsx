@@ -33,7 +33,7 @@ export default function Metodo() {
         </div>
       </section>
 
-      <Section tone="muted" firstContent>
+      <Section tone="bone" divider firstContent>
         <p className="text-lg text-abyss/70 leading-relaxed max-w-3xl mb-12">
           {c.method.description}
         </p>
@@ -83,7 +83,7 @@ export default function Metodo() {
         </div>
       </Section>
 
-      <Section tone="paper">
+      <Section tone="bone">
         <SectionHeader title={c.method.howWeWork.title} />
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-5 max-w-5xl">
           {c.method.howWeWork.items.map((item) => (

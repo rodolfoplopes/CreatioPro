@@ -21,7 +21,7 @@ export default function CreationOpsSection() {
   const c = useContent();
 
   return (
-    <Section tone="paper">
+    <Section tone="bone">
       <div className="max-w-3xl">
         <p className="text-xs font-semibold text-abyss/70 mb-4 uppercase tracking-widest">
           {c.method.badge}

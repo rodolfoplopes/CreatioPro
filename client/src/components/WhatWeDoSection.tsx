@@ -13,7 +13,7 @@ export default function WhatWeDoSection() {
   const c = useContent();
 
   return (
-    <Section tone="paper" firstContent>
+    <Section tone="bone" firstContent>
       <SectionHeader
         title={c.whatWeDo.title}
         subtitle={c.whatWeDo.description}

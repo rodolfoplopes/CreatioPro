@@ -26,7 +26,7 @@ export default function Producoes() {
         videoSrc="/images/video-hero.mp4"
       />
 
-      <Section tone="muted" firstContent>
+      <Section tone="bone" divider firstContent>
         <SectionHeader title={c.productions.servicesTitle} />
 
         <Grid cols={3}>
@@ -74,7 +74,7 @@ export default function Producoes() {
 
       <ProductionsMediaGrid />
 
-      <Section tone="paper" size="sm" className="border-t border-abyss/14">
+      <Section tone="bone" size="sm" className="border-t border-abyss/14">
         <div className="text-center">
           <CTAButton label={c.cta.primary} href={c.cta.href} variant="primary" />
         </div>

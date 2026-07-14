@@ -33,7 +33,7 @@ export default function Servicos() {
         </div>
       </section>
 
-      <Section tone="muted" size="sm" firstContent>
+      <Section tone="bone" divider size="sm" firstContent>
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 border-l-2 border-abyss pl-8">
           <p className="text-lg text-abyss/70 leading-relaxed max-w-2xl">
             {c.services.methodNote}
@@ -47,7 +47,7 @@ export default function Servicos() {
         </div>
       </Section>
 
-      <Section tone="paper">
+      <Section tone="bone">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-abyss/10 border border-abyss/14">
           {c.services.items.map((service) => (
             <article key={service.title} className="bg-bone p-8 md:p-10 flex flex-col">

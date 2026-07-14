@@ -5,25 +5,34 @@ import { cn } from "@/lib/utils";
 import { useLocalizedHref } from "@/content";
 
 // ============================================================================
-// PRIMITIVOS
-// Antes, cada secao reimplementava a mao:
-//   py-20 md:py-28 / mx-auto max-w-7xl px-4 / border-t-4 border-t-[#000000]
-// Copiado em ~40 lugares. Dai o espacamento variava, a barra de cor alternava
-// preto/ciano sem codificar nada, e o grid ia de 3 -> 2 -> 4 -> 2 sem logica.
+// PRIMITIVOS — Manual de Marca v3
+// ----------------------------------------------------------------------------
+// SUPERFICIES: o manual da tres. Bone, Abyss, Ink. Nao existe cinza-claro.
+// Antes o site alternava branco / #f8f9fa para criar ritmo. Como Bone e a
+// unica superficie clara, o ritmo entre secoes claras passa a vir de DIVISOR
+// (border-abyss/14), nao de cor de fundo.
+//
+// CONTRASTE (manual, pag. W1):
+//   Fundo claro (bone):   corpo text-abyss 12.47:1 | secundario text-abyss/70 5.15:1
+//                         PROIBIDO text-signal (2.20:1) e text-slate (3.78:1)
+//   Fundo escuro (abyss): corpo text-bone 12.47:1  | secundario text-bone/70 6.84:1
+//                         link/acento text-signal 5.67:1
 // ============================================================================
 
-type Tone = "paper" | "muted" | "ink";
+type Tone = "bone" | "abyss" | "ink";
 
 const TONES: Record<Tone, string> = {
-  paper: "bg-bone",
-  muted: "bg-bone",
-  ink: "bg-abyss text-bone",
+  bone: "bg-bone text-abyss",
+  abyss: "bg-abyss text-bone",
+  ink: "bg-ink text-bone",
 };
 
 interface SectionProps {
   children: ReactNode;
   tone?: Tone;
   size?: "sm" | "md" | "lg";
+  /** Linha superior. E o que cria ritmo entre secoes claras consecutivas. */
+  divider?: boolean;
   className?: string;
   firstContent?: boolean;
   id?: string;
@@ -31,8 +40,9 @@ interface SectionProps {
 
 export function Section({
   children,
-  tone = "paper",
+  tone = "bone",
   size = "md",
+  divider = false,
   className,
   firstContent,
   id,
@@ -46,7 +56,12 @@ export function Section({
   return (
     <section
       id={id}
-      className={cn(TONES[tone], padding, className)}
+      className={cn(
+        TONES[tone],
+        padding,
+        divider && "border-t border-abyss/14",
+        className,
+      )}
       data-first-content={firstContent ? "true" : undefined}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">{children}</div>
@@ -63,6 +78,10 @@ interface SectionHeaderProps {
   className?: string;
 }
 
+/**
+ * Tipografia: Newsreader nos titulos (font-display), Inter no corpo.
+ * O manual e explicito: "Newsreader NUNCA em corpo. Inter NUNCA em titulo."
+ */
 export function SectionHeader({
   title,
   subtitle,
@@ -75,18 +94,19 @@ export function SectionHeader({
     <div
       className={cn(
         "mb-12",
-        align === "center" ? "text-center mx-auto max-w-3xl" : "max-w-3xl",
+        align === "center" ? "text-center mx-auto max-w-measure" : "max-w-measure",
         className,
       )}
     >
       <h2
         className={cn(
-          "text-3xl sm:text-4xl font-bold tracking-tight",
+          "font-display text-h2 sm:text-h1 font-bold",
           onDark ? "text-bone" : "text-abyss",
         )}
       >
         {title}
       </h2>
+
       {subtitle && (
         <p
           className={cn(
@@ -97,11 +117,12 @@ export function SectionHeader({
           {subtitle}
         </p>
       )}
+
       {description && (
         <p
           className={cn(
-            "mt-3 leading-relaxed",
-            onDark ? "text-bone/60" : "text-abyss/70",
+            "mt-3 text-small leading-relaxed",
+            onDark ? "text-bone/70" : "text-abyss/70",
           )}
         >
           {description}
@@ -111,7 +132,6 @@ export function SectionHeader({
   );
 }
 
-/** Grid padronizado. Antes: 3 -> 2 -> 4 -> 2 colunas sem logica. Agora: 2 ou 3. */
 export function Grid({
   children,
   cols = 3,
@@ -137,15 +157,11 @@ export function Grid({
 }
 
 /**
- * O card que se repetia em 6 paginas.
+ * O card que se repetia em 6 paginas. Sem icone: os anteriores eram genericos
+ * de biblioteca e rebaixavam a tipografia, que e o ativo mais forte.
  *
- * Note o que NAO tem aqui: icone.
- * Os anteriores (Layers, Target, Cog, Heart, Lightbulb, TrendingUp, Building2)
- * eram genericos de biblioteca, em caixinhas cinzas de 48px. Rebaixavam a
- * tipografia, que e o ativo mais forte da identidade.
- *
- * E a barra de cor virou semantica (accent), nao decorativa alternando
- * preto/ciano ao acaso.
+ * O eyebrow em fundo CLARO usa abyss/70, nunca signal: Signal sobre Bone da
+ * 2.20:1 e reprova (manual, pag. W1).
  */
 export function FeatureCard({
   title,
@@ -171,26 +187,35 @@ export function FeatureCard({
       )}
     >
       {eyebrow && (
-        <p className="text-xs font-semibold text-abyss/70 mb-2 uppercase tracking-widest">
+        <p
+          className={cn(
+            "text-caption font-semibold mb-2 uppercase tracking-widest",
+            onDark ? "text-signal" : "text-abyss/70",
+          )}
+        >
           {eyebrow}
         </p>
       )}
-      <h3 className={cn("text-lg font-bold mb-2", onDark ? "text-bone" : "text-abyss")}>
+      <h3
+        className={cn(
+          "text-h3 font-semibold mb-2",
+          onDark ? "text-bone" : "text-abyss",
+        )}
+      >
         {title}
       </h3>
-      <p className={cn("leading-relaxed", onDark ? "text-bone/70" : "text-abyss/70")}>
+      <p
+        className={cn(
+          "leading-relaxed",
+          onDark ? "text-bone/70" : "text-abyss/70",
+        )}
+      >
         {description}
       </p>
     </div>
   );
 }
 
-/**
- * Um CTA primario, um secundario. No site inteiro.
- * Antes competiam: "Agendar conversa", "Agendar uma Conversa", "Agende uma
- * conversa", "Solicitar proposta", "Solicitar orcamento", "Falar com
- * especialista", "Quero saber mais", "Ver cases"... Nenhum dominante.
- */
 export function CTAButton({
   label,
   href,
@@ -211,9 +236,11 @@ export function CTAButton({
       ? "bg-bone text-abyss px-8 py-4 hover:bg-signal"
       : "bg-abyss text-bone px-8 py-4 hover:bg-ink",
     secondary: onDark
-      ? "border border-bone/30 text-bone px-8 py-4 hover:border-white"
+      ? "border border-bone/30 text-bone px-8 py-4 hover:border-bone"
       : "border border-abyss/20 text-abyss px-8 py-4 hover:border-abyss",
-    link: onDark ? "text-signal hover:gap-3" : "text-abyss hover:gap-3",
+    link: onDark
+      ? "text-signal hover:gap-3"
+      : "text-abyss font-semibold underline underline-offset-4 hover:gap-3",
   }[variant];
 
   return (

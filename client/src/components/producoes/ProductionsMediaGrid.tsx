@@ -31,7 +31,7 @@ const mediaItems = [
 
 export default function ProductionsMediaGrid() {
   return (
-    <Section tone="muted">
+    <Section tone="bone" divider>
       <SectionHeader title="Alguns momentos que ajudamos a produzir" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

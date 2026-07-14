@@ -13,7 +13,7 @@ export default function VerticalsSection() {
   const localize = useLocalizedHref();
 
   return (
-    <Section id="verticais" tone="muted">
+    <Section id="verticais" tone="bone" divider>
       <SectionHeader title={c.verticals.title} subtitle={c.verticals.subtitle} />
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-abyss/10 border border-abyss/14">

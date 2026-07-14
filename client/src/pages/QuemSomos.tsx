@@ -34,7 +34,7 @@ export default function QuemSomos() {
         Execucao / Sustentacao). Quem Somos fala de QUEM somos, nao de COMO.
       */}
 
-      <Section tone="muted" firstContent>
+      <Section tone="bone" divider firstContent>
         <Grid cols={2}>
           <div className="bg-bone border-t-2 border-abyss p-8">
             <h2 className="text-xl font-bold text-abyss mb-4">{about.mission.title}</h2>
@@ -54,7 +54,7 @@ export default function QuemSomos() {
         nesta pagina - enquanto o content.ts ja continha "Clareza Radical:
         se nao esta claro, nao funciona" e o resto, ignorados.
       */}
-      <Section tone="paper">
+      <Section tone="bone">
         <SectionHeader title={about.values.title} subtitle={about.values.subtitle} />
         <Grid cols={3} className="gap-y-10">
           {about.values.items.map((value) => (
@@ -95,7 +95,7 @@ export default function QuemSomos() {
         </div>
       </Section>
 
-      <Section tone="muted">
+      <Section tone="bone" divider>
         <Grid cols={2}>
           <div className="bg-bone border-l-2 border-abyss p-8">
             <h2 className="text-xl font-bold text-abyss mb-4">{about.niche.title}</h2>
@@ -144,7 +144,7 @@ export default function QuemSomos() {
         </div>
       </Section>
 
-      <Section tone="paper" size="sm" className="border-t border-abyss/14">
+      <Section tone="bone" size="sm" className="border-t border-abyss/14">
         <div className="text-center">
           <CTAButton label={c.cta.primary} href={c.cta.href} variant="primary" />
           <p className="mt-8 text-sm font-semibold tracking-widest text-abyss/70 uppercase">

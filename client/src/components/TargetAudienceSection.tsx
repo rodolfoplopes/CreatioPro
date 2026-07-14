@@ -11,7 +11,7 @@ export default function TargetAudienceSection() {
   const c = useContent();
 
   return (
-    <Section tone="muted">
+    <Section tone="bone" divider>
       <SectionHeader
         title={c.targetAudience.title}
         subtitle={c.targetAudience.subtitle}

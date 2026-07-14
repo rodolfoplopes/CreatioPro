@@ -90,7 +90,7 @@ export default function Contato() {
         </div>
       </section>
 
-      <Section tone="muted" firstContent>
+      <Section tone="bone" divider firstContent>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
             <Card className="bg-bone border border-abyss/14">
