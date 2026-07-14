@@ -10,7 +10,6 @@ import Servicos from "@/pages/Servicos";
 import Producoes from "@/pages/Producoes";
 import CreatorOpsRio from "@/pages/producoes/CreatorOpsRio";
 import Impacto from "@/pages/Impacto";
-import Metodo from "@/pages/Metodo";
 import Contato from "@/pages/Contato";
 import CreationProfile from "@/pages/CreationProfile";
 import NotFound from "@/pages/not-found";
@@ -94,7 +93,10 @@ function LangRouter({ lang }: { lang: string }) {
         <Route path={`/${lang}/producoes`} component={Producoes} />
         <Route path={`/${lang}/producoes/creator-ops-rio`} component={CreatorOpsRio} />
         <Route path={`/${lang}/impacto`} component={Impacto} />
-        <Route path={`/${lang}/metodo`} component={Metodo} />
+        {/* /metodo foi absorvido por /servicos. Redirect preserva SEO e links externos. */}
+        <Route path={`/${lang}/metodo`}>
+          <Redirect to={`/${lang}/servicos`} />
+        </Route>
         <Route path={`/${lang}/contato`} component={Contato} />
         <Route path={`/${lang}/profile`} component={CreationProfile} />
         <Route component={NotFound} />

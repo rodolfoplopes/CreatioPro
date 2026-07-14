@@ -138,6 +138,7 @@ export interface Content {
     title: string;
     subtitle: string;
     methodNote: string;
+    opsLinkLabel: string;
     items: ServiceDetail[];
     doubt: { title: string; description: string };
   };

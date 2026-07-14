@@ -253,7 +253,8 @@ export const en: Content = {
   services: {
     title: "Our Verticals",
     subtitle: "Three specialized fronts. One method behind them — Creation OPS.",
-    methodNote: "Every vertical runs on the same 90-day framework — Diagnosis, Structuring and Guided Execution.",
+    methodNote: "Every vertical runs on the same 90-day framework.",
+    opsLinkLabel: "Explore Creation OPS",
     items: [
       {
         title: "Creation OPS",

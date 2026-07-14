@@ -258,7 +258,8 @@ export const pt: Content = {
   services: {
     title: "Nossas Verticais",
     subtitle: "Três frentes especializadas. Um único método por trás — o Creation OPS.",
-    methodNote: "Todas as verticais rodam sobre o mesmo framework de 90 dias — Diagnóstico, Estruturação e Execução Acompanhada.",
+    methodNote: "Todas as verticais rodam sobre o mesmo framework de 90 dias.",
+    opsLinkLabel: "Conhecer o Creation OPS",
     items: [
       {
         title: "Creation OPS",
