@@ -58,20 +58,20 @@ export default function WhyWeExistSection() {
 
       <button
         onClick={scrollPrev}
-        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white flex items-center justify-center transition-colors border border-[rgba(0,0,0,0.1)]"
+        className="absolute left-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-bone/90 hover:bg-bone flex items-center justify-center transition-colors border border-[rgba(0,0,0,0.1)]"
         data-testid="button-slide-prev"
         aria-label="Previous slide"
       >
-        <ChevronLeft className="h-6 w-6 text-black" />
+        <ChevronLeft className="h-6 w-6 text-abyss" />
       </button>
 
       <button
         onClick={scrollNext}
-        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-white/90 hover:bg-white flex items-center justify-center transition-colors border border-[rgba(0,0,0,0.1)]"
+        className="absolute right-4 top-1/2 -translate-y-1/2 w-12 h-12 bg-bone/90 hover:bg-bone flex items-center justify-center transition-colors border border-[rgba(0,0,0,0.1)]"
         data-testid="button-slide-next"
         aria-label="Next slide"
       >
-        <ChevronRight className="h-6 w-6 text-black" />
+        <ChevronRight className="h-6 w-6 text-abyss" />
       </button>
 
       <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
@@ -79,7 +79,7 @@ export default function WhyWeExistSection() {
           <button
             key={index}
             onClick={() => emblaApi?.scrollTo(index)}
-            className="w-2 h-2 bg-white/60 hover:bg-white transition-colors"
+            className="w-2 h-2 bg-bone/60 hover:bg-bone transition-colors"
             data-testid={`slide-indicator-${index}`}
             aria-label={`Go to slide ${index + 1}`}
           />

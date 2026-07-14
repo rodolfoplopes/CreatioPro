@@ -76,14 +76,14 @@ export default function Contato() {
 
   return (
     <Layout>
-      <section className="relative bg-white py-14 md:py-20 overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#7ad1e4]" />
+      <section className="relative bg-bone py-14 md:py-20 overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-2 bg-signal" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-abyss mb-6 tracking-tight">
               {c.contact.title}
             </h1>
-            <p className="text-xl text-[#4a4a4a] leading-relaxed">
+            <p className="text-xl text-abyss/70 leading-relaxed">
               {c.contact.description}
             </p>
           </div>
@@ -93,7 +93,7 @@ export default function Contato() {
       <Section tone="muted" firstContent>
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           <div className="lg:col-span-2">
-            <Card className="bg-white border border-black/10">
+            <Card className="bg-bone border border-abyss/14">
               <CardContent className="p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -178,7 +178,7 @@ export default function Contato() {
                     type="submit"
                     size="lg"
                     disabled={isSubmitting}
-                    className="w-full md:w-auto bg-black text-white hover:bg-[#1a1a1a] font-semibold"
+                    className="w-full md:w-auto bg-abyss text-bone hover:bg-ink font-semibold"
                     data-testid="button-submit"
                   >
                     {isSubmitting ? (
@@ -196,24 +196,24 @@ export default function Contato() {
           </div>
 
           <div className="space-y-6">
-            <Card className="bg-white border border-black/10">
+            <Card className="bg-bone border border-abyss/14">
               <CardContent className="p-6">
-                <p className="text-black font-semibold mb-1">
+                <p className="text-abyss font-semibold mb-1">
                   {c.contact.aside.title}
                 </p>
-                <p className="text-[#4a4a4a] leading-relaxed mb-8">
+                <p className="text-abyss/70 leading-relaxed mb-8">
                   {c.contact.aside.subtitle}
                 </p>
-                <h3 className="text-sm font-semibold text-black mb-4">
+                <h3 className="text-sm font-semibold text-abyss mb-4">
                   {c.contact.aside.alternativesTitle}
                 </h3>
                 <div className="space-y-3">
                   <a
                     href={`mailto:${c.contact.aside.email}`}
-                    className="flex items-center gap-3 p-3 bg-[#f8f9fa] hover:bg-[#e9ecef] transition-colors"
+                    className="flex items-center gap-3 p-3 bg-bone hover:bg-[#e9ecef] transition-colors"
                   >
-                    <Mail className="h-5 w-5 text-black" />
-                    <span className="text-sm text-[#4a4a4a]">
+                    <Mail className="h-5 w-5 text-abyss" />
+                    <span className="text-sm text-abyss/70">
                       {c.contact.aside.email}
                     </span>
                   </a>
@@ -221,10 +221,10 @@ export default function Contato() {
                     href="https://wa.me/5521999176231"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-3 p-3 bg-[#f8f9fa] hover:bg-[#e9ecef] transition-colors"
+                    className="flex items-center gap-3 p-3 bg-bone hover:bg-[#e9ecef] transition-colors"
                   >
-                    <MessageSquare className="h-5 w-5 text-black" />
-                    <span className="text-sm text-[#4a4a4a]">
+                    <MessageSquare className="h-5 w-5 text-abyss" />
+                    <span className="text-sm text-abyss/70">
                       {c.contact.aside.whatsapp}
                     </span>
                   </a>
@@ -232,12 +232,12 @@ export default function Contato() {
               </CardContent>
             </Card>
 
-            <Card className="bg-black border-black">
+            <Card className="bg-abyss border-abyss">
               <CardContent className="p-6">
-                <p className="text-white/90 text-sm leading-relaxed">
+                <p className="text-bone/90 text-sm leading-relaxed">
                   {c.contact.aside.note}
                 </p>
-                <p className="mt-6 text-[#7ad1e4] font-semibold tracking-widest text-sm uppercase">
+                <p className="mt-6 text-signal font-semibold tracking-widest text-sm uppercase">
                   {c.brand.microcopy}
                 </p>
               </CardContent>

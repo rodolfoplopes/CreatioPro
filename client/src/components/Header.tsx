@@ -53,7 +53,7 @@ export default function Header() {
   const langButtons: SupportedLang[] = ["pt", "en", "es"];
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-black" data-testid="header">
+    <header className="sticky top-0 z-50 w-full bg-abyss" data-testid="header">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link href={localize("/")} data-testid="link-logo">
@@ -67,8 +67,8 @@ export default function Header() {
                   <span
                     className={`px-3 py-2 text-sm font-medium transition-colors flex items-center gap-1 cursor-pointer ${
                       isCurrentPath(link.href)
-                        ? "text-[#7ad1e4]"
-                        : "text-white/80 hover:text-white"
+                        ? "text-signal"
+                        : "text-bone/80 hover:text-bone"
                     }`}
                   >
                     {link.label}
@@ -77,14 +77,14 @@ export default function Header() {
                 </Link>
 
                 {link.submenu && (
-                  <div className="absolute left-0 w-56 border border-white/20 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-black">
+                  <div className="absolute left-0 w-56 border border-bone/20 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 bg-abyss">
                     {link.submenu.map((sublink) => (
                       <Link key={sublink.href} href={localize(sublink.href)}>
                         <span
                           className={`block px-4 py-2 text-sm font-medium transition-colors cursor-pointer ${
                             isCurrentPath(sublink.href)
-                              ? "text-[#7ad1e4] bg-white/5"
-                              : "text-white/80 hover:text-white hover:bg-white/5"
+                              ? "text-signal bg-bone/5"
+                              : "text-bone/80 hover:text-bone hover:bg-bone/5"
                           }`}
                         >
                           {sublink.label}
@@ -97,8 +97,8 @@ export default function Header() {
                         <span
                           className={`block px-4 py-2 text-sm font-medium transition-colors cursor-pointer ${
                             isCurrentPath("/profile")
-                              ? "text-[#7ad1e4] bg-white/5"
-                              : "text-white/80 hover:text-white hover:bg-white/5"
+                              ? "text-signal bg-bone/5"
+                              : "text-bone/80 hover:text-bone hover:bg-bone/5"
                           }`}
                         >
                           Creation Profile
@@ -127,7 +127,7 @@ export default function Header() {
 
             <Link href={localize(c.cta.href)}>
               <span
-                className="inline-flex items-center gap-2 text-[#7ad1e4] font-semibold hover:gap-3 transition-all cursor-pointer"
+                className="inline-flex items-center gap-2 text-signal font-semibold hover:gap-3 transition-all cursor-pointer"
                 data-testid="button-header-cta"
               >
                 {c.cta.primary}
@@ -141,7 +141,7 @@ export default function Header() {
               <Button
                 variant="ghost"
                 size="icon"
-                className="text-white hover:bg-white/10"
+                className="text-bone hover:bg-bone/10"
                 data-testid="button-mobile-menu"
               >
                 <Menu className="h-5 w-5" />
@@ -149,15 +149,15 @@ export default function Header() {
               </Button>
             </SheetTrigger>
 
-            <SheetContent side="right" className="w-[280px] p-0 border-white/20 bg-black">
+            <SheetContent side="right" className="w-[280px] p-0 border-bone/20 bg-abyss">
               <div className="flex flex-col h-full">
-                <div className="flex items-center justify-between p-4 border-b border-white/10">
+                <div className="flex items-center justify-between p-4 border-b border-bone/14">
                   <img src={logoWhite} alt={c.brand.name} className="h-12 w-auto" />
                   <Button
                     variant="ghost"
                     size="icon"
                     onClick={() => setIsOpen(false)}
-                    className="text-white hover:bg-white/10"
+                    className="text-bone hover:bg-bone/10"
                     data-testid="button-close-menu"
                   >
                     <X className="h-5 w-5" />
@@ -175,8 +175,8 @@ export default function Header() {
                             }}
                             className={`block px-3 py-3 text-base font-medium transition-colors cursor-pointer ${
                               isCurrentPath(link.href)
-                                ? "text-[#7ad1e4] bg-white/5"
-                                : "text-white/80 hover:text-white hover:bg-white/5"
+                                ? "text-signal bg-bone/5"
+                                : "text-bone/80 hover:text-bone hover:bg-bone/5"
                             }`}
                           >
                             {link.label}
@@ -188,7 +188,7 @@ export default function Header() {
                             onClick={() =>
                               setOpenSubmenu(openSubmenu === link.href ? null : link.href)
                             }
-                            className="px-3 py-3 text-white/80"
+                            className="px-3 py-3 text-bone/80"
                           >
                             <ChevronDown
                               className={`h-4 w-4 transition-transform ${
@@ -200,7 +200,7 @@ export default function Header() {
                       </div>
 
                       {link.submenu && openSubmenu === link.href && (
-                        <div className="bg-white/5 mt-1">
+                        <div className="bg-bone/5 mt-1">
                           {link.submenu.map((sublink) => (
                             <Link key={sublink.href} href={localize(sublink.href)}>
                               <span
@@ -208,7 +208,7 @@ export default function Header() {
                                   setIsOpen(false);
                                   setOpenSubmenu(null);
                                 }}
-                                className="block px-4 py-3 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
+                                className="block px-4 py-3 text-base font-medium text-bone/80 hover:text-bone hover:bg-bone/5 transition-colors cursor-pointer"
                               >
                                 {sublink.label}
                               </span>
@@ -222,7 +222,7 @@ export default function Header() {
                                   setIsOpen(false);
                                   setOpenSubmenu(null);
                                 }}
-                                className="block px-4 py-3 text-base font-medium text-white/80 hover:text-white hover:bg-white/5 transition-colors cursor-pointer"
+                                className="block px-4 py-3 text-base font-medium text-bone/80 hover:text-bone hover:bg-bone/5 transition-colors cursor-pointer"
                               >
                                 Creation Profile
                               </span>
@@ -234,7 +234,7 @@ export default function Header() {
                   ))}
                 </nav>
 
-                <div className="mt-auto p-4 border-t border-white/10">
+                <div className="mt-auto p-4 border-t border-bone/14">
                   <div className="flex items-center justify-center gap-2 mb-6">
                     {langButtons.map((lang) => (
                       <button
@@ -254,7 +254,7 @@ export default function Header() {
                   <Link href={localize(c.cta.href)}>
                     <span
                       onClick={() => setIsOpen(false)}
-                      className="inline-flex items-center gap-2 text-[#7ad1e4] font-semibold hover:gap-3 transition-all cursor-pointer"
+                      className="inline-flex items-center gap-2 text-signal font-semibold hover:gap-3 transition-all cursor-pointer"
                       data-testid="button-mobile-cta"
                     >
                       {c.cta.primary}

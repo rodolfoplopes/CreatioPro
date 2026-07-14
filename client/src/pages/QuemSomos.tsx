@@ -10,14 +10,14 @@ export default function QuemSomos() {
 
   return (
     <Layout>
-      <section className="relative bg-white py-14 md:py-20 overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#7ad1e4]" />
+      <section className="relative bg-bone py-14 md:py-20 overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-2 bg-signal" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-abyss mb-6 tracking-tight">
               {about.hero.title}
             </h1>
-            <p className="text-xl text-[#4a4a4a] leading-relaxed mb-10">
+            <p className="text-xl text-abyss/70 leading-relaxed mb-10">
               {about.hero.subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
@@ -36,13 +36,13 @@ export default function QuemSomos() {
 
       <Section tone="muted" firstContent>
         <Grid cols={2}>
-          <div className="bg-white border-t-2 border-black p-8">
-            <h2 className="text-xl font-bold text-black mb-4">{about.mission.title}</h2>
-            <p className="text-lg text-[#4a4a4a] leading-relaxed">{about.mission.text}</p>
+          <div className="bg-bone border-t-2 border-abyss p-8">
+            <h2 className="text-xl font-bold text-abyss mb-4">{about.mission.title}</h2>
+            <p className="text-lg text-abyss/70 leading-relaxed">{about.mission.text}</p>
           </div>
-          <div className="bg-white border-t-2 border-[#7ad1e4] p-8">
-            <h2 className="text-xl font-bold text-black mb-4">{about.vision.title}</h2>
-            <p className="text-lg text-[#4a4a4a] leading-relaxed">{about.vision.text}</p>
+          <div className="bg-bone border-t-2 border-signal p-8">
+            <h2 className="text-xl font-bold text-abyss mb-4">{about.vision.title}</h2>
+            <p className="text-lg text-abyss/70 leading-relaxed">{about.vision.text}</p>
           </div>
         </Grid>
       </Section>
@@ -75,20 +75,20 @@ export default function QuemSomos() {
       <Section tone="ink">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-8 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-bone mb-8 tracking-tight">
               {about.whatWeDontDo.title}
             </h2>
             <ul className="space-y-4">
               {about.whatWeDontDo.items.map((item) => (
                 <li key={item} className="flex items-start gap-3">
-                  <X className="h-5 w-5 text-[#7ad1e4] shrink-0 mt-1" />
-                  <span className="text-lg text-white/80">{item}</span>
+                  <X className="h-5 w-5 text-signal shrink-0 mt-1" />
+                  <span className="text-lg text-bone/80">{item}</span>
                 </li>
               ))}
             </ul>
           </div>
-          <div className="border-l-2 border-[#7ad1e4] pl-8">
-            <p className="text-2xl md:text-3xl font-bold text-white leading-snug">
+          <div className="border-l-2 border-signal pl-8">
+            <p className="text-2xl md:text-3xl font-bold text-bone leading-snug">
               {about.whatWeDontDo.conclusion}
             </p>
           </div>
@@ -97,13 +97,13 @@ export default function QuemSomos() {
 
       <Section tone="muted">
         <Grid cols={2}>
-          <div className="bg-white border-l-2 border-black p-8">
-            <h2 className="text-xl font-bold text-black mb-4">{about.niche.title}</h2>
-            <p className="text-[#4a4a4a] leading-relaxed">{about.niche.text}</p>
+          <div className="bg-bone border-l-2 border-abyss p-8">
+            <h2 className="text-xl font-bold text-abyss mb-4">{about.niche.title}</h2>
+            <p className="text-abyss/70 leading-relaxed">{about.niche.text}</p>
           </div>
-          <div className="bg-white border-l-2 border-[#7ad1e4] p-8">
-            <h2 className="text-xl font-bold text-black mb-4">{about.differentiator.title}</h2>
-            <p className="text-[#4a4a4a] leading-relaxed">{about.differentiator.text}</p>
+          <div className="bg-bone border-l-2 border-signal p-8">
+            <h2 className="text-xl font-bold text-abyss mb-4">{about.differentiator.title}</h2>
+            <p className="text-abyss/70 leading-relaxed">{about.differentiator.text}</p>
           </div>
         </Grid>
       </Section>
@@ -122,32 +122,32 @@ export default function QuemSomos() {
       */}
       <Section tone="ink">
         <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#7ad1e4] mb-10 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-signal mb-10 tracking-tight">
             {about.manifesto.title}
           </h2>
 
           <div className="space-y-6">
             {about.manifesto.paragraphs.map((paragraph, i) => (
-              <p key={i} className="text-base text-white/80 leading-relaxed">
+              <p key={i} className="text-base text-bone/80 leading-relaxed">
                 {paragraph}
               </p>
             ))}
           </div>
 
-          <p className="text-2xl md:text-3xl font-bold text-white mt-12 leading-snug">
+          <p className="text-2xl md:text-3xl font-bold text-bone mt-12 leading-snug">
             {about.manifesto.closing}
           </p>
 
-          <p className="text-lg text-[#7ad1e4] mt-6 leading-relaxed">
+          <p className="text-lg text-signal mt-6 leading-relaxed">
             {about.manifesto.signature}
           </p>
         </div>
       </Section>
 
-      <Section tone="paper" size="sm" className="border-t border-black/10">
+      <Section tone="paper" size="sm" className="border-t border-abyss/14">
         <div className="text-center">
           <CTAButton label={c.cta.primary} href={c.cta.href} variant="primary" />
-          <p className="mt-8 text-sm font-semibold tracking-widest text-[#7ad1e4] uppercase">
+          <p className="mt-8 text-sm font-semibold tracking-widest text-abyss/70 uppercase">
             {c.brand.microcopy}
           </p>
         </div>

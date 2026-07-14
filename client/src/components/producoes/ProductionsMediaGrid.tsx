@@ -37,7 +37,7 @@ export default function ProductionsMediaGrid() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {mediaItems.map((item) => (
           <figure key={item.label} className="group">
-            <div className="aspect-video overflow-hidden bg-black">
+            <div className="aspect-video overflow-hidden bg-abyss">
               <img
                 src={item.src}
                 alt={item.label}
@@ -45,7 +45,7 @@ export default function ProductionsMediaGrid() {
                 loading="lazy"
               />
             </div>
-            <figcaption className="mt-3 text-sm font-medium text-black">
+            <figcaption className="mt-3 text-sm font-medium text-abyss">
               {item.label}
             </figcaption>
           </figure>

@@ -37,7 +37,7 @@ export default function MediaGrid({
         {items.map((item, index) => (
           <div
             key={index}
-            className="group relative bg-white border border-[rgba(15,23,42,0.12)] overflow-hidden hover:border-[rgba(15,23,42,0.20)] transition-all"
+            className="group relative bg-bone border border-[rgba(15,23,42,0.12)] overflow-hidden hover:border-[rgba(15,23,42,0.20)] transition-all"
             data-testid={`media-item-${index}`}
           >
             <div className="aspect-video relative overflow-hidden">
@@ -51,10 +51,10 @@ export default function MediaGrid({
                   />
                   <button
                     onClick={() => setActiveVideo(item.src)}
-                    className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity"
+                    className="absolute inset-0 flex items-center justify-center bg-abyss/30 opacity-0 group-hover:opacity-100 transition-opacity"
                     data-testid={`play-button-${index}`}
                   >
-                    <div className="w-16 h-16 bg-white/90 flex items-center justify-center">
+                    <div className="w-16 h-16 bg-bone/90 flex items-center justify-center">
                       <Play className="w-8 h-8 text-petroleo ml-1" />
                     </div>
                   </button>
@@ -79,13 +79,13 @@ export default function MediaGrid({
 
       {activeVideo && (
         <div 
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-abyss/90 p-4"
           onClick={() => setActiveVideo(null)}
           data-testid="video-modal"
         >
           <button
             onClick={() => setActiveVideo(null)}
-            className="absolute top-4 right-4 text-white hover:text-ouro transition-colors"
+            className="absolute top-4 right-4 text-bone hover:text-ouro transition-colors"
             data-testid="close-video-modal"
           >
             <X className="w-8 h-8" />

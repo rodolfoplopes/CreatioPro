@@ -15,9 +15,9 @@ import { useLocalizedHref } from "@/content";
 type Tone = "paper" | "muted" | "ink";
 
 const TONES: Record<Tone, string> = {
-  paper: "bg-white",
-  muted: "bg-[#f8f9fa]",
-  ink: "bg-black text-white",
+  paper: "bg-bone",
+  muted: "bg-bone",
+  ink: "bg-abyss text-bone",
 };
 
 interface SectionProps {
@@ -82,7 +82,7 @@ export function SectionHeader({
       <h2
         className={cn(
           "text-3xl sm:text-4xl font-bold tracking-tight",
-          onDark ? "text-white" : "text-black",
+          onDark ? "text-bone" : "text-abyss",
         )}
       >
         {title}
@@ -91,7 +91,7 @@ export function SectionHeader({
         <p
           className={cn(
             "mt-4 text-lg leading-relaxed",
-            onDark ? "text-white/70" : "text-[#4a4a4a]",
+            onDark ? "text-bone/70" : "text-abyss/70",
           )}
         >
           {subtitle}
@@ -101,7 +101,7 @@ export function SectionHeader({
         <p
           className={cn(
             "mt-3 leading-relaxed",
-            onDark ? "text-white/60" : "text-[#6b7280]",
+            onDark ? "text-bone/60" : "text-abyss/70",
           )}
         >
           {description}
@@ -166,19 +166,19 @@ export function FeatureCard({
     <div
       className={cn(
         "border-l-2 pl-6 py-1",
-        accent ? "border-[#7ad1e4]" : onDark ? "border-white/30" : "border-black",
+        accent ? "border-signal" : onDark ? "border-bone/30" : "border-abyss",
         className,
       )}
     >
       {eyebrow && (
-        <p className="text-xs font-semibold text-[#7ad1e4] mb-2 uppercase tracking-widest">
+        <p className="text-xs font-semibold text-abyss/70 mb-2 uppercase tracking-widest">
           {eyebrow}
         </p>
       )}
-      <h3 className={cn("text-lg font-bold mb-2", onDark ? "text-white" : "text-black")}>
+      <h3 className={cn("text-lg font-bold mb-2", onDark ? "text-bone" : "text-abyss")}>
         {title}
       </h3>
-      <p className={cn("leading-relaxed", onDark ? "text-white/70" : "text-[#4a4a4a]")}>
+      <p className={cn("leading-relaxed", onDark ? "text-bone/70" : "text-abyss/70")}>
         {description}
       </p>
     </div>
@@ -208,12 +208,12 @@ export function CTAButton({
 
   const styles = {
     primary: onDark
-      ? "bg-white text-black px-8 py-4 hover:bg-[#7ad1e4]"
-      : "bg-black text-white px-8 py-4 hover:bg-[#1a1a1a]",
+      ? "bg-bone text-abyss px-8 py-4 hover:bg-signal"
+      : "bg-abyss text-bone px-8 py-4 hover:bg-ink",
     secondary: onDark
-      ? "border border-white/30 text-white px-8 py-4 hover:border-white"
-      : "border border-black/20 text-black px-8 py-4 hover:border-black",
-    link: onDark ? "text-[#7ad1e4] hover:gap-3" : "text-black hover:gap-3",
+      ? "border border-bone/30 text-bone px-8 py-4 hover:border-white"
+      : "border border-abyss/20 text-abyss px-8 py-4 hover:border-abyss",
+    link: onDark ? "text-signal hover:gap-3" : "text-abyss hover:gap-3",
   }[variant];
 
   return (

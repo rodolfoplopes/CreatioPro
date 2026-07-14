@@ -34,13 +34,13 @@ const images = [
 
 export default function ImpactoTripleImage() {
   return (
-    <section className="py-12 md:py-16 bg-[#f4f6fa]">
+    <section className="py-12 md:py-16 bg-bone">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {images.map((img, index) => (
             <div 
               key={index} 
-              className="bg-white border border-[rgba(15,23,42,0.12)] overflow-hidden group hover:border-[rgba(15,23,42,0.20)] transition-colors"
+              className="bg-bone border border-[rgba(15,23,42,0.12)] overflow-hidden group hover:border-[rgba(15,23,42,0.20)] transition-colors"
               data-testid={`impacto-image-${index}`}
             >
               <img

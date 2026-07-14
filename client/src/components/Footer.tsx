@@ -18,7 +18,7 @@ export default function Footer() {
   const localize = useLocalizedHref();
 
   return (
-    <footer className="bg-black text-white" data-testid="footer">
+    <footer className="bg-abyss text-bone" data-testid="footer">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="py-14 md:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
@@ -32,26 +32,26 @@ export default function Footer() {
                 />
               </Link>
 
-              <p className="mt-6 text-white/60 max-w-md leading-relaxed">
+              <p className="mt-6 text-bone/60 max-w-md leading-relaxed">
                 {c.footer.description}
               </p>
 
-              <p className="mt-3 text-white/40 text-sm">{c.footer.locations}</p>
+              <p className="mt-3 text-bone/60 text-sm">{c.footer.locations}</p>
 
-              <p className="mt-6 text-[#7ad1e4] font-semibold tracking-widest text-sm uppercase">
+              <p className="mt-6 text-signal font-semibold tracking-widest text-sm uppercase">
                 {c.brand.microcopy}
               </p>
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-white mb-6 uppercase tracking-widest">
+              <h3 className="text-sm font-semibold text-bone mb-6 uppercase tracking-widest">
                 {c.footer.companyTitle}
               </h3>
               <ul className="space-y-4">
                 {c.footer.companyLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={localize(link.href)}>
-                      <span className="text-white/60 hover:text-[#7ad1e4] transition-colors cursor-pointer">
+                      <span className="text-bone/60 hover:text-signal transition-colors cursor-pointer">
                         {link.label}
                       </span>
                     </Link>
@@ -61,14 +61,14 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold text-white mb-6 uppercase tracking-widest">
+              <h3 className="text-sm font-semibold text-bone mb-6 uppercase tracking-widest">
                 {c.footer.solutionsTitle}
               </h3>
               <ul className="space-y-4">
                 {c.footer.solutionsLinks.map((link) => (
                   <li key={link.href}>
                     <Link href={localize(link.href)}>
-                      <span className="text-white/60 hover:text-[#7ad1e4] transition-colors cursor-pointer">
+                      <span className="text-bone/60 hover:text-signal transition-colors cursor-pointer">
                         {link.label}
                       </span>
                     </Link>
@@ -78,8 +78,8 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="mt-14 pt-8 border-t border-white/10">
-            <p className="text-sm text-white/40">
+          <div className="mt-14 pt-8 border-t border-bone/14">
+            <p className="text-sm text-bone/60">
               &copy; {new Date().getFullYear()} {c.footer.copyright}
             </p>
           </div>

@@ -49,9 +49,9 @@ export default function ClientLogosSlideshow() {
   };
 
   return (
-    <section className="py-16 md:py-20 bg-[#f8f9fa]">
+    <section className="py-16 md:py-20 bg-bone">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-black mb-12 text-center">
+        <h2 className="text-2xl sm:text-3xl font-bold text-abyss mb-12 text-center">
           {c.about.partnersTitle}
         </h2>
         
@@ -79,7 +79,7 @@ export default function ClientLogosSlideshow() {
               key={index}
               onClick={() => setCurrentIndex(index)}
               className={`w-2 h-2 transition-all duration-300 ${
-                index === currentIndex ? "bg-[#7ad1e4] w-6" : "bg-black/20"
+                index === currentIndex ? "bg-signal w-6" : "bg-abyss/20"
               }`}
               data-testid={`logo-indicator-${index}`}
             />

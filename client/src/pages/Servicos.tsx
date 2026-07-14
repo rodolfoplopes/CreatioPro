@@ -19,14 +19,14 @@ export default function Servicos() {
 
   return (
     <Layout>
-      <section className="relative bg-white py-14 md:py-20 overflow-hidden">
-        <div className="absolute left-0 top-0 bottom-0 w-2 bg-[#7ad1e4]" />
+      <section className="relative bg-bone py-14 md:py-20 overflow-hidden">
+        <div className="absolute left-0 top-0 bottom-0 w-2 bg-signal" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-black mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-abyss mb-6 tracking-tight">
               {c.services.title}
             </h1>
-            <p className="text-xl text-[#4a4a4a] leading-relaxed">
+            <p className="text-xl text-abyss/70 leading-relaxed">
               {c.services.subtitle}
             </p>
           </div>
@@ -34,12 +34,12 @@ export default function Servicos() {
       </section>
 
       <Section tone="muted" size="sm" firstContent>
-        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 border-l-2 border-black pl-8">
-          <p className="text-lg text-[#4a4a4a] leading-relaxed max-w-2xl">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6 border-l-2 border-abyss pl-8">
+          <p className="text-lg text-abyss/70 leading-relaxed max-w-2xl">
             {c.services.methodNote}
           </p>
           <Link href={localize(c.cta.methodHref)}>
-            <span className="inline-flex items-center gap-2 font-semibold text-black hover:gap-3 transition-all cursor-pointer shrink-0">
+            <span className="inline-flex items-center gap-2 font-semibold text-abyss hover:gap-3 transition-all cursor-pointer shrink-0">
               {c.cta.secondary}
               <ArrowRight className="h-5 w-5" />
             </span>
@@ -48,37 +48,37 @@ export default function Servicos() {
       </Section>
 
       <Section tone="paper">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-black/10 border border-black/10">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-px bg-abyss/10 border border-abyss/14">
           {c.services.items.map((service) => (
-            <article key={service.title} className="bg-white p-8 md:p-10 flex flex-col">
-              <h2 className="text-2xl font-bold text-black mb-2">
+            <article key={service.title} className="bg-bone p-8 md:p-10 flex flex-col">
+              <h2 className="text-2xl font-bold text-abyss mb-2">
                 {service.title}
               </h2>
-              <p className="text-sm text-[#6b7280] mb-8 leading-relaxed">
+              <p className="text-sm text-abyss/70 mb-8 leading-relaxed">
                 {service.subtitle}
               </p>
 
               <div className="space-y-6 flex-1">
                 <div>
-                  <h3 className="text-xs font-semibold text-black mb-2 uppercase tracking-wide">
+                  <h3 className="text-xs font-semibold text-abyss mb-2 uppercase tracking-wide">
                     {c.labels.solves}
                   </h3>
-                  <p className="text-[#4a4a4a] leading-relaxed">{service.solves}</p>
+                  <p className="text-abyss/70 leading-relaxed">{service.solves}</p>
                 </div>
 
                 <div>
-                  <h3 className="text-xs font-semibold text-black mb-2 uppercase tracking-wide">
+                  <h3 className="text-xs font-semibold text-abyss mb-2 uppercase tracking-wide">
                     {c.labels.delivers}
                   </h3>
-                  <p className="text-[#4a4a4a] leading-relaxed">{service.delivers}</p>
+                  <p className="text-abyss/70 leading-relaxed">{service.delivers}</p>
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-black/10">
-                <h3 className="text-xs font-semibold text-[#7ad1e4] mb-2 uppercase tracking-wide">
+              <div className="mt-8 pt-6 border-t border-abyss/14">
+                <h3 className="text-xs font-semibold text-abyss/70 mb-2 uppercase tracking-wide">
                   {c.labels.result}
                 </h3>
-                <p className="text-black font-medium leading-relaxed">
+                <p className="text-abyss font-medium leading-relaxed">
                   {service.result}
                 </p>
               </div>
@@ -89,10 +89,10 @@ export default function Servicos() {
 
       <Section tone="ink" size="sm">
         <div className="text-center max-w-2xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-bold text-bone mb-6 tracking-tight">
             {c.services.doubt.title}
           </h2>
-          <p className="text-white/70 mb-10 leading-relaxed">
+          <p className="text-bone/70 mb-10 leading-relaxed">
             {c.services.doubt.description}
           </p>
           <CTAButton label={c.cta.primary} href={c.cta.href} variant="primary" onDark />

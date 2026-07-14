@@ -52,19 +52,19 @@ export default function Producoes() {
       <Section tone="ink">
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
           <div className="max-w-2xl">
-            <p className="text-xs font-semibold text-[#7ad1e4] mb-3 uppercase tracking-widest">
+            <p className="text-xs font-semibold text-signal mb-3 uppercase tracking-widest">
               {c.productions.creatorOps.eyebrow}
             </p>
-            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4 tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-bold text-bone mb-4 tracking-tight">
               {c.productions.creatorOps.title}
             </h2>
-            <p className="text-white/70 leading-relaxed">
+            <p className="text-bone/70 leading-relaxed">
               {c.productions.creatorOps.description}
             </p>
           </div>
 
           <Link href={localize(c.productions.creatorOps.href)}>
-            <span className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 font-semibold hover:border-white transition-colors cursor-pointer shrink-0">
+            <span className="inline-flex items-center gap-2 border border-bone/30 text-bone px-8 py-4 font-semibold hover:border-white transition-colors cursor-pointer shrink-0">
               {c.productions.creatorOps.linkLabel}
               <ArrowRight className="h-5 w-5" />
             </span>
@@ -74,7 +74,7 @@ export default function Producoes() {
 
       <ProductionsMediaGrid />
 
-      <Section tone="paper" size="sm" className="border-t border-black/10">
+      <Section tone="paper" size="sm" className="border-t border-abyss/14">
         <div className="text-center">
           <CTAButton label={c.cta.primary} href={c.cta.href} variant="primary" />
         </div>

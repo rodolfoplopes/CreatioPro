@@ -75,14 +75,14 @@ export default function CreationProfile() {
             </Badge>
             
             <h1 
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6 tracking-tight"
+              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-bone mb-6 tracking-tight"
               data-testid="text-profile-title"
             >
               Creation Profile
             </h1>
             
             <p 
-              className="text-xl sm:text-2xl text-white/90 mb-4 font-light leading-relaxed"
+              className="text-xl sm:text-2xl text-bone/90 mb-4 font-light leading-relaxed"
               data-i18n="profile_hero_subtitle"
               data-testid="text-profile-subtitle"
             >
@@ -112,7 +112,7 @@ export default function CreationProfile() {
                 <Button 
                   size="lg" 
                   variant="outline" 
-                  className="border-white/30 text-white hover:bg-white/10 font-semibold px-8"
+                  className="border-bone/30 text-bone hover:bg-bone/10 font-semibold px-8"
                   data-testid="button-profile-call"
                 >
                   <Calendar className="mr-2 h-5 w-5" />
@@ -125,7 +125,7 @@ export default function CreationProfile() {
       </section>
 
       {/* What is Creation Profile */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-bone">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h2 
@@ -147,7 +147,7 @@ export default function CreationProfile() {
       </section>
 
       {/* What You Get */}
-      <section className="py-20 bg-[#f4f6fa]">
+      <section className="py-20 bg-bone">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 
             className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12"
@@ -163,7 +163,7 @@ export default function CreationProfile() {
               return (
                 <Card 
                   key={index} 
-                  className="bg-white border-[rgba(15,23,42,0.12)] hover:border-ouro/40 transition-colors"
+                  className="bg-bone border-[rgba(15,23,42,0.12)] hover:border-ouro/40 transition-colors"
                   data-testid={`card-deliverable-${index}`}
                 >
                   <CardContent className="p-6 flex items-start gap-4">
@@ -191,7 +191,7 @@ export default function CreationProfile() {
       </section>
 
       {/* How It Works - Timeline Infographic */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-bone">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 
             className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-16"
@@ -225,7 +225,7 @@ export default function CreationProfile() {
                   )}
                   
                   {/* Step Content */}
-                  <div className="bg-[#f4f6fa] p-4 w-full border border-ouro/10 hover:border-ouro/30 transition-colors">
+                  <div className="bg-bone p-4 w-full border border-ouro/10 hover:border-ouro/30 transition-colors">
                     <p 
                       className="text-base font-semibold text-foreground leading-tight"
                       data-i18n={step.keyEN}
@@ -246,7 +246,7 @@ export default function CreationProfile() {
       </section>
 
       {/* Who It's For */}
-      <section className="py-20 bg-[#f4f6fa]">
+      <section className="py-20 bg-bone">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 
             className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12"
@@ -288,7 +288,7 @@ export default function CreationProfile() {
       </section>
 
       {/* Packages */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-bone">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <h2 
             className="text-3xl sm:text-4xl font-bold text-foreground text-center mb-12"
@@ -302,7 +302,7 @@ export default function CreationProfile() {
             {packages.map((pkg, index) => (
               <Card 
                 key={index} 
-                className={`text-center border-2 bg-white ${
+                className={`text-center border-2 bg-bone ${
                   index === 2 
                     ? 'border-ouro bg-ouro/5' 
                     : 'border-[rgba(15,23,42,0.12)]'
@@ -335,7 +335,7 @@ export default function CreationProfile() {
       <section className="py-20 cta-gradient">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 
-            className="text-3xl sm:text-4xl font-bold text-white mb-8 max-w-2xl mx-auto leading-tight"
+            className="text-3xl sm:text-4xl font-bold text-bone mb-8 max-w-2xl mx-auto leading-tight"
             data-i18n="profile_final_title"
             data-testid="text-final-title"
           >

@@ -23,19 +23,19 @@ export default function CreationOpsSection() {
   return (
     <Section tone="paper">
       <div className="max-w-3xl">
-        <p className="text-xs font-semibold text-[#7ad1e4] mb-4 uppercase tracking-widest">
+        <p className="text-xs font-semibold text-abyss/70 mb-4 uppercase tracking-widest">
           {c.method.badge}
         </p>
 
-        <h2 className="text-4xl sm:text-5xl font-bold text-black tracking-tight">
+        <h2 className="text-4xl sm:text-5xl font-bold text-abyss tracking-tight">
           {c.method.title}
         </h2>
 
-        <p className="mt-4 text-xl text-[#4a4a4a] font-medium">
+        <p className="mt-4 text-xl text-abyss/70 font-medium">
           {c.method.subtitle}
         </p>
 
-        <p className="mt-6 text-lg text-[#4a4a4a] leading-relaxed">
+        <p className="mt-6 text-lg text-abyss/70 leading-relaxed">
           {c.method.description}
         </p>
 
@@ -43,19 +43,19 @@ export default function CreationOpsSection() {
           {c.method.phases.map((phase) => (
             <li
               key={phase.number}
-              className="flex items-baseline gap-4 py-3 border-b border-black/10"
+              className="flex items-baseline gap-4 py-3 border-b border-abyss/14"
             >
-              <span className="text-2xl font-black text-black/20 tabular-nums">
+              <span className="text-2xl font-black text-abyss/20 tabular-nums">
                 {phase.number}
               </span>
-              <span className="text-lg font-semibold text-black">
+              <span className="text-lg font-semibold text-abyss">
                 {phase.title}
               </span>
             </li>
           ))}
         </ol>
 
-        <p className="mt-10 text-xl font-medium text-black leading-snug border-l-2 border-[#7ad1e4] pl-6">
+        <p className="mt-10 text-xl font-medium text-abyss leading-snug border-l-2 border-signal pl-6">
           {c.hero.proof}
         </p>
 

@@ -47,24 +47,24 @@ export default function HeroInternal({
   const secondaryHref = secondaryCtaHref ?? c.cta.methodHref;
 
   return (
-    <section className="relative bg-white py-14 md:py-20 overflow-hidden">
-      <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[#7ad1e4]" />
+    <section className="relative bg-bone py-14 md:py-20 overflow-hidden">
+      <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-signal" />
 
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
           <div className="order-2 lg:order-1">
             {badge && (
-              <span className="inline-block text-sm font-semibold text-[#7ad1e4] uppercase tracking-widest mb-4">
+              <span className="inline-block text-sm font-semibold text-abyss/70 uppercase tracking-widest mb-4">
                 {badge}
               </span>
             )}
 
-            <h1 className="text-4xl sm:text-5xl font-bold text-black mb-6 tracking-tight">
+            <h1 className="text-4xl sm:text-5xl font-bold text-abyss mb-6 tracking-tight">
               {title}
             </h1>
 
             {subtitle && (
-              <p className="text-xl text-[#4a4a4a] leading-relaxed mb-10">
+              <p className="text-xl text-abyss/70 leading-relaxed mb-10">
                 {subtitle}
               </p>
             )}
@@ -72,7 +72,7 @@ export default function HeroInternal({
             {showCta && (
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link href={localize(primaryHref)}>
-                  <span className="inline-flex items-center gap-2 bg-black text-white px-8 py-4 font-semibold hover:bg-[#1a1a1a] transition-colors cursor-pointer">
+                  <span className="inline-flex items-center gap-2 bg-abyss text-bone px-8 py-4 font-semibold hover:bg-ink transition-colors cursor-pointer">
                     {primaryLabel}
                     <ArrowRight className="h-5 w-5" />
                   </span>
@@ -80,7 +80,7 @@ export default function HeroInternal({
 
                 {showSecondaryCta && (
                   <Link href={localize(secondaryHref)}>
-                    <span className="inline-flex items-center gap-2 border border-black/20 text-black px-8 py-4 font-semibold hover:border-black transition-colors cursor-pointer">
+                    <span className="inline-flex items-center gap-2 border border-abyss/20 text-abyss px-8 py-4 font-semibold hover:border-abyss transition-colors cursor-pointer">
                       {secondaryLabel}
                       <ArrowRight className="h-5 w-5" />
                     </span>
@@ -92,7 +92,7 @@ export default function HeroInternal({
 
           {(imageSrc || videoSrc) && (
             <div className="order-1 lg:order-2">
-              <div className="relative overflow-hidden min-h-[320px] md:min-h-[420px] border border-black/10">
+              <div className="relative overflow-hidden min-h-[320px] md:min-h-[420px] border border-abyss/14">
                 {videoSrc ? (
                   <video
                     src={videoSrc}
