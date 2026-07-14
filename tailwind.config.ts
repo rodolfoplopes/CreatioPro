@@ -140,6 +140,10 @@ export default {
         measure: "68ch",
       },
       keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
         "accordion-down": {
           from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
@@ -150,6 +154,7 @@ export default {
         },
       },
       animation: {
+        marquee: "marquee 45s linear infinite",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },

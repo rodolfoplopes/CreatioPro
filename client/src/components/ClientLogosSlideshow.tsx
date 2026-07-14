@@ -1,6 +1,4 @@
-import { useEffect, useState } from "react";
 import { useContent } from "@/content";
-
 import logo1 from "@assets/1_1767297713777.png";
 import logo2 from "@assets/2_1767297713782.png";
 import logo3 from "@assets/3_1767297713784.png";
@@ -13,75 +11,59 @@ import logo10 from "@assets/10_1767297713805.png";
 import logo11 from "@assets/11_1767297713805.png";
 import logo12 from "@assets/12_1767297713806.png";
 
+/**
+ * ANTES: carrossel com indicadores, trocando 5 logos a cada 3s. Os PNGs tem
+ * fundo proprio (gradiente azul-rosa) e o object-cover cortava em quadrado —
+ * criava as "caixas furta-cor" que nao pertenciam ao sistema.
+ *
+ * AGORA: marquee continuo. Fundo Bone, logos em Abyss monocromatico via filtro
+ * CSS. O array e duplicado para o loop ser perfeito (sem salto no fim).
+ *
+ * TODO(Sprint 2): cada logo precisa de UMA LINHA dizendo o que foi feito.
+ * Globo, L'Oreal, SESC, Senac, Hacking.Rio sem contexto sao decoracao.
+ * Com contexto, sao prova.
+ */
 const clientLogos = [
-  { id: 1, src: logo1, alt: "Sesc" },
-  { id: 2, src: logo2, alt: "Sal Grosso Gastronomia" },
-  { id: 3, src: logo3, alt: "L'Oréal Paris" },
-  { id: 4, src: logo4, alt: "Life Impact International Brasil" },
-  { id: 5, src: logo5, alt: "Instituto Casa do Pai" },
-  { id: 6, src: logo6, alt: "Asta" },
-  { id: 7, src: logo7, alt: "Instituto Skate Cuida" },
-  { id: 9, src: logo9, alt: "Pertinho de Casa" },
-  { id: 10, src: logo10, alt: "Globo" },
-  { id: 11, src: logo11, alt: "Hacking.Rio" },
-  { id: 12, src: logo12, alt: "Senac" },
+  { src: logo1, alt: "Sesc" },
+  { src: logo2, alt: "Sal Grosso Gastronomia" },
+  { src: logo3, alt: "L'Oréal Paris" },
+  { src: logo4, alt: "Life Impact International Brasil" },
+  { src: logo5, alt: "Instituto Casa do Pai" },
+  { src: logo6, alt: "Asta" },
+  { src: logo7, alt: "Instituto Skate Cuida" },
+  { src: logo9, alt: "Pertinho de Casa" },
+  { src: logo10, alt: "Globo" },
+  { src: logo11, alt: "Hacking.Rio" },
+  { src: logo12, alt: "Senac" },
 ];
 
 export default function ClientLogosSlideshow() {
   const c = useContent();
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleLogos = 5;
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % clientLogos.length);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const getVisibleLogos = () => {
-    const logos = [];
-    for (let i = 0; i < visibleLogos; i++) {
-      const index = (currentIndex + i) % clientLogos.length;
-      logos.push(clientLogos[index]);
-    }
-    return logos;
-  };
+  // Duplicado: o loop precisa de duas voltas para nao dar salto no fim.
+  const loop = [...clientLogos, ...clientLogos];
 
   return (
-    <section className="py-16 md:py-20 bg-bone">
+    <section className="py-14 md:py-20 bg-bone border-t border-abyss/14">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl font-bold text-abyss mb-12 text-center">
+        <h2 className="font-display text-h2 font-bold text-abyss mb-12">
           {c.about.partnersTitle}
         </h2>
-        
-        <div className="relative overflow-hidden">
-          <div className="flex items-center justify-center gap-4 md:gap-8 transition-all duration-500 ease-in-out">
-            {getVisibleLogos().map((logo, index) => (
-              <div
-                key={`${logo.id}-${index}`}
-                className="flex-shrink-0 w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 overflow-hidden transition-all duration-300"
-                data-testid={`client-logo-${logo.id}`}
-              >
-                <img
-                  src={logo.src}
-                  alt={logo.alt}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+      </div>
 
-        <div className="flex justify-center mt-8 gap-2">
-          {clientLogos.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 transition-all duration-300 ${
-                index === currentIndex ? "bg-signal w-6" : "bg-abyss/20"
-              }`}
-              data-testid={`logo-indicator-${index}`}
+      <div className="relative overflow-hidden">
+        {/* Fade nas bordas: o logo entra e sai do Bone, nao e cortado seco */}
+        <div className="pointer-events-none absolute left-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-r from-bone to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 bottom-0 w-24 z-10 bg-gradient-to-l from-bone to-transparent" />
+
+        <div className="flex w-max animate-marquee items-center gap-16 md:gap-24">
+          {loop.map((logo, i) => (
+            <img
+              key={`${logo.alt}-${i}`}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-12 md:h-14 w-auto shrink-0 object-contain opacity-60 transition-opacity duration-300 hover:opacity-100 [filter:grayscale(1)_brightness(0)_saturate(0)_invert(13%)_sepia(28%)_saturate(1400%)_hue-rotate(158deg)]"
+              loading="lazy"
             />
           ))}
         </div>
