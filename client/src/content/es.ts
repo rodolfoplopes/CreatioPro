@@ -284,6 +284,67 @@ export const es: Content = {
     },
   },
 
+  servicesOps: {
+    hero: {
+      eyebrow: "Creation OPS",
+      title: "90 días para operacionalizar proyectos complejos.",
+      subtitle: "No entregamos diagnóstico. Instalamos la operación.",
+      description: "Creation OPS es el programa que resuelve la raíz del caos operativo. En tres fases, mapeamos lo que traba, construimos los procesos y acompañamos hasta que la operación funcione sola.",
+    },
+    problem: {
+      title: "¿Reconoces alguno de estos?",
+      subtitle: "Si dos o más te suenan familiares, el problema no es falta de esfuerzo. Es falta de estructura.",
+      items: [
+        "Reuniones que no deciden nada.",
+        "Cada entrega depende de la misma persona.",
+        "Nadie sabe dónde está el proyecto de verdad.",
+        "Lo acordado no se convierte en ejecución.",
+        "Los plazos se corren y nadie sabe explicar por qué.",
+      ],
+    },
+    audience: {
+      title: "Para quién es",
+      items: [
+        {
+          title: "ONGs, Fundaciones e Institutos",
+          description: "Proyectos de impacto que necesitan salir del modo apagar incendios.",
+        },
+        {
+          title: "Hubs, Labs, Cultura y Educación",
+          description: "Entornos creativos que necesitan orden sin perder su esencia.",
+        },
+        {
+          title: "Negocios en expansión",
+          description: "Operaciones que necesitan un modelo replicable para crecer.",
+        },
+        {
+          title: "Áreas internas sobrecargadas",
+          description: "Equipos de innovación, ESG y proyectos especiales dentro de empresas.",
+        },
+      ],
+    },
+    included: {
+      title: "Qué incluye",
+      subtitle: "Quince entregables distribuidos en tres fases. Todo documentado, todo replicable.",
+    },
+    routine: {
+      title: "Cómo es la rutina",
+      items: [
+        "Reunión semanal de una hora — con agenda y decisión registrada.",
+        "Entrega semanal — nunca solo un informe.",
+        "Documentación accesible, viva, actualizada.",
+        "Comunicación directa. Sin intermediarios, sin ruido.",
+      ],
+    },
+    investment: {
+      title: "Inversión",
+      text: "El alcance se cierra tras la llamada de diagnóstico. No enviamos propuestas genéricas — cada operación tiene su tamaño.",
+    },
+    finalCta: {
+      title: "¿Vamos a destrabar tu operación?",
+      subtitle: "La llamada de diagnóstico es gratuita y objetiva. En una hora sabrás qué te está trabando.",
+    },
+  },
   productions: {
     hero: {
       title: "Creamos productos, contenidos y experiencias que conectan.",

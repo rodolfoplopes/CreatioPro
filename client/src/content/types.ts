@@ -142,6 +142,16 @@ export interface Content {
     items: ServiceDetail[];
     doubt: { title: string; description: string };
   };
+  servicesOps: {
+    hero: { eyebrow: string; title: string; subtitle: string; description: string };
+    problem: { title: string; subtitle: string; items: string[] };
+    audience: { title: string; items: TitledItem[] };
+    included: { title: string; subtitle: string };
+    routine: { title: string; items: string[] };
+    investment: { title: string; text: string };
+    finalCta: { title: string; subtitle: string };
+  };
+
   productions: {
     hero: { title: string; subtitle: string };
     servicesTitle: string;

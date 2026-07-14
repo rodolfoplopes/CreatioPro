@@ -284,6 +284,67 @@ export const en: Content = {
     },
   },
 
+  servicesOps: {
+    hero: {
+      eyebrow: "Creation OPS",
+      title: "90 days to operationalize complex projects.",
+      subtitle: "We don't hand over a diagnosis. We install the operation.",
+      description: "Creation OPS is the program that solves the root of operational chaos. In three phases, we map what's blocking, build the processes, and stay until the operation runs on its own.",
+    },
+    problem: {
+      title: "Recognize any of these?",
+      subtitle: "If two or more sound familiar, the problem isn't lack of effort. It's lack of structure.",
+      items: [
+        "Meetings that decide nothing.",
+        "Every delivery depends on the same person.",
+        "Nobody knows where the project actually stands.",
+        "What was agreed never becomes execution.",
+        "Deadlines slip and no one can say why.",
+      ],
+    },
+    audience: {
+      title: "Who it's for",
+      items: [
+        {
+          title: "NGOs, Foundations & Institutes",
+          description: "Impact projects that need to exit firefighting mode.",
+        },
+        {
+          title: "Hubs, Labs, Culture & Education",
+          description: "Creative environments that need order without losing their essence.",
+        },
+        {
+          title: "Expanding businesses",
+          description: "Operations that need a replicable model to grow.",
+        },
+        {
+          title: "Overloaded internal teams",
+          description: "Innovation, ESG and special projects inside companies.",
+        },
+      ],
+    },
+    included: {
+      title: "What's included",
+      subtitle: "Fifteen deliverables across three phases. All documented, all replicable.",
+    },
+    routine: {
+      title: "What the routine looks like",
+      items: [
+        "Weekly one-hour meeting — with an agenda and a recorded decision.",
+        "Weekly delivery — never just a report.",
+        "Documentation that is accessible, alive, and current.",
+        "Direct communication. No intermediaries, no noise.",
+      ],
+    },
+    investment: {
+      title: "Investment",
+      text: "Scope is set after the diagnostic call. We don't send generic proposals — every operation has its own size.",
+    },
+    finalCta: {
+      title: "Ready to unblock your operation?",
+      subtitle: "The diagnostic call is free and objective. In one hour you'll know what's blocking you.",
+    },
+  },
   productions: {
     hero: {
       title: "We create products, content and experiences that connect.",

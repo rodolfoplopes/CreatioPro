@@ -289,6 +289,68 @@ export const pt: Content = {
     },
   },
 
+  servicesOps: {
+    hero: {
+      eyebrow: "Creation OPS",
+      title: "90 dias para operacionalizar projetos complexos.",
+      subtitle: "Não entregamos diagnóstico. Instalamos a operação.",
+      description: "O Creation OPS é o programa que resolve a raiz do caos operacional. Em três fases, mapeamos o que trava, construímos os processos e acompanhamos até a operação rodar sozinha.",
+    },
+    problem: {
+      title: "Você reconhece algum destes?",
+      subtitle: "Se dois ou mais soam familiares, o problema não é falta de esforço. É falta de estrutura.",
+      items: [
+        "Reuniões que não decidem nada.",
+        "Cada entrega depende da mesma pessoa.",
+        "Ninguém sabe onde o projeto está de verdade.",
+        "O que foi combinado não vira execução.",
+        "Prazos escorregam sem que ninguém consiga dizer por quê.",
+      ],
+    },
+    audience: {
+      title: "Para quem é",
+      items: [
+        {
+          title: "ONGs, Fundações e Institutos",
+          description: "Projetos de impacto que precisam sair do modo apagar-incêndio.",
+        },
+        {
+          title: "Hubs, Labs, Cultura e Educação",
+          description: "Ambientes criativos que precisam de ordem sem perder a essência.",
+        },
+        {
+          title: "Negócios em expansão",
+          description: "Operações que precisam de modelo replicável para crescer.",
+        },
+        {
+          title: "Áreas internas sobrecarregadas",
+          description: "Times de inovação, ESG e projetos especiais dentro de empresas.",
+        },
+      ],
+    },
+    included: {
+      title: "O que está incluso",
+      subtitle: "Quinze entregáveis, distribuídos nas três fases. Tudo documentado, tudo replicável.",
+    },
+    routine: {
+      title: "Como é a rotina",
+      items: [
+        "Reunião semanal de uma hora — com pauta e decisão registrada.",
+        "Entrega semanal — nunca só relatório.",
+        "Documentação acessível, viva, atualizada.",
+        "Comunicação direta. Sem intermediários, sem ruído.",
+      ],
+    },
+    investment: {
+      title: "Investimento",
+      text: "O escopo é fechado após a conversa de diagnóstico. Não trabalhamos com proposta genérica — cada operação tem um tamanho.",
+    },
+    finalCta: {
+      title: "Vamos destravar sua operação?",
+      subtitle: "A conversa de diagnóstico é gratuita e objetiva. Em uma hora você sai sabendo o que está travando.",
+    },
+  },
+
   productions: {
     hero: {
       title: "Criamos produtos, conteúdos e experiências que conectam.",
