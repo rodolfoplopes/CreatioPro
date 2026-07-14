@@ -73,10 +73,18 @@ export default function Producoes() {
       </Section>
 
       <ProductionsMediaGrid title={c.productions.mediaTitle} />
-
-      <Section tone="bone" size="sm" className="border-t border-abyss/14">
-        <div className="text-center">
-          <CTAButton label={c.cta.primary} href={c.cta.href} variant="primary" />
+      <Section tone="abyss" size="sm">
+        <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-8">
+          <h2 className="font-display text-h2 sm:text-h1 font-bold text-bone max-w-measure">
+            {c.contact.title}
+          </h2>
+          <CTAButton
+            label={c.cta.primary}
+            href={c.cta.href}
+            variant="primary"
+            onDark
+            className="shrink-0"
+          />
         </div>
       </Section>
     </Layout>
