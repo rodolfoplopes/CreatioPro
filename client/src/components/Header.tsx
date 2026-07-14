@@ -5,7 +5,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { useContent, useLang } from "@/content";
 import { getPathWithoutLang, type SupportedLang } from "@/lib/lang";
-import logoWhite from "@assets/site_logo_creation.png";
+
 
 /**
  * MUDANCAS:
@@ -57,7 +57,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between gap-4">
           <Link href={localize("/")} data-testid="link-logo">
-            <img src={logoWhite} alt={c.brand.name} className="h-16 w-auto cursor-pointer" />
+            <img src="/brand/lockup_bone.svg" alt={c.brand.name} className="h-16 w-auto cursor-pointer" />
           </Link>
 
           <nav className="hidden md:flex items-center gap-1" data-testid="nav-desktop">
@@ -152,7 +152,7 @@ export default function Header() {
             <SheetContent side="right" className="w-[280px] p-0 border-bone/20 bg-abyss">
               <div className="flex flex-col h-full">
                 <div className="flex items-center justify-between p-4 border-b border-bone/14">
-                  <img src={logoWhite} alt={c.brand.name} className="h-12 w-auto" />
+                  <img src="/brand/lockup_bone.svg" alt={c.brand.name} className="h-12 w-auto" />
                   <Button
                     variant="ghost"
                     size="icon"

@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useContent, useLocalizedHref } from "@/content";
-import logoWhite from "@assets/site_logo_creation.png";
+
 
 /**
  * ============================================================================
@@ -25,7 +25,7 @@ export default function Footer() {
             <div className="lg:col-span-2">
               <Link href={localize("/")}>
                 <img
-                  src={logoWhite}
+                  src="/brand/lockup_bone.svg"
                   alt={c.brand.name}
                   className="h-14 w-auto cursor-pointer"
                   data-testid="img-footer-logo"

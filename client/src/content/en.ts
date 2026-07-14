@@ -450,6 +450,6 @@ export const en: Content = {
       { label: "Creation Productions", href: "/producoes" },
       { label: "Creation Impact", href: "/impacto" },
     ],
-    copyright: "Creation Pro. All rights reserved.",
+    copyright: "Creation Produções LTDA. All rights reserved.",
   },
 };
