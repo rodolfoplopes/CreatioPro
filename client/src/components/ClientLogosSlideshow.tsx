@@ -50,7 +50,7 @@ export default function ClientLogosSlideshow() {
               key={`${logo.alt}-${i}`}
               src={logo.src}
               alt={logo.alt}
-              className="h-16 md:h-20 w-auto shrink-0 object-contain opacity-70 transition-opacity duration-300 hover:opacity-100"
+              className="h-[74px] md:h-[92px] w-auto shrink-0 object-contain opacity-70 transition-opacity duration-300 hover:opacity-100"
               loading="lazy"
             />
           ))}
