@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import Home from "@/pages/Home";
 import QuemSomos from "@/pages/QuemSomos";
 import Servicos from "@/pages/Servicos";
+import CreationOps from "@/pages/servicos/CreationOps";
 import Producoes from "@/pages/Producoes";
 import CreatorOpsRio from "@/pages/producoes/CreatorOpsRio";
 import Impacto from "@/pages/Impacto";
@@ -90,6 +91,7 @@ function LangRouter({ lang }: { lang: string }) {
         <Route path={`/${lang}`} component={Home} />
         <Route path={`/${lang}/quem-somos`} component={QuemSomos} />
         <Route path={`/${lang}/servicos`} component={Servicos} />
+        <Route path={`/${lang}/servicos/ops`} component={CreationOps} />
         <Route path={`/${lang}/producoes`} component={Producoes} />
         <Route path={`/${lang}/producoes/creator-ops-rio`} component={CreatorOpsRio} />
         <Route path={`/${lang}/impacto`} component={Impacto} />

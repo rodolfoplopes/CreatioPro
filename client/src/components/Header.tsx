@@ -33,7 +33,7 @@ export default function Header() {
     {
       href: "/servicos",
       label: c.nav.services,
-      submenu: [{ href: "/metodo", label: c.nav.method }],
+      submenu: [{ href: "/servicos/ops", label: "Creation OPS" }],
     },
     { href: "/producoes", label: c.nav.productions, submenu: undefined },
     { href: "/impacto", label: c.nav.impact, submenu: undefined },
