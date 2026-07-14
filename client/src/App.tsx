@@ -67,11 +67,24 @@ function HrefLangTags({ currentPath }: { currentPath: string }) {
   return null;
 }
 
+/**
+ * O Wouter nao faz scroll restoration. Ao trocar de pagina, o navegador
+ * mantinha a posicao do scroll anterior — voce clicava em "Impacto" no menu
+ * e caia no meio da pagina.
+ */
+function ScrollToTop({ path }: { path: string }) {
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+  }, [path]);
+  return null;
+}
+
 function LangRouter({ lang }: { lang: string }) {
   const [location] = useLocation();
 
   return (
     <>
+      <ScrollToTop path={location} />
       <LanguageSync lang={lang} />
       <HrefLangTags currentPath={location} />
       <Switch>
