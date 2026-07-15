@@ -58,7 +58,7 @@ export default function HeroSection() {
               <img
                 src={heroImage}
                 alt=""
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-bottom"
               />
             </div>
           </div>
