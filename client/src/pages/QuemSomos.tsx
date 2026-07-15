@@ -66,32 +66,11 @@ export default function QuemSomos() {
           ))}
         </Grid>
       </Section>
-
-      {/*
-        O QUE NAO FAZEMOS
-        Estava escrito no content.ts e NUNCA apareceu no site.
-        E a melhor diferenciacao que a Creation tem.
-      */}
       <Section tone="ink">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div>
-            <h2 className="text-3xl sm:text-4xl font-bold text-bone mb-8 tracking-tight">
-              {about.whatWeDontDo.title}
-            </h2>
-            <ul className="space-y-4">
-              {about.whatWeDontDo.items.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <X className="h-5 w-5 text-signal shrink-0 mt-1" />
-                  <span className="text-lg text-bone/80">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="border-l-2 border-signal pl-8">
-            <p className="text-2xl md:text-3xl font-bold text-bone leading-snug">
-              {about.whatWeDontDo.conclusion}
-            </p>
-          </div>
+        <div className="mx-auto max-w-4xl text-center">
+          <p className="font-display text-3xl md:text-5xl font-bold text-bone leading-tight">
+            {about.whatWeDontDo.conclusion}
+          </p>
         </div>
       </Section>
 
