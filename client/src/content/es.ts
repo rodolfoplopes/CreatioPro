@@ -426,7 +426,11 @@ export const es: Content = {
     ],
     cases: {
       title: "Proyectos que transformamos",
-      items: [],
+      items: [
+        { eyebrow: "Emprendimiento Social", title: "Asta", client: "Asta", problem: "Ferias de nanoemprendedoras dispersas por el Territorio de la Costa Verde, sin una operación unificada para coordinar ediciones recurrentes y sostener el impacto a lo largo del tiempo.", action: "Condujimos el proyecto en tres ediciones consecutivas en el Territorio de la Costa Verde, estructurando la operación de las ferias y el acompañamiento de las emprendedoras de la región.", results: [ { value: "+300", label: "nanoemprendedoras impactadas" }, { value: "3", label: "ediciones consecutivas" }, { value: "+20", label: "ferias realizadas" } ], image: "/cases/asta.jpg" },
+        { eyebrow: "Eventos & Proyectos de Innovación", title: "Hacking.Rio", client: "Íons Innovation", problem: "Un hackathon que necesitaba mantener el engagement y el volumen de entregas al migrar entre formatos — presencial, híbrido y totalmente online — sin una estructura de producción que sostuviera esa escala en cada edición.", action: "Operamos la producción del evento en todas las ediciones desde 2019, atravesando los formatos presencial, híbrido y online sin pérdida de engagement ni de volumen de entregas.", results: [ { value: "+10.000", label: "desarrolladores alcanzados" }, { value: "+500", label: "proyectos construidos" }, { value: "desde 2019", label: "en todas las ediciones" } ], image: "/cases/hacking-rio.jpg" },
+        { eyebrow: "Evento & Cultura", title: "World Creativity Day", client: "WCD Organization · CCBB/RJ", problem: "Llevar el festival al CCBB/RJ en formato pocket, coordinando más de 100 creators inscritos y operando un evento presencial de gran público en un espacio institucional exigente.", action: "Estructuramos la producción de la edición 2023 en el CCBB/RJ, coordinando la curaduría de los creators y la operación del evento presencial en el espacio.", results: [ { value: "+100", label: "creators inscritos" }, { value: "2023", label: "edición en el CCBB/RJ" }, { value: "récord", label: "de público presencial" } ], image: "/cases/wcd.jpg" },
+      ],
     },
     audience: {
       title: "Para quién es",

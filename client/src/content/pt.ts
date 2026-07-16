@@ -432,7 +432,11 @@ export const pt: Content = {
     ],
     cases: {
       title: "Projetos que transformamos",
-      items: [],
+      items: [
+        { eyebrow: "Empreendedorismo Social", title: "Asta", client: "Asta", problem: "Feiras de nanoempreendedoras dispersas pelo Território da Costa Verde, sem uma operação unificada para coordenar edições recorrentes e sustentar o impacto ao longo do tempo.", action: "Conduzimos o projeto em três edições consecutivas no Território da Costa Verde, estruturando a operação das feiras e o acompanhamento das empreendedoras da região.", results: [ { value: "+300", label: "nanoempreendedoras impactadas" }, { value: "3", label: "edições consecutivas" }, { value: "+20", label: "feiras realizadas" } ], image: "/cases/asta.jpg" },
+        { eyebrow: "Eventos & Projetos de Inovação", title: "Hacking.Rio", client: "Íons Innovation", problem: "Um hackathon que precisava manter engajamento e volume de entregas ao migrar entre formatos — presencial, híbrido e totalmente online — sem uma estrutura de produção que sustentasse essa escala a cada edição.", action: "Operamos a produção do evento em todas as edições desde 2019, atravessando os formatos presencial, híbrido e online sem perda de engajamento nem de volume de entregas.", results: [ { value: "+10.000", label: "desenvolvedores alcançados" }, { value: "+500", label: "projetos construídos" }, { value: "desde 2019", label: "em todas as edições" } ], image: "/cases/hacking-rio.jpg" },
+        { eyebrow: "Evento & Cultura", title: "World Creativity Day", client: "WCD Organization · CCBB/RJ", problem: "Levar o festival ao CCBB/RJ em formato pocket, coordenando mais de 100 creators inscritos e operando um evento presencial de grande público em um espaço institucional exigente.", action: "Estruturamos a produção da edição 2023 no CCBB/RJ, coordenando a curadoria dos creators e a operação do evento presencial no espaço.", results: [ { value: "+100", label: "creators inscritos" }, { value: "2023", label: "edição no CCBB/RJ" }, { value: "recorde", label: "de público presencial" } ], image: "/cases/wcd.jpg" },
+      ],
     },
     audience: {
       title: "Para quem é",

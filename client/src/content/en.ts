@@ -426,7 +426,11 @@ export const en: Content = {
     ],
     cases: {
       title: "Projects we transformed",
-      items: [],
+      items: [
+        { eyebrow: "Social Entrepreneurship", title: "Asta", client: "Asta", problem: "Nano-entrepreneur fairs scattered across the Costa Verde territory, with no unified operation to coordinate recurring editions and sustain impact over time.", action: "We ran the project across three consecutive editions in the Costa Verde territory, structuring the fair operations and the ongoing support for local entrepreneurs.", results: [ { value: "300+", label: "nano-entrepreneurs reached" }, { value: "3", label: "consecutive editions" }, { value: "20+", label: "fairs held" } ], image: "/cases/asta.jpg" },
+        { eyebrow: "Innovation Events & Projects", title: "Hacking.Rio", client: "Íons Innovation", problem: "A hackathon that needed to sustain engagement and delivery volume while shifting formats — in-person, hybrid and fully online — without a production structure to support that scale each edition.", action: "We operated the event's production across every edition since 2019, moving through in-person, hybrid and online formats with no loss of engagement or delivery volume.", results: [ { value: "10,000+", label: "developers reached" }, { value: "500+", label: "projects built" }, { value: "since 2019", label: "every edition" } ], image: "/cases/hacking-rio.jpg" },
+        { eyebrow: "Event & Culture", title: "World Creativity Day", client: "WCD Organization · CCBB/RJ", problem: "Bringing the festival to CCBB/RJ in a pocket format, coordinating over 100 registered creators and operating a high-attendance in-person event inside a demanding institutional venue.", action: "We structured the production of the 2023 edition at CCBB/RJ, coordinating creator curation and the operation of the in-person event on site.", results: [ { value: "100+", label: "registered creators" }, { value: "2023", label: "edition at CCBB/RJ" }, { value: "record", label: "in-person attendance" } ], image: "/cases/wcd.jpg" },
+      ],
     },
     audience: {
       title: "Who it's for",
