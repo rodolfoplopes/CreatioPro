@@ -1,6 +1,7 @@
 import type { Express } from "express";
 import { createServer, type Server } from "http";
 import { storage } from "./storage";
+import { Resend } from "resend";
 
 export async function registerRoutes(
   httpServer: Server,
@@ -14,20 +15,32 @@ export async function registerRoutes(
       if (!name || !email || !message) {
         return res.status(400).json({ error: "Missing required fields" });
       }
-      
-      const contactData = {
+
+      const resend = new Resend(process.env.RESEND_API_KEY);
+
+      const { data, error } = await resend.emails.send({
+        from: "Creation <contato@creation-pro.com>",
         to: "info@creation-pro.com",
-        from: email,
-        name,
-        organization: organization || "",
-        projectType: projectType || "",
-        message,
-        timestamp: new Date().toISOString(),
-      };
+        replyTo: email,
+        subject: `Novo contato pelo site — ${name}`,
+        text: [
+          `Nome: ${name}`,
+          `E-mail: ${email}`,
+          `Organizacao: ${organization || "-"}`,
+          `Tipo de projeto: ${projectType || "-"}`,
+          "",
+          "Mensagem:",
+          message,
+        ].join("\n"),
+      });
+
+      if (error) {
+        console.error("Resend error:", error);
+        return res.status(500).json({ error: "Failed to send email" });
+      }
+
+      res.json({ success: true, message: "Message sent successfully", id: data?.id });
       
-      console.log("Contact form submission:", JSON.stringify(contactData, null, 2));
-      
-      res.json({ success: true, message: "Message received successfully" });
     } catch (error) {
       console.error("Contact form error:", error);
       res.status(500).json({ error: "Failed to process contact form" });
